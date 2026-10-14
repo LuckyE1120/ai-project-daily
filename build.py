@@ -1,5 +1,6 @@
 """Build the static reading site from reports/*.md using Python's standard library."""
 import html
+import hashlib
 import json
 import re
 import shutil
@@ -70,6 +71,20 @@ def markdown(text):
         i += 1
     return '\n'.join(output)
 
+def extract_projects(text, all_tables=False):
+    projects = []
+    in_first_table = False
+    for line in text.splitlines():
+        if line.startswith('|'):
+            in_first_table = True
+            cells = [c.strip() for c in line.strip('|').split('|')]
+            name = re.search(r'\[([^]]+)\]\((https://github.com/[^)]+)\)', cells[0])
+            if name and len(cells) >= 3:
+                projects.append({'name': name[1], 'url': name[2], 'description': cells[1], 'signal': cells[2]})
+        elif in_first_table and not all_tables:
+            break
+    return projects
+
 def collect():
     reports = []
     for path in sorted((ROOT/'reports').glob('*.md'), reverse=True):
@@ -77,26 +92,17 @@ def collect():
         if not match:
             raise ValueError(f'Report filename needs date: {path.name}')
         text = path.read_text()
-        projects = []
-        in_first_table = False
-        for line in text.splitlines():
-            if line.startswith('|'):
-                in_first_table = True
-                cells = [c.strip() for c in line.strip('|').split('|')]
-                name = re.search(r'\[([^]]+)\]\((https://github.com/[^)]+)\)',cells[0])
-                if name:
-                    projects.append({'name':name[1], 'url':name[2], 'description':cells[1], 'signal':cells[2]})
-            elif in_first_table:
-                break
+        projects = extract_projects(text)
         title = text.splitlines()[0].lstrip('# ')
         date = match[0]
-        reports.append({'date':date,'title':title,'filename':path.name,'text':text,'html':markdown(text),'projects':projects})
+        reports.append({'date':date,'title':title,'filename':path.name,'text':text,'html':markdown(text),'projects':projects,'observations':extract_projects(text, all_tables=True)})
     reports.sort(key=lambda r:r['date'],reverse=True)
     if len({r['date'] for r in reports}) != len(reports):
         raise ValueError('Only one report per date is supported')
     return reports
 
 def build():
+    import monthly
     reports = collect()
     if not reports:
         raise ValueError('At least one report is required')
@@ -106,11 +112,20 @@ def build():
     # Inline data keeps local-file preview and private hosting independent of fetch routing.
     data = json.dumps(reports,ensure_ascii=False).replace('<','\\u003c')
     template = (DIST/'index.html').read_text()
-    (DIST/'index.html').write_text(template.replace('/* REPORT_DATA */',data))
+    for asset in ['style.css','app.js']:
+        version = hashlib.sha256((DIST/asset).read_bytes()).hexdigest()[:12]
+        template = template.replace('./'+asset, './'+asset+'?v='+version)
+    months = monthly.collect_monthlies(reports)
+    month_data = json.dumps(months,ensure_ascii=False).replace('<','\\u003c')
+    (DIST/'index.html').write_text(template.replace('/* REPORT_DATA */',data).replace('/* MONTH_DATA */',month_data))
     if (DIST/'reports').exists():
         shutil.rmtree(DIST/'reports')
     shutil.copytree(ROOT/'reports',DIST/'reports')
+    if (DIST/'monthlies').exists():
+        shutil.rmtree(DIST/'monthlies')
+    shutil.copytree(ROOT/'monthlies',DIST/'monthlies')
     (DIST/'data.json').write_text(json.dumps(reports,ensure_ascii=False,indent=2))
+    (DIST/'monthly-data.json').write_text(json.dumps(months,ensure_ascii=False,indent=2))
     print(f'Built {len(reports)} reports, {len({p["url"] for r in reports for p in r["projects"]})} projects → dist/')
 
 if __name__ == '__main__':

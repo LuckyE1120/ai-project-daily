@@ -4,3 +4,4 @@
 __pycache__/
 .env*
 .sites-runtime/
+monthly_work/

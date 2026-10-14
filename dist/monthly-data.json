@@ -1,0 +1,220 @@
+[
+  {
+    "month": "2026-10",
+    "status": "preview",
+    "title": "2026-10 · 月度采样预览",
+    "report_count": 2,
+    "project_count": 14,
+    "calendar_days": 31,
+    "coverage": 6.5,
+    "start": "2026-10-13",
+    "end": "2026-10-14",
+    "report_dates": [
+      "2026-10-13",
+      "2026-10-14"
+    ],
+    "source_fingerprint": "729c65c48d7ddee73d340b7100961228c8b4bb06c0a9fd8e97fe2b79b3a92b53",
+    "projects": [
+      {
+        "name": "addyosmani/agent-skills",
+        "url": "https://github.com/addyosmani/agent-skills",
+        "description": "工程 Skill 集合，包括代码 Review、需求访谈、测试驱动开发等",
+        "signal": "近周增约 4,200",
+        "key": "addyosmani/agent-skills",
+        "category": "AI 编程与工程 Skill",
+        "dates": [
+          "2026-10-14"
+        ]
+      },
+      {
+        "name": "OpenMontage",
+        "url": "https://github.com/calesthio/OpenMontage",
+        "description": "面向 Agent 的视频制作体系，组合制作流程、工具和 Skill",
+        "signal": "3,500",
+        "key": "calesthio/openmontage",
+        "category": "音视频创作",
+        "dates": [
+          "2026-10-13",
+          "2026-10-14"
+        ]
+      },
+      {
+        "name": "diagram-design",
+        "url": "https://github.com/cathrynlavery/diagram-design",
+        "description": "图表设计 Skill，生成 HTML/SVG 架构图、流程图等，提供 44 类图表",
+        "signal": "8,900",
+        "key": "cathrynlavery/diagram-design",
+        "category": "设计与可视化",
+        "dates": [
+          "2026-10-13",
+          "2026-10-14"
+        ]
+      },
+      {
+        "name": "VoiceStudio",
+        "url": "https://github.com/debpalash/VoiceStudio",
+        "description": "主打本地运行，覆盖声音克隆、配音、转录和有声书制作",
+        "signal": "6,600",
+        "key": "debpalash/voicestudio",
+        "category": "音视频创作",
+        "dates": [
+          "2026-10-13"
+        ]
+      },
+      {
+        "name": "HyperFrames",
+        "url": "https://github.com/heygen-com/hyperframes",
+        "description": "把 HTML 动画渲染为视频，支持 Agent 参与制作",
+        "signal": "4,500",
+        "key": "heygen-com/hyperframes",
+        "category": "音视频创作",
+        "dates": [
+          "2026-10-13",
+          "2026-10-14"
+        ]
+      },
+      {
+        "name": "taste-skill",
+        "url": "https://github.com/Leonxlnx/taste-skill",
+        "description": "帮助 Agent 确定网站视觉方向、使用参考素材，并在浏览器中检查页面",
+        "signal": "近周增约 2,500",
+        "key": "leonxlnx/taste-skill",
+        "category": "设计与可视化",
+        "dates": [
+          "2026-10-14"
+        ]
+      },
+      {
+        "name": "mattpocock/skills",
+        "url": "https://github.com/mattpocock/skills",
+        "description": "可组合的工程工作流 Skill，覆盖需求澄清、诊断等开发任务",
+        "signal": "近周增约 11,200 Star",
+        "key": "mattpocock/skills",
+        "category": "AI 编程与工程 Skill",
+        "dates": [
+          "2026-10-14"
+        ]
+      },
+      {
+        "name": "context-mode",
+        "url": "https://github.com/mksglu/context-mode",
+        "description": "通过 MCP 处理工具输出、索引内容，并提供会话记忆和平台 hooks 集成",
+        "signal": "榜单显示当日约增 970",
+        "key": "mksglu/context-mode",
+        "category": "Agent 基础能力",
+        "dates": [
+          "2026-10-14"
+        ]
+      },
+      {
+        "name": "REA",
+        "url": "https://github.com/morluto/rea",
+        "description": "让 AI 分析应用、二进制和运行行为，追踪功能实现并提供证据",
+        "signal": "148,800",
+        "key": "morluto/rea",
+        "category": "软件分析与研究",
+        "dates": [
+          "2026-10-13",
+          "2026-10-14"
+        ]
+      },
+      {
+        "name": "Agent-Reach",
+        "url": "https://github.com/Panniantong/Agent-Reach",
+        "description": "为 Agent 配置、检查和选择网页、视频字幕、RSS、社交平台等访问工具",
+        "signal": "近周增约 4,400",
+        "key": "panniantong/agent-reach",
+        "category": "Agent 基础能力",
+        "dates": [
+          "2026-10-14"
+        ]
+      },
+      {
+        "name": "Paperclip",
+        "url": "https://github.com/paperclipai/paperclip",
+        "description": "管理多个 AI Agent 的任务、工作流程和成本",
+        "signal": "3,300",
+        "key": "paperclipai/paperclip",
+        "category": "Agent 协作与编排",
+        "dates": [
+          "2026-10-13"
+        ]
+      },
+      {
+        "name": "ArtCraft",
+        "url": "https://github.com/storytold/artcraft",
+        "description": "面向图像与视频创作的可视化工作台，支持 2D 合成、3D 场景布置、角色姿态与镜头控制",
+        "signal": "榜单显示当日约增 4,100",
+        "key": "storytold/artcraft",
+        "category": "音视频创作",
+        "dates": [
+          "2026-10-14"
+        ]
+      },
+      {
+        "name": "tester-army/e2e",
+        "url": "https://github.com/tester-army/e2e",
+        "description": "用自然语言驱动网页或移动应用，结合定位器与断言验证结果",
+        "signal": "4,800",
+        "key": "tester-army/e2e",
+        "category": "自动化测试",
+        "dates": [
+          "2026-10-13",
+          "2026-10-14"
+        ]
+      },
+      {
+        "name": "claude-mem",
+        "url": "https://github.com/thedotmack/claude-mem",
+        "description": "保存、压缩 Agent 工作记录，在后续会话找回相关上下文",
+        "signal": "3,500",
+        "key": "thedotmack/claude-mem",
+        "category": "Agent 基础能力",
+        "dates": [
+          "2026-10-13"
+        ]
+      }
+    ],
+    "categories": [
+      {
+        "name": "音视频创作",
+        "count": 4,
+        "percent": 28.6
+      },
+      {
+        "name": "Agent 基础能力",
+        "count": 3,
+        "percent": 21.4
+      },
+      {
+        "name": "AI 编程与工程 Skill",
+        "count": 2,
+        "percent": 14.3
+      },
+      {
+        "name": "设计与可视化",
+        "count": 2,
+        "percent": 14.3
+      },
+      {
+        "name": "Agent 协作与编排",
+        "count": 1,
+        "percent": 7.1
+      },
+      {
+        "name": "自动化测试",
+        "count": 1,
+        "percent": 7.1
+      },
+      {
+        "name": "软件分析与研究",
+        "count": 1,
+        "percent": 7.1
+      }
+    ],
+    "idea_top": [],
+    "value_top": [],
+    "summary": "基于已归档日报的采样预览，尚未完成月度评选。",
+    "insights": []
+  }
+]

@@ -16,18 +16,20 @@
       <div class="eyebrow">YOUR READING ROOM</div><h2>发现，留档，<br>再去体验。</h2>
       <p class="sidebar-note">把值得关注的 AI 项目<br>整理成每天可以翻阅的一页。</p>
       <label class="search-box"><span aria-hidden="true">⌕</span><input id="search" type="search" placeholder="搜索项目或关键词" aria-label="搜索所有日报全文"><kbd>/</kbd></label>
-      <div class="archive-heading"><span>日报归档</span><span id="archive-count"></span></div>
+      <nav class="view-switch" aria-label="报告类型"><a id="daily-tab" href="#view=daily">日报</a><a id="monthly-tab" href="#view=monthly">月报 · Top 榜</a></nav>
+      <div class="archive-heading"><span id="archive-label">日报归档</span><span id="archive-count"></span></div>
       <nav id="archive" aria-label="选择日期"></nav>
       <div id="search-status" class="search-status" role="status" aria-live="polite"></div>
       <div class="sidebar-bottom"><span class="mini-mark">✳</span><p>热度是一条线索。<br>体验，才是自己的判断。</p><small>官方资料核实用途 · 第三方快照记录热度</small></div>
     </aside>
     <main>
       <section class="intro"><div class="intro-top"><span class="eyebrow">OPEN SOURCE / AGENTS / CREATIVE TOOLS</span><span id="issue-label" class="issue-label"></span></div><h1>每天发现<br>值得试的 <em>AI。</em></h1><p>从热门项目到实际用途，少一点信息噪音，多一点体验线索。</p><div class="stats"><div><strong id="stat-issues">—</strong><span>期已归档</span></div><div><strong id="stat-projects">—</strong><span>个项目已收录</span></div><div><strong>10:15</strong><span>每日任务开始时间</span></div></div><span class="intro-shape" aria-hidden="true">✳</span></section>
-      <section class="project-section" aria-labelledby="project-heading"><div class="section-top"><div><span class="eyebrow">ON THE RADAR</span><h2 id="project-heading">本期关注</h2></div><span id="project-count" class="muted"></span></div><div id="projects" class="projects"></div></section>
+      <section id="daily-projects" class="project-section" aria-labelledby="project-heading"><div class="section-top"><div><span class="eyebrow">ON THE RADAR</span><h2 id="project-heading">本期关注</h2></div><span id="project-count" class="muted"></span></div><div id="projects" class="projects"></div></section>
+      <section id="monthly-panel" class="monthly-panel" aria-label="月度项目分析" hidden></section>
       <section id="reader" class="reader" aria-labelledby="reader-title"><div class="reader-toolbar"><div><span class="eyebrow">THE COMPLETE REPORT</span><h2 id="reader-title">完整日报</h2></div><a id="download" class="download" download>下载 Markdown ↓</a></div><div class="article-meta"><span id="reader-date"></span><span>资料调研 · 保留来源与体验前提</span></div><article id="report"></article></section>
       <footer><span>AI 项目日报 / 每天积累一点发现</span><a href="https://github.com/LuckyE1120/ai-project-daily" target="_blank" rel="noopener noreferrer">查看源码与原文 ↗</a><span id="last-updated"></span></footer>
     </main>
   </div>
-  <script id="report-data" type="application/json">/* REPORT_DATA */</script><script src="./app.js"></script>
+  <script id="report-data" type="application/json">/* REPORT_DATA */</script><script id="monthly-data" type="application/json">/* MONTH_DATA */</script><script src="./app.js"></script>
 </body>
 </html>
