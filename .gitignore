@@ -1,0 +1,6 @@
+.DS_Store
+*.tar.gz
+*.tgz
+__pycache__/
+.env*
+.sites-runtime/
