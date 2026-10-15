@@ -3,17 +3,18 @@
     "month": "2026-10",
     "status": "preview",
     "title": "2026-10 · 月度采样预览",
-    "report_count": 2,
-    "project_count": 14,
+    "report_count": 3,
+    "project_count": 19,
     "calendar_days": 31,
-    "coverage": 6.5,
+    "coverage": 9.7,
     "start": "2026-10-13",
-    "end": "2026-10-14",
+    "end": "2026-10-15",
     "report_dates": [
       "2026-10-13",
-      "2026-10-14"
+      "2026-10-14",
+      "2026-10-15"
     ],
-    "source_fingerprint": "729c65c48d7ddee73d340b7100961228c8b4bb06c0a9fd8e97fe2b79b3a92b53",
+    "source_fingerprint": "05de3b8a505c6b8f00fd09e35a7a8ad415c3d060ea512741839c4a291b6fee05",
     "projects": [
       {
         "name": "addyosmani/agent-skills",
@@ -51,6 +52,17 @@
         ]
       },
       {
+        "name": "Chrome DevTools MCP",
+        "url": "https://github.com/ChromeDevTools/chrome-devtools-mcp",
+        "description": "让编程 Agent 检查 Chrome 页面、网络请求、控制台及性能轨迹，支持浏览器自动化",
+        "signal": "榜单卡片标注当日 +85 Star",
+        "key": "chromedevtools/chrome-devtools-mcp",
+        "category": "自动化测试",
+        "dates": [
+          "2026-10-15"
+        ]
+      },
+      {
         "name": "VoiceStudio",
         "url": "https://github.com/debpalash/VoiceStudio",
         "description": "主打本地运行，覆盖声音克隆、配音、转录和有声书制作",
@@ -59,6 +71,17 @@
         "category": "音视频创作",
         "dates": [
           "2026-10-13"
+        ]
+      },
+      {
+        "name": "text-to-cad",
+        "url": "https://github.com/earthtojake/text-to-cad",
+        "description": "为 Agent 提供本地 3D 建模、工程图和制造检查工作流，可输出 STEP、STL、GLB、3MF",
+        "signal": "榜单卡片标注近周 +1,994 Star",
+        "key": "earthtojake/text-to-cad",
+        "category": "设计与可视化",
+        "dates": [
+          "2026-10-15"
         ]
       },
       {
@@ -71,6 +94,17 @@
         "dates": [
           "2026-10-13",
           "2026-10-14"
+        ]
+      },
+      {
+        "name": "OpenCreator",
+        "url": "https://github.com/krillinai/OpenCreator",
+        "description": "将视频翻译、脚本、图像、配音和编辑等工作放入本地创作与 Agent 工作台；前身为 KrillinAI",
+        "signal": "榜单卡片标注当日 +95 Star",
+        "key": "krillinai/opencreator",
+        "category": "音视频创作",
+        "dates": [
+          "2026-10-15"
         ]
       },
       {
@@ -119,6 +153,17 @@
         ]
       },
       {
+        "name": "Superpowers",
+        "url": "https://github.com/obra/superpowers",
+        "description": "将需求澄清、计划、测试驱动开发及审查组织为可组合的 Agent 工程工作流",
+        "signal": "顶部周榜 +2,778 Star",
+        "key": "obra/superpowers",
+        "category": "AI 编程与工程 Skill",
+        "dates": [
+          "2026-10-15"
+        ]
+      },
+      {
         "name": "Agent-Reach",
         "url": "https://github.com/Panniantong/Agent-Reach",
         "description": "为 Agent 配置、检查和选择网页、视频字幕、RSS、社交平台等访问工具",
@@ -138,6 +183,17 @@
         "category": "Agent 协作与编排",
         "dates": [
           "2026-10-13"
+        ]
+      },
+      {
+        "name": "Orca",
+        "url": "https://github.com/stablyai/orca",
+        "description": "在独立 Git worktree 中并行运行与追踪多个编程 Agent，并提供移动伴随端",
+        "signal": "榜单卡片标注当日 +919 Star",
+        "key": "stablyai/orca",
+        "category": "Agent 协作与编排",
+        "dates": [
+          "2026-10-15"
         ]
       },
       {
@@ -178,38 +234,38 @@
     "categories": [
       {
         "name": "音视频创作",
-        "count": 4,
-        "percent": 28.6
+        "count": 5,
+        "percent": 26.3
+      },
+      {
+        "name": "AI 编程与工程 Skill",
+        "count": 3,
+        "percent": 15.8
       },
       {
         "name": "Agent 基础能力",
         "count": 3,
-        "percent": 21.4
-      },
-      {
-        "name": "AI 编程与工程 Skill",
-        "count": 2,
-        "percent": 14.3
+        "percent": 15.8
       },
       {
         "name": "设计与可视化",
-        "count": 2,
-        "percent": 14.3
+        "count": 3,
+        "percent": 15.8
       },
       {
         "name": "Agent 协作与编排",
-        "count": 1,
-        "percent": 7.1
+        "count": 2,
+        "percent": 10.5
       },
       {
         "name": "自动化测试",
-        "count": 1,
-        "percent": 7.1
+        "count": 2,
+        "percent": 10.5
       },
       {
         "name": "软件分析与研究",
         "count": 1,
-        "percent": 7.1
+        "percent": 5.3
       }
     ],
     "idea_top": [],

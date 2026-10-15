@@ -12,5 +12,10 @@
   "addyosmani/agent-skills": "AI 编程与工程 Skill",
   "leonxlnx/taste-skill": "设计与可视化",
   "mksglu/context-mode": "Agent 基础能力",
-  "storytold/artcraft": "音视频创作"
+  "storytold/artcraft": "音视频创作",
+  "chromedevtools/chrome-devtools-mcp": "自动化测试",
+  "obra/superpowers": "AI 编程与工程 Skill",
+  "stablyai/orca": "Agent 协作与编排",
+  "krillinai/opencreator": "音视频创作",
+  "earthtojake/text-to-cad": "设计与可视化"
 }
