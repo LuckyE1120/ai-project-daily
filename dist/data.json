@@ -1,5 +1,76 @@
 [
   {
+    "date": "2026-10-16",
+    "title": "AI 项目日报 · 2026-10-16",
+    "filename": "AI项目日报-2026-10-16.md",
+    "text": "# AI 项目日报 · 2026-10-16\n\n检索日期：2026 年 10 月 16 日（北京时间）  \n近一周观察窗口：10 月 9 日—10 月 16 日  \n对照文档：[10 月 15 日日报](./AI项目日报-2026-10-15.md)\n\n## 今日重点\n\n首次收录 5 个项目：软件 CLI 封装、手机 Agent 操作、领域 Skill、上下文数据库和短视频生成。“首次收录”表示此前本地三期未完整介绍，不表示项目刚发布。今天核实的是官方当前资料，没有将 README 功能当作当日新版本；以下项目均未在本机安装或实测。\n\n结合你正在做的安卓播放器，优先关注 phone-harness 的设备连接方式与 CLI-Anything 的可验证操作思路；视频创作方向可看 MoneyPrinterTurbo。优先级是按当前需求作出的编辑判断。\n\n## 新增项目\n\n| 项目 | 已核实的用途 | 第三方热度信号 | 体验入口与前提 | 建议先验证什么 |\n|---|---|---|---|---|\n| [CLI-Anything](https://github.com/HKUDS/CLI-Anything) | 为软件生成可由 Agent 调用的 CLI；CLI-Hub 可发现与安装已有工具封装 | 今日页面卡片标注 +716 Star | 生成器要求 Python 3.10+、支持的编程 Agent 及目标软件或源码；使用现成封装也可能需要安装原软件 | 找一个现成工具完成输入文件到输出文件的任务，检查结果与错误码；不把生成 CLI 等同于软件所有功能都可用 |\n| [phone-harness](https://github.com/ShawnPana/phone-harness) | 提供手机屏幕读取、点击与输入等 Agent 操作能力，支持本地设备及云端手机 | 今日页面卡片标注 +161 Star | 官方安装路径使用 uv、Python 3.12；本地 Android 需开发者选项与 adb 授权，iPhone 路径需 Mac 镜像配对及相关权限 | 在测试手机上记录“点全屏→横屏→返回恢复”的实际画面和状态；操作成功还需明确断言，不能替代完整测试框架 |\n| [Scientific Agent Skills](https://github.com/K-Dense-AI/scientific-agent-skills) | 为科学计算、数据分析与数据库查询提供领域工作流 Skill | 今日页面卡片标注 +1,091 Star | 需要支持 Agent Skills 的客户端与 uv；仓库工具要求 Python 3.13+，具体 Skill 的环境和 API 凭据单独配置 | 只选一个可视化或数据分析 Skill，用已知结果的小数据集核对输出；安装 Skill 文件不等于依赖已就绪 |\n| [OpenViking](https://github.com/volcengine/OpenViking) | 以分层目录组织 Agent 记忆、知识与 Skill，提供服务端、CLI 和 SDK 接入 | 今日页面卡片标注 +105 Star | 自部署需 uv、Python 3.10+、Embedding 与 VLM 服务配置；先启动上下文服务 | 导入一个小文档目录，比较找回的原文、遗漏情况与模型用量；作者基准结果不代表本机收益 |\n| [MoneyPrinterTurbo](https://github.com/harry0703/MoneyPrinterTurbo) | 串联脚本、素材、配音、字幕与剪辑，支持 WebUI、API 和 CLI 的短视频工作流 | 今日页面卡片标注 +604 Star | 本地 Python 3.11+，可按官方说明用 uv 或 Docker；模型、在线素材等服务需各自配置 | 用自有素材和审核过的脚本做 30 秒样片，检查字幕、画面匹配、时长和导出，先核对所用服务费用 |\n\n热度来自 [whatstrending.ai 2026-10-16 页面](https://whatstrending.ai/repos)中明确标为“stars today”的卡片，属于第三方统计，不能当作官方增长审计或质量评分。页面整体周观察窗口为 10/9—10/16，但上述数字是日增标签，不能写成周增。用途与准备条件分别核对了表中官方仓库。\n\n## 体验路径与取舍\n\n### phone-harness：与当前安卓问题最相关\n\n先阅读[官方安装文档](https://github.com/ShawnPana/phone-harness/blob/main/install.md)和设备引导，连接后用 `phone-harness --doctor` 检查链路。建议先做全屏按钮、横竖屏和返回恢复的小流程，保留前后状态并人工核对。它提供操作能力，不会自动证明播放、系统栏、字幕和生命周期都正确；今天没有连接设备或验证它能复现本聊天问题。云端手机属于另一条服务路径，使用前单独确认费用。\n\n### CLI-Anything：先复用一个现成封装\n\n从[官方 Quick Start](https://github.com/HKUDS/CLI-Anything#-quick-start)浏览 CLI-Hub，先查看工具说明，再决定是否安装。建议选择文件导出这类结果明确的任务，对照原软件检查输出。生成器需要目标软件及其可调用能力；“让所有软件 Agent 化”是项目愿景，不能理解为任意 App 都已经适配。\n\n### Scientific Agent Skills：按任务选装\n\n从[官方 Getting Started](https://github.com/K-Dense-AI/scientific-agent-skills#getting-started)选择安装方式，按具体 Skill 配置独立环境，先做可核对的数据处理或绘图任务。不同科学工具的依赖和 Python 版本可能不兼容，不宜把整套环境混装。仓库中的使用人数、质量与验证口号，本期没有独立审计，也不据此评价科研结论正确性。\n\n### OpenViking：测召回，别只看压缩比例\n\n按[官方 Quick Start](https://github.com/volcengine/OpenViking#quick-start)配置服务、模型和工作目录，导入少量非敏感文档。建议预先写下几个问题和正确出处，比较检索是否找回原始证据、摘要有没有遗漏、准备成本是否值得。它与此前 context-mode 的关注点不同：今天重点观察上下文组织和服务接入，不直接比较不同作者基准的百分比。\n\n### MoneyPrinterTurbo：从已审核脚本开始\n\n按[官方安装部署章节](https://github.com/harry0703/MoneyPrinterTurbo#安装部署-)配置环境，使用本地自有素材可以减少素材匹配的不确定性。先导出一条短片，再比较修改字幕、替换镜头和重复运行的成本。它更适合组合短视频流程；不能仅凭“一键生成”的介绍推定适合精确复刻网站交互动画。\n\n## 既有项目跟踪与数据口径\n\n- REA、HyperFrames、OpenMontage 和工程 Skill 集合仍见于第三方列表，本期优先补充未覆盖方向，不重复完整介绍。REA 的异常增长原因仍未独立核验。\n- 同页顶部周榜与部分项目卡片的周增数字继续存在差异，本期没有为这些项目追加精确增长结论；也没有将今天与昨天的滚动周增相减。\n- 本期没有核实到足以单独报道的、与本清单相关的当日正式版本更新，不把首次发现写成首次发布。\n- 本聊天已对 LibreTV 安卓包进行全屏代码修复、构建和签名校验；这不构成对今天推荐的手机操作工具或完整真机播放流程的实测。\n\n## 月报与发布说明\n\n本期新项目已加入主要用途目录。今天不是月报发布日；上一个自然月为 2026-09，早于本站 2026-10 收录起点，因此不补造月报。正式首期仍于 2026-11-01 汇总 10 月归档后生成。\n\n联网资料核验通过检索工具完成；本机 GitHub 连接在首次同步时失败，尚不能确认远程是否有更新。日报、网站构建与最终发布结果以本聊天本次运行反馈为准，不以旧部署成功代替本次发布验证。\n",
+    "html": "<h2>AI 项目日报 · 2026-10-16</h2>\n<p>检索日期：2026 年 10 月 16 日（北京时间） 近一周观察窗口：10 月 9 日—10 月 16 日 对照文档：<a href=\"#date=2026-10-15\">10 月 15 日日报</a></p>\n<h3>今日重点</h3>\n<p>首次收录 5 个项目：软件 CLI 封装、手机 Agent 操作、领域 Skill、上下文数据库和短视频生成。“首次收录”表示此前本地三期未完整介绍，不表示项目刚发布。今天核实的是官方当前资料，没有将 README 功能当作当日新版本；以下项目均未在本机安装或实测。</p>\n<p>结合你正在做的安卓播放器，优先关注 phone-harness 的设备连接方式与 CLI-Anything 的可验证操作思路；视频创作方向可看 MoneyPrinterTurbo。优先级是按当前需求作出的编辑判断。</p>\n<h3>新增项目</h3>\n<div class=\"table-scroll\" tabindex=\"0\" aria-label=\"可横向滚动的项目表格\"><table><thead><tr><th scope=\"col\">项目</th><th scope=\"col\">已核实的用途</th><th scope=\"col\">第三方热度信号</th><th scope=\"col\">体验入口与前提</th><th scope=\"col\">建议先验证什么</th></tr></thead><tbody><tr><td><a href=\"https://github.com/HKUDS/CLI-Anything\" target=\"_blank\" rel=\"noopener noreferrer\">CLI-Anything ↗</a></td><td>为软件生成可由 Agent 调用的 CLI；CLI-Hub 可发现与安装已有工具封装</td><td>今日页面卡片标注 +716 Star</td><td>生成器要求 Python 3.10+、支持的编程 Agent 及目标软件或源码；使用现成封装也可能需要安装原软件</td><td>找一个现成工具完成输入文件到输出文件的任务，检查结果与错误码；不把生成 CLI 等同于软件所有功能都可用</td></tr><tr><td><a href=\"https://github.com/ShawnPana/phone-harness\" target=\"_blank\" rel=\"noopener noreferrer\">phone-harness ↗</a></td><td>提供手机屏幕读取、点击与输入等 Agent 操作能力，支持本地设备及云端手机</td><td>今日页面卡片标注 +161 Star</td><td>官方安装路径使用 uv、Python 3.12；本地 Android 需开发者选项与 adb 授权，iPhone 路径需 Mac 镜像配对及相关权限</td><td>在测试手机上记录“点全屏→横屏→返回恢复”的实际画面和状态；操作成功还需明确断言，不能替代完整测试框架</td></tr><tr><td><a href=\"https://github.com/K-Dense-AI/scientific-agent-skills\" target=\"_blank\" rel=\"noopener noreferrer\">Scientific Agent Skills ↗</a></td><td>为科学计算、数据分析与数据库查询提供领域工作流 Skill</td><td>今日页面卡片标注 +1,091 Star</td><td>需要支持 Agent Skills 的客户端与 uv；仓库工具要求 Python 3.13+，具体 Skill 的环境和 API 凭据单独配置</td><td>只选一个可视化或数据分析 Skill，用已知结果的小数据集核对输出；安装 Skill 文件不等于依赖已就绪</td></tr><tr><td><a href=\"https://github.com/volcengine/OpenViking\" target=\"_blank\" rel=\"noopener noreferrer\">OpenViking ↗</a></td><td>以分层目录组织 Agent 记忆、知识与 Skill，提供服务端、CLI 和 SDK 接入</td><td>今日页面卡片标注 +105 Star</td><td>自部署需 uv、Python 3.10+、Embedding 与 VLM 服务配置；先启动上下文服务</td><td>导入一个小文档目录，比较找回的原文、遗漏情况与模型用量；作者基准结果不代表本机收益</td></tr><tr><td><a href=\"https://github.com/harry0703/MoneyPrinterTurbo\" target=\"_blank\" rel=\"noopener noreferrer\">MoneyPrinterTurbo ↗</a></td><td>串联脚本、素材、配音、字幕与剪辑，支持 WebUI、API 和 CLI 的短视频工作流</td><td>今日页面卡片标注 +604 Star</td><td>本地 Python 3.11+，可按官方说明用 uv 或 Docker；模型、在线素材等服务需各自配置</td><td>用自有素材和审核过的脚本做 30 秒样片，检查字幕、画面匹配、时长和导出，先核对所用服务费用</td></tr></tbody></table></div>\n<p>热度来自 <a href=\"https://whatstrending.ai/repos\" target=\"_blank\" rel=\"noopener noreferrer\">whatstrending.ai 2026-10-16 页面 ↗</a>中明确标为“stars today”的卡片，属于第三方统计，不能当作官方增长审计或质量评分。页面整体周观察窗口为 10/9—10/16，但上述数字是日增标签，不能写成周增。用途与准备条件分别核对了表中官方仓库。</p>\n<h3>体验路径与取舍</h3>\n<h4>phone-harness：与当前安卓问题最相关</h4>\n<p>先阅读<a href=\"https://github.com/ShawnPana/phone-harness/blob/main/install.md\" target=\"_blank\" rel=\"noopener noreferrer\">官方安装文档 ↗</a>和设备引导，连接后用 <code>phone-harness --doctor</code> 检查链路。建议先做全屏按钮、横竖屏和返回恢复的小流程，保留前后状态并人工核对。它提供操作能力，不会自动证明播放、系统栏、字幕和生命周期都正确；今天没有连接设备或验证它能复现本聊天问题。云端手机属于另一条服务路径，使用前单独确认费用。</p>\n<h4>CLI-Anything：先复用一个现成封装</h4>\n<p>从<a href=\"https://github.com/HKUDS/CLI-Anything#-quick-start\" target=\"_blank\" rel=\"noopener noreferrer\">官方 Quick Start ↗</a>浏览 CLI-Hub，先查看工具说明，再决定是否安装。建议选择文件导出这类结果明确的任务，对照原软件检查输出。生成器需要目标软件及其可调用能力；“让所有软件 Agent 化”是项目愿景，不能理解为任意 App 都已经适配。</p>\n<h4>Scientific Agent Skills：按任务选装</h4>\n<p>从<a href=\"https://github.com/K-Dense-AI/scientific-agent-skills#getting-started\" target=\"_blank\" rel=\"noopener noreferrer\">官方 Getting Started ↗</a>选择安装方式，按具体 Skill 配置独立环境，先做可核对的数据处理或绘图任务。不同科学工具的依赖和 Python 版本可能不兼容，不宜把整套环境混装。仓库中的使用人数、质量与验证口号，本期没有独立审计，也不据此评价科研结论正确性。</p>\n<h4>OpenViking：测召回，别只看压缩比例</h4>\n<p>按<a href=\"https://github.com/volcengine/OpenViking#quick-start\" target=\"_blank\" rel=\"noopener noreferrer\">官方 Quick Start ↗</a>配置服务、模型和工作目录，导入少量非敏感文档。建议预先写下几个问题和正确出处，比较检索是否找回原始证据、摘要有没有遗漏、准备成本是否值得。它与此前 context-mode 的关注点不同：今天重点观察上下文组织和服务接入，不直接比较不同作者基准的百分比。</p>\n<h4>MoneyPrinterTurbo：从已审核脚本开始</h4>\n<p>按<a href=\"https://github.com/harry0703/MoneyPrinterTurbo#安装部署-\" target=\"_blank\" rel=\"noopener noreferrer\">官方安装部署章节 ↗</a>配置环境，使用本地自有素材可以减少素材匹配的不确定性。先导出一条短片，再比较修改字幕、替换镜头和重复运行的成本。它更适合组合短视频流程；不能仅凭“一键生成”的介绍推定适合精确复刻网站交互动画。</p>\n<h3>既有项目跟踪与数据口径</h3>\n<ul><li>REA、HyperFrames、OpenMontage 和工程 Skill 集合仍见于第三方列表，本期优先补充未覆盖方向，不重复完整介绍。REA 的异常增长原因仍未独立核验。</li><li>同页顶部周榜与部分项目卡片的周增数字继续存在差异，本期没有为这些项目追加精确增长结论；也没有将今天与昨天的滚动周增相减。</li><li>本期没有核实到足以单独报道的、与本清单相关的当日正式版本更新，不把首次发现写成首次发布。</li><li>本聊天已对 LibreTV 安卓包进行全屏代码修复、构建和签名校验；这不构成对今天推荐的手机操作工具或完整真机播放流程的实测。</li></ul>\n<h3>月报与发布说明</h3>\n<p>本期新项目已加入主要用途目录。今天不是月报发布日；上一个自然月为 2026-09，早于本站 2026-10 收录起点，因此不补造月报。正式首期仍于 2026-11-01 汇总 10 月归档后生成。</p>\n<p>联网资料核验通过检索工具完成；本机 GitHub 连接在首次同步时失败，尚不能确认远程是否有更新。日报、网站构建与最终发布结果以本聊天本次运行反馈为准，不以旧部署成功代替本次发布验证。</p>",
+    "projects": [
+      {
+        "name": "CLI-Anything",
+        "url": "https://github.com/HKUDS/CLI-Anything",
+        "description": "为软件生成可由 Agent 调用的 CLI；CLI-Hub 可发现与安装已有工具封装",
+        "signal": "今日页面卡片标注 +716 Star"
+      },
+      {
+        "name": "phone-harness",
+        "url": "https://github.com/ShawnPana/phone-harness",
+        "description": "提供手机屏幕读取、点击与输入等 Agent 操作能力，支持本地设备及云端手机",
+        "signal": "今日页面卡片标注 +161 Star"
+      },
+      {
+        "name": "Scientific Agent Skills",
+        "url": "https://github.com/K-Dense-AI/scientific-agent-skills",
+        "description": "为科学计算、数据分析与数据库查询提供领域工作流 Skill",
+        "signal": "今日页面卡片标注 +1,091 Star"
+      },
+      {
+        "name": "OpenViking",
+        "url": "https://github.com/volcengine/OpenViking",
+        "description": "以分层目录组织 Agent 记忆、知识与 Skill，提供服务端、CLI 和 SDK 接入",
+        "signal": "今日页面卡片标注 +105 Star"
+      },
+      {
+        "name": "MoneyPrinterTurbo",
+        "url": "https://github.com/harry0703/MoneyPrinterTurbo",
+        "description": "串联脚本、素材、配音、字幕与剪辑，支持 WebUI、API 和 CLI 的短视频工作流",
+        "signal": "今日页面卡片标注 +604 Star"
+      }
+    ],
+    "observations": [
+      {
+        "name": "CLI-Anything",
+        "url": "https://github.com/HKUDS/CLI-Anything",
+        "description": "为软件生成可由 Agent 调用的 CLI；CLI-Hub 可发现与安装已有工具封装",
+        "signal": "今日页面卡片标注 +716 Star"
+      },
+      {
+        "name": "phone-harness",
+        "url": "https://github.com/ShawnPana/phone-harness",
+        "description": "提供手机屏幕读取、点击与输入等 Agent 操作能力，支持本地设备及云端手机",
+        "signal": "今日页面卡片标注 +161 Star"
+      },
+      {
+        "name": "Scientific Agent Skills",
+        "url": "https://github.com/K-Dense-AI/scientific-agent-skills",
+        "description": "为科学计算、数据分析与数据库查询提供领域工作流 Skill",
+        "signal": "今日页面卡片标注 +1,091 Star"
+      },
+      {
+        "name": "OpenViking",
+        "url": "https://github.com/volcengine/OpenViking",
+        "description": "以分层目录组织 Agent 记忆、知识与 Skill，提供服务端、CLI 和 SDK 接入",
+        "signal": "今日页面卡片标注 +105 Star"
+      },
+      {
+        "name": "MoneyPrinterTurbo",
+        "url": "https://github.com/harry0703/MoneyPrinterTurbo",
+        "description": "串联脚本、素材、配音、字幕与剪辑，支持 WebUI、API 和 CLI 的短视频工作流",
+        "signal": "今日页面卡片标注 +604 Star"
+      }
+    ]
+  },
+  {
     "date": "2026-10-15",
     "title": "AI 项目日报 · 2026-10-15",
     "filename": "AI项目日报-2026-10-15.md",
