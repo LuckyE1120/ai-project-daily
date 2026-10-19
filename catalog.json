@@ -22,5 +22,9 @@
   "shawnpana/phone-harness": "自动化测试",
   "k-dense-ai/scientific-agent-skills": "科研与数据分析",
   "volcengine/openviking": "Agent 基础能力",
-  "harry0703/moneyprinterturbo": "音视频创作"
+  "harry0703/moneyprinterturbo": "音视频创作",
+  "callstack/agent-device": "自动化测试",
+  "promptfoo/promptfoo": "自动化测试",
+  "anomalyco/opencode": "AI 编程与工程 Skill",
+  "jub0t/concat": "音视频创作"
 }

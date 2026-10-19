@@ -1,5 +1,64 @@
 [
   {
+    "date": "2026-10-19",
+    "title": "AI 项目日报 · 2026-10-19",
+    "filename": "AI项目日报-2026-10-19.md",
+    "text": "# AI 项目日报 · 2026-10-19\n\n检索日期：2026 年 10 月 19 日（北京时间）  \n近一周观察窗口：10 月 12 日—10 月 19 日  \n对照文档：[10 月 16 日日报](./AI项目日报-2026-10-16.md)\n\n## 今日重点\n\n首次收录 4 个项目，覆盖移动端验证、LLM 评测、开源编程 Agent 和本地视频编辑。首次收录不表示刚发布。本期是官方资料核验，没有安装、实测这些项目，也没有核实到可以单独报道的当日版本更新。\n\n优先关注 agent-device：它与此前的 tester-army/e2e 有明确关联，也更贴近当前安卓播放器的全屏验证需求。创作方向补充 Concat，重点看本地剪辑和 MCP 接口。两项测试相关工具的近期增长证据不足，按实用工具收录，不声称它们是本周热度榜前列。\n\n本次任务在日期切换后继续执行，以实际检索日 10/19 归档；未生成 10/17、10/18 的历史日报，不用今天的数字补造当日快照。\n\n## 新增项目\n\n| 项目 | 已核实的用途 | 热度依据与证据边界 | 体验入口与前提 | 建议先验证什么 |\n|---|---|---|---|---|\n| [agent-device](https://github.com/callstack/agent-device) | 为编程 Agent 提供运行中应用的检查、操作、调试与验证，支持 CLI、MCP 和 Node.js API | 近期工具目录出现；未核实可靠周增，不作热门排名 | Node.js 22.12+；网页目标需 Node.js 24+；Android 需 SDK、ADB 与可连接设备，iOS 按官方要求准备 Xcode | 对测试 App 验证“全屏→横屏→返回”，检查控件树、屏幕证据和明确断言；无法仅靠编译成功验收 |\n| [Promptfoo](https://github.com/promptfoo/promptfoo) | 对提示词、Agent、RAG 做自动评测和红队测试，可接入 CI | 实用工具补充；未核实可靠近期增长，不以目录评分背书 | 准备 Node/npm 或官方其他安装入口、模型访问配置与测试集；调用云端模型可能收费 | 固定十条有正确答案的测试，比较两个提示词版本；通过率变化需要结合样本和判分规则解释 |\n| [OpenCode](https://github.com/anomalyco/opencode) | 开源编程 Agent，提供终端与桌面入口，内置 build 和 plan 工作方式 | RepoSpark 检索摘要记录 10/18 出现于急升清单；完整页缓存较旧，不引用精确增量 | 从官方安装或下载入口选择平台版本，再按文档配置可用模型；桌面版标为 Beta | 用隔离的小仓库完成同一修复，比较 diff、测试结果和操作权限；不由热度推导效果胜过其他客户端 |\n| [Concat](https://github.com/jub0t/Concat) | 本地视频编辑器，提供多轨剪辑、字幕等能力及 MCP、JSON-RPC 接口 | RepoSpark 10/16 条目标注 +1,156 / 24h；是窗口内一次检测，不是本周累计 | 优先用官方发布页安装包；AI 功能需要首次下载模型，具体系统与模型要求看官网；当前为 Beta | 导入 30 秒自有素材，验证剪切、字幕、保存与导出，再测试 Agent 编辑接口；不把作者功能表当作实测 |\n\n## 先体验什么\n\n### 1. agent-device：补上运行时反馈\n\n[官方安装说明](https://oss.callstack.com/agent-device/docs/installation)列出了目标平台依赖，安装后先运行 `agent-device doctor` 检查环境。仓库明确说明它为 tester-army/e2e 提供移动自动化能力，因此两者并非完全独立的两套底层引擎。建议用一个测试 App 检查进入全屏、系统栏、横屏后控件位置及返回恢复，保留失败现场。本期没有连接设备，不据此宣称 LibreTV 真机问题已验证。\n\n### 2. Promptfoo：把“感觉更好”变成固定样例比较\n\n从[官方入门](https://www.promptfoo.dev/docs/getting-started/)初始化示例，再替换成自己的输入和断言。先跑小测试集，记录模型、提示词版本和判分方式。评测框架在本地运行，不代表所配置模型也在本地；选择云端模型时，输入会按对应 Provider 配置发送。今天没有跑评测，不给出准确率或节省费用的结论。\n\n### 3. OpenCode：在一个可回滚任务里比较\n\n按[官方安装章节](https://github.com/anomalyco/opencode#installation)选择 CLI 或桌面版本，再准备模型配置。可以先用 plan 阅读熟悉的代码，再用 build 修复一个范围明确的问题，检查测试是否真正覆盖缺陷。推荐的是对照体验方式，没有验证模型成本、速度或完成率优势；README 当前功能不代表今天新发布。\n\n### 4. Concat：先用桌面界面验收输出\n\n从[官方 Releases](https://github.com/jub0t/Concat/releases)进入对应平台安装包，先验证工程保存和导出，再尝试 MCP。官方说明字幕、配音等模型可预先下载后本地使用，但本期没有验证离线运行、编码兼容性或完整功能。它与 HyperFrames 的 HTML 动画渲染定位不同，更接近时间线剪辑工具。\n\n## 热度跟踪与数据说明\n\n- [whatstrending.ai 周报告](https://whatstrending.ai/repos/weekly)列出 VoiceStudio 在 10/14—10/19 的五天快照增量为 +12,100 Star；这是第三方统计，既不是完整七日增量，也不是使用效果证明。本期继续跟踪，不重复收录。\n- [RepoSpark 周页面](https://repospark.com/weekly/)本次直接打开显示 10/11—10/17 的缓存，Concat 的 10/16 明确条目处于本期观察窗口，故仅引用该条目日期；搜索摘要中较新的 OpenCode 记录只作发现线索，未当作实时榜单验证。\n- githubtrending.today 首页本次返回采集时间 10/3，排除为本周热度证据。whatstrending.ai 项目首页超时，改读其可访问的周报告，没有把访问失败写成“没有变化”。\n- [MCP Skills 目录](https://mcpskills.io/servers)中 agent-device 与 Promptfoo 的近期出现记录只用于发现工具；没有可靠增长数字时明确留空，不为凑榜单编造 Star。\n\n## 月报积累\n\n新项目已补充主类型分类，累计样本随网站构建更新。10 月尚未结束，9 月又早于本站收录起点，本次不生成正式月报。首期仍于 2026-11-01 汇总 10 月全部归档、按仓库去重后评审，缺报日期计入覆盖率限制。\n",
+    "html": "<h2>AI 项目日报 · 2026-10-19</h2>\n<p>检索日期：2026 年 10 月 19 日（北京时间） 近一周观察窗口：10 月 12 日—10 月 19 日 对照文档：<a href=\"#date=2026-10-16\">10 月 16 日日报</a></p>\n<h3>今日重点</h3>\n<p>首次收录 4 个项目，覆盖移动端验证、LLM 评测、开源编程 Agent 和本地视频编辑。首次收录不表示刚发布。本期是官方资料核验，没有安装、实测这些项目，也没有核实到可以单独报道的当日版本更新。</p>\n<p>优先关注 agent-device：它与此前的 tester-army/e2e 有明确关联，也更贴近当前安卓播放器的全屏验证需求。创作方向补充 Concat，重点看本地剪辑和 MCP 接口。两项测试相关工具的近期增长证据不足，按实用工具收录，不声称它们是本周热度榜前列。</p>\n<p>本次任务在日期切换后继续执行，以实际检索日 10/19 归档；未生成 10/17、10/18 的历史日报，不用今天的数字补造当日快照。</p>\n<h3>新增项目</h3>\n<div class=\"table-scroll\" tabindex=\"0\" aria-label=\"可横向滚动的项目表格\"><table><thead><tr><th scope=\"col\">项目</th><th scope=\"col\">已核实的用途</th><th scope=\"col\">热度依据与证据边界</th><th scope=\"col\">体验入口与前提</th><th scope=\"col\">建议先验证什么</th></tr></thead><tbody><tr><td><a href=\"https://github.com/callstack/agent-device\" target=\"_blank\" rel=\"noopener noreferrer\">agent-device ↗</a></td><td>为编程 Agent 提供运行中应用的检查、操作、调试与验证，支持 CLI、MCP 和 Node.js API</td><td>近期工具目录出现；未核实可靠周增，不作热门排名</td><td>Node.js 22.12+；网页目标需 Node.js 24+；Android 需 SDK、ADB 与可连接设备，iOS 按官方要求准备 Xcode</td><td>对测试 App 验证“全屏→横屏→返回”，检查控件树、屏幕证据和明确断言；无法仅靠编译成功验收</td></tr><tr><td><a href=\"https://github.com/promptfoo/promptfoo\" target=\"_blank\" rel=\"noopener noreferrer\">Promptfoo ↗</a></td><td>对提示词、Agent、RAG 做自动评测和红队测试，可接入 CI</td><td>实用工具补充；未核实可靠近期增长，不以目录评分背书</td><td>准备 Node/npm 或官方其他安装入口、模型访问配置与测试集；调用云端模型可能收费</td><td>固定十条有正确答案的测试，比较两个提示词版本；通过率变化需要结合样本和判分规则解释</td></tr><tr><td><a href=\"https://github.com/anomalyco/opencode\" target=\"_blank\" rel=\"noopener noreferrer\">OpenCode ↗</a></td><td>开源编程 Agent，提供终端与桌面入口，内置 build 和 plan 工作方式</td><td>RepoSpark 检索摘要记录 10/18 出现于急升清单；完整页缓存较旧，不引用精确增量</td><td>从官方安装或下载入口选择平台版本，再按文档配置可用模型；桌面版标为 Beta</td><td>用隔离的小仓库完成同一修复，比较 diff、测试结果和操作权限；不由热度推导效果胜过其他客户端</td></tr><tr><td><a href=\"https://github.com/jub0t/Concat\" target=\"_blank\" rel=\"noopener noreferrer\">Concat ↗</a></td><td>本地视频编辑器，提供多轨剪辑、字幕等能力及 MCP、JSON-RPC 接口</td><td>RepoSpark 10/16 条目标注 +1,156 / 24h；是窗口内一次检测，不是本周累计</td><td>优先用官方发布页安装包；AI 功能需要首次下载模型，具体系统与模型要求看官网；当前为 Beta</td><td>导入 30 秒自有素材，验证剪切、字幕、保存与导出，再测试 Agent 编辑接口；不把作者功能表当作实测</td></tr></tbody></table></div>\n<h3>先体验什么</h3>\n<h4>1. agent-device：补上运行时反馈</h4>\n<p><a href=\"https://oss.callstack.com/agent-device/docs/installation\" target=\"_blank\" rel=\"noopener noreferrer\">官方安装说明 ↗</a>列出了目标平台依赖，安装后先运行 <code>agent-device doctor</code> 检查环境。仓库明确说明它为 tester-army/e2e 提供移动自动化能力，因此两者并非完全独立的两套底层引擎。建议用一个测试 App 检查进入全屏、系统栏、横屏后控件位置及返回恢复，保留失败现场。本期没有连接设备，不据此宣称 LibreTV 真机问题已验证。</p>\n<h4>2. Promptfoo：把“感觉更好”变成固定样例比较</h4>\n<p>从<a href=\"https://www.promptfoo.dev/docs/getting-started/\" target=\"_blank\" rel=\"noopener noreferrer\">官方入门 ↗</a>初始化示例，再替换成自己的输入和断言。先跑小测试集，记录模型、提示词版本和判分方式。评测框架在本地运行，不代表所配置模型也在本地；选择云端模型时，输入会按对应 Provider 配置发送。今天没有跑评测，不给出准确率或节省费用的结论。</p>\n<h4>3. OpenCode：在一个可回滚任务里比较</h4>\n<p>按<a href=\"https://github.com/anomalyco/opencode#installation\" target=\"_blank\" rel=\"noopener noreferrer\">官方安装章节 ↗</a>选择 CLI 或桌面版本，再准备模型配置。可以先用 plan 阅读熟悉的代码，再用 build 修复一个范围明确的问题，检查测试是否真正覆盖缺陷。推荐的是对照体验方式，没有验证模型成本、速度或完成率优势；README 当前功能不代表今天新发布。</p>\n<h4>4. Concat：先用桌面界面验收输出</h4>\n<p>从<a href=\"https://github.com/jub0t/Concat/releases\" target=\"_blank\" rel=\"noopener noreferrer\">官方 Releases ↗</a>进入对应平台安装包，先验证工程保存和导出，再尝试 MCP。官方说明字幕、配音等模型可预先下载后本地使用，但本期没有验证离线运行、编码兼容性或完整功能。它与 HyperFrames 的 HTML 动画渲染定位不同，更接近时间线剪辑工具。</p>\n<h3>热度跟踪与数据说明</h3>\n<ul><li><a href=\"https://whatstrending.ai/repos/weekly\" target=\"_blank\" rel=\"noopener noreferrer\">whatstrending.ai 周报告 ↗</a>列出 VoiceStudio 在 10/14—10/19 的五天快照增量为 +12,100 Star；这是第三方统计，既不是完整七日增量，也不是使用效果证明。本期继续跟踪，不重复收录。</li><li><a href=\"https://repospark.com/weekly/\" target=\"_blank\" rel=\"noopener noreferrer\">RepoSpark 周页面 ↗</a>本次直接打开显示 10/11—10/17 的缓存，Concat 的 10/16 明确条目处于本期观察窗口，故仅引用该条目日期；搜索摘要中较新的 OpenCode 记录只作发现线索，未当作实时榜单验证。</li><li>githubtrending.today 首页本次返回采集时间 10/3，排除为本周热度证据。whatstrending.ai 项目首页超时，改读其可访问的周报告，没有把访问失败写成“没有变化”。</li><li><a href=\"https://mcpskills.io/servers\" target=\"_blank\" rel=\"noopener noreferrer\">MCP Skills 目录 ↗</a>中 agent-device 与 Promptfoo 的近期出现记录只用于发现工具；没有可靠增长数字时明确留空，不为凑榜单编造 Star。</li></ul>\n<h3>月报积累</h3>\n<p>新项目已补充主类型分类，累计样本随网站构建更新。10 月尚未结束，9 月又早于本站收录起点，本次不生成正式月报。首期仍于 2026-11-01 汇总 10 月全部归档、按仓库去重后评审，缺报日期计入覆盖率限制。</p>",
+    "projects": [
+      {
+        "name": "agent-device",
+        "url": "https://github.com/callstack/agent-device",
+        "description": "为编程 Agent 提供运行中应用的检查、操作、调试与验证，支持 CLI、MCP 和 Node.js API",
+        "signal": "近期工具目录出现；未核实可靠周增，不作热门排名"
+      },
+      {
+        "name": "Promptfoo",
+        "url": "https://github.com/promptfoo/promptfoo",
+        "description": "对提示词、Agent、RAG 做自动评测和红队测试，可接入 CI",
+        "signal": "实用工具补充；未核实可靠近期增长，不以目录评分背书"
+      },
+      {
+        "name": "OpenCode",
+        "url": "https://github.com/anomalyco/opencode",
+        "description": "开源编程 Agent，提供终端与桌面入口，内置 build 和 plan 工作方式",
+        "signal": "RepoSpark 检索摘要记录 10/18 出现于急升清单；完整页缓存较旧，不引用精确增量"
+      },
+      {
+        "name": "Concat",
+        "url": "https://github.com/jub0t/Concat",
+        "description": "本地视频编辑器，提供多轨剪辑、字幕等能力及 MCP、JSON-RPC 接口",
+        "signal": "RepoSpark 10/16 条目标注 +1,156 / 24h；是窗口内一次检测，不是本周累计"
+      }
+    ],
+    "observations": [
+      {
+        "name": "agent-device",
+        "url": "https://github.com/callstack/agent-device",
+        "description": "为编程 Agent 提供运行中应用的检查、操作、调试与验证，支持 CLI、MCP 和 Node.js API",
+        "signal": "近期工具目录出现；未核实可靠周增，不作热门排名"
+      },
+      {
+        "name": "Promptfoo",
+        "url": "https://github.com/promptfoo/promptfoo",
+        "description": "对提示词、Agent、RAG 做自动评测和红队测试，可接入 CI",
+        "signal": "实用工具补充；未核实可靠近期增长，不以目录评分背书"
+      },
+      {
+        "name": "OpenCode",
+        "url": "https://github.com/anomalyco/opencode",
+        "description": "开源编程 Agent，提供终端与桌面入口，内置 build 和 plan 工作方式",
+        "signal": "RepoSpark 检索摘要记录 10/18 出现于急升清单；完整页缓存较旧，不引用精确增量"
+      },
+      {
+        "name": "Concat",
+        "url": "https://github.com/jub0t/Concat",
+        "description": "本地视频编辑器，提供多轨剪辑、字幕等能力及 MCP、JSON-RPC 接口",
+        "signal": "RepoSpark 10/16 条目标注 +1,156 / 24h；是窗口内一次检测，不是本周累计"
+      }
+    ]
+  },
+  {
     "date": "2026-10-16",
     "title": "AI 项目日报 · 2026-10-16",
     "filename": "AI项目日报-2026-10-16.md",

@@ -3,19 +3,20 @@
     "month": "2026-10",
     "status": "preview",
     "title": "2026-10 · 月度采样预览",
-    "report_count": 4,
-    "project_count": 24,
+    "report_count": 5,
+    "project_count": 28,
     "calendar_days": 31,
-    "coverage": 12.9,
+    "coverage": 16.1,
     "start": "2026-10-13",
-    "end": "2026-10-16",
+    "end": "2026-10-19",
     "report_dates": [
       "2026-10-13",
       "2026-10-14",
       "2026-10-15",
-      "2026-10-16"
+      "2026-10-16",
+      "2026-10-19"
     ],
-    "source_fingerprint": "b7e08d17e45c2609a19d12fae2eab42e852ab8328bbc8098da17b412666b0162",
+    "source_fingerprint": "79bd3e3061f6810fc9305598adce0ac44745b35ba30f63d77eeac76bab752844",
     "projects": [
       {
         "name": "addyosmani/agent-skills",
@@ -29,6 +30,17 @@
         ]
       },
       {
+        "name": "OpenCode",
+        "url": "https://github.com/anomalyco/opencode",
+        "description": "开源编程 Agent，提供终端与桌面入口，内置 build 和 plan 工作方式",
+        "signal": "RepoSpark 检索摘要记录 10/18 出现于急升清单；完整页缓存较旧，不引用精确增量",
+        "key": "anomalyco/opencode",
+        "category": "AI 编程与工程 Skill",
+        "dates": [
+          "2026-10-19"
+        ]
+      },
+      {
         "name": "OpenMontage",
         "url": "https://github.com/calesthio/OpenMontage",
         "description": "面向 Agent 的视频制作体系，组合制作流程、工具和 Skill",
@@ -38,6 +50,17 @@
         "dates": [
           "2026-10-13",
           "2026-10-14"
+        ]
+      },
+      {
+        "name": "agent-device",
+        "url": "https://github.com/callstack/agent-device",
+        "description": "为编程 Agent 提供运行中应用的检查、操作、调试与验证，支持 CLI、MCP 和 Node.js API",
+        "signal": "近期工具目录出现；未核实可靠周增，不作热门排名",
+        "key": "callstack/agent-device",
+        "category": "自动化测试",
+        "dates": [
+          "2026-10-19"
         ]
       },
       {
@@ -117,6 +140,17 @@
         "category": "AI 编程与工程 Skill",
         "dates": [
           "2026-10-16"
+        ]
+      },
+      {
+        "name": "Concat",
+        "url": "https://github.com/jub0t/Concat",
+        "description": "本地视频编辑器，提供多轨剪辑、字幕等能力及 MCP、JSON-RPC 接口",
+        "signal": "RepoSpark 10/16 条目标注 +1,156 / 24h；是窗口内一次检测，不是本周累计",
+        "key": "jub0t/concat",
+        "category": "音视频创作",
+        "dates": [
+          "2026-10-19"
         ]
       },
       {
@@ -220,6 +254,17 @@
         ]
       },
       {
+        "name": "Promptfoo",
+        "url": "https://github.com/promptfoo/promptfoo",
+        "description": "对提示词、Agent、RAG 做自动评测和红队测试，可接入 CI",
+        "signal": "实用工具补充；未核实可靠近期增长，不以目录评分背书",
+        "key": "promptfoo/promptfoo",
+        "category": "自动化测试",
+        "dates": [
+          "2026-10-19"
+        ]
+      },
+      {
         "name": "phone-harness",
         "url": "https://github.com/ShawnPana/phone-harness",
         "description": "提供手机屏幕读取、点击与输入等 Agent 操作能力，支持本地设备及云端手机",
@@ -290,43 +335,43 @@
     "categories": [
       {
         "name": "音视频创作",
-        "count": 6,
+        "count": 7,
         "percent": 25.0
       },
       {
         "name": "AI 编程与工程 Skill",
-        "count": 4,
-        "percent": 16.7
+        "count": 5,
+        "percent": 17.9
+      },
+      {
+        "name": "自动化测试",
+        "count": 5,
+        "percent": 17.9
       },
       {
         "name": "Agent 基础能力",
         "count": 4,
-        "percent": 16.7
-      },
-      {
-        "name": "自动化测试",
-        "count": 3,
-        "percent": 12.5
+        "percent": 14.3
       },
       {
         "name": "设计与可视化",
         "count": 3,
-        "percent": 12.5
+        "percent": 10.7
       },
       {
         "name": "Agent 协作与编排",
         "count": 2,
-        "percent": 8.3
+        "percent": 7.1
       },
       {
         "name": "科研与数据分析",
         "count": 1,
-        "percent": 4.2
+        "percent": 3.6
       },
       {
         "name": "软件分析与研究",
         "count": 1,
-        "percent": 4.2
+        "percent": 3.6
       }
     ],
     "idea_top": [],
