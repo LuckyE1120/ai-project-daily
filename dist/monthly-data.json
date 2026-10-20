@@ -3,20 +3,21 @@
     "month": "2026-10",
     "status": "preview",
     "title": "2026-10 · 月度采样预览",
-    "report_count": 5,
-    "project_count": 28,
+    "report_count": 6,
+    "project_count": 32,
     "calendar_days": 31,
-    "coverage": 16.1,
+    "coverage": 19.4,
     "start": "2026-10-13",
-    "end": "2026-10-19",
+    "end": "2026-10-20",
     "report_dates": [
       "2026-10-13",
       "2026-10-14",
       "2026-10-15",
       "2026-10-16",
-      "2026-10-19"
+      "2026-10-19",
+      "2026-10-20"
     ],
-    "source_fingerprint": "79bd3e3061f6810fc9305598adce0ac44745b35ba30f63d77eeac76bab752844",
+    "source_fingerprint": "eec49c3c7ca7432812611600d0865327b4c3620f718f10e5ef7dd3de8ddeb8f8",
     "projects": [
       {
         "name": "addyosmani/agent-skills",
@@ -109,6 +110,28 @@
         ]
       },
       {
+        "name": "ARTEMIS",
+        "url": "https://github.com/google/artemis",
+        "description": "从自然语言执行安卓跨应用流程，提供 MCP 接入、设备操作和日志诊断",
+        "signal": "今日卡片标注 +597 Star",
+        "key": "google/artemis",
+        "category": "自动化测试",
+        "dates": [
+          "2026-10-20"
+        ]
+      },
+      {
+        "name": "Graphify",
+        "url": "https://github.com/Graphify-Labs/graphify",
+        "description": "将代码及相关资料组织成可查询知识图谱，代码路径采用本地 AST 解析，可配合 Skill 使用",
+        "signal": "今日卡片标注 +751 Star",
+        "key": "graphify-labs/graphify",
+        "category": "AI 编程与工程 Skill",
+        "dates": [
+          "2026-10-20"
+        ]
+      },
+      {
         "name": "MoneyPrinterTurbo",
         "url": "https://github.com/harry0703/MoneyPrinterTurbo",
         "description": "串联脚本、素材、配音、字幕与剪辑，支持 WebUI、API 和 CLI 的短视频工作流",
@@ -117,6 +140,17 @@
         "category": "音视频创作",
         "dates": [
           "2026-10-16"
+        ]
+      },
+      {
+        "name": "Headroom",
+        "url": "https://github.com/headroomlabs-ai/headroom",
+        "description": "在工具输出、日志或 RAG 内容进入模型前做压缩，提供库、代理和 MCP 入口，并支持取回原文",
+        "signal": "今日卡片标注 +310 Star",
+        "key": "headroomlabs-ai/headroom",
+        "category": "Agent 基础能力",
+        "dates": [
+          "2026-10-20"
         ]
       },
       {
@@ -321,6 +355,17 @@
         ]
       },
       {
+        "name": "OpenUI",
+        "url": "https://github.com/thesysdev/openui",
+        "description": "为模型生成结构化、流式交互界面提供语言与渲染组件，可限定组件库",
+        "signal": "今日卡片标注 +401 Star",
+        "key": "thesysdev/openui",
+        "category": "设计与可视化",
+        "dates": [
+          "2026-10-20"
+        ]
+      },
+      {
         "name": "OpenViking",
         "url": "https://github.com/volcengine/OpenViking",
         "description": "以分层目录组织 Agent 记忆、知识与 Skill，提供服务端、CLI 和 SDK 接入",
@@ -336,42 +381,42 @@
       {
         "name": "音视频创作",
         "count": 7,
-        "percent": 25.0
+        "percent": 21.9
       },
       {
         "name": "AI 编程与工程 Skill",
-        "count": 5,
-        "percent": 17.9
+        "count": 6,
+        "percent": 18.8
       },
       {
         "name": "自动化测试",
-        "count": 5,
-        "percent": 17.9
+        "count": 6,
+        "percent": 18.8
       },
       {
         "name": "Agent 基础能力",
-        "count": 4,
-        "percent": 14.3
+        "count": 5,
+        "percent": 15.6
       },
       {
         "name": "设计与可视化",
-        "count": 3,
-        "percent": 10.7
+        "count": 4,
+        "percent": 12.5
       },
       {
         "name": "Agent 协作与编排",
         "count": 2,
-        "percent": 7.1
+        "percent": 6.2
       },
       {
         "name": "科研与数据分析",
         "count": 1,
-        "percent": 3.6
+        "percent": 3.1
       },
       {
         "name": "软件分析与研究",
         "count": 1,
-        "percent": 3.6
+        "percent": 3.1
       }
     ],
     "idea_top": [],

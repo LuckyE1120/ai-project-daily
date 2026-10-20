@@ -1,5 +1,64 @@
 [
   {
+    "date": "2026-10-20",
+    "title": "AI 项目日报 · 2026-10-20",
+    "filename": "AI项目日报-2026-10-20.md",
+    "text": "# AI 项目日报 · 2026-10-20\n\n检索日期：2026 年 10 月 20 日（北京时间）  \n近一周观察窗口：10 月 13 日—10 月 20 日  \n对照文档：[10 月 19 日日报](./AI项目日报-2026-10-19.md)\n\n## 今日重点\n\n首次收录 4 个项目：ARTEMIS 安卓自动化、Graphify 代码知识图谱、Headroom 工具输出压缩和 OpenUI 生成式界面。这里的“首次”只指本日报新增，不代表项目刚发布。本期核实官方当前用途及安装入口，没有安装或实测，也未核实到应单独报道的当日版本发布。\n\n结合你正在做的安卓客户端，优先关注 ARTEMIS，和昨天的 agent-device 在同一小场景上比较；代码阅读方向看 Graphify。Headroom 与 OpenUI 更适合有现成 Agent 应用、愿意做前后对照的人，不能仅看作者的节省比例。推荐顺序是编辑判断，不是性能排名。\n\n## 新增项目\n\n| 项目 | 已核实的用途 | 第三方热度信号 | 体验入口与前提 | 建议先验证什么 |\n|---|---|---|---|---|\n| [ARTEMIS](https://github.com/google/artemis) | 从自然语言执行安卓跨应用流程，提供 MCP 接入、设备操作和日志诊断 | 今日卡片标注 +597 Star | 连接开启 USB 调试的 Android 设备或模拟器；按官方启动脚本准备 ADB、scrcpy、FFmpeg、uv/Python，并核对模型配置 | 用测试 App 检查全屏、横屏、返回恢复，保留截图及 Logcat；作者基准成功率不等于你的 App 通过率 |\n| [Graphify](https://github.com/Graphify-Labs/graphify) | 将代码及相关资料组织成可查询知识图谱，代码路径采用本地 AST 解析，可配合 Skill 使用 | 今日卡片标注 +751 Star | Python 3.10+，推荐 uv 或 pipx；官方 PyPI 包名为 `graphifyy`，命令仍为 `graphify`；文档和媒体语义处理按需接模型 | 在熟悉的小仓库追踪一个跨文件调用，逐条核对图中关系与源码，区分直接提取和推断关系 |\n| [Headroom](https://github.com/headroomlabs-ai/headroom) | 在工具输出、日志或 RAG 内容进入模型前做压缩，提供库、代理和 MCP 入口，并支持取回原文 | 今日卡片标注 +310 Star | Python 3.10+，按模块选依赖；官方 CLI 示例推荐 uv 隔离环境与 Python 3.13；npm 包仅是 TypeScript SDK | 对同一日志问题比较答案、关键错误保留情况和实际 token；先测库方式，再决定是否接管代理路由 |\n| [OpenUI](https://github.com/thesysdev/openui) | 为模型生成结构化、流式交互界面提供语言与渲染组件，可限定组件库 | 今日卡片标注 +401 Star | 准备 Node.js 与包管理器，按官方脚手架生成应用；模型生成服务及费用另行配置；需要前端基础 | 做一个含表格和表单的演示，检查流式渲染、输入校验与交互结果，不只看生成截图 |\n\n热度来自 [whatstrending.ai 当日页面](https://whatstrending.ai/repos)明确标为“stars today”的项目卡片，是第三方统计，不是官方增长审计。整页周榜窗口为 10/13—10/20，但上表采用的是日增标签，不能写成近周累计。项目功能与前提分别以表中官方仓库为依据。\n\n## 怎么开始体验\n\n### ARTEMIS：重点看设备反馈与失败诊断\n\n从[官方 Quick Start](https://github.com/google/artemis#quick-start)阅读启动流程，先确认设备可连接，再选择测试目标。启动器还可能提出安装全局 MCP 配置和规则，体验前应看清实际修改项。本期没有运行脚本或修改客户端配置。建议复用 LibreTV 的“进入全屏→旋转→退出”流程，对比任务结束状态、错误截图和日志是否足够定位问题。官方 AndroidWorld 成绩属于作者报告，没有在本机复现。\n\n### Graphify：从代码调用关系开始\n\n按[官方安装说明](https://github.com/Graphify-Labs/graphify#install)使用 `graphifyy`，避免装到同名无关包。先在小仓库构图，再沿一个熟悉功能核对节点和路径。代码解析与文档、媒体的语义处理具有不同依赖和模型调用条件；不能把“代码本地解析”泛化为所有输入都完全离线。它与现有搜索工具的价值比较，应看关系是否正确、图是否及时更新及查询成本。\n\n### Headroom：先核对压缩后的答案\n\n从[官方 Get started](https://github.com/headroomlabs-ai/headroom#get-started-60-seconds)挑选库、代理或 MCP 接入方式。Python 包才包含 CLI；npm 的同名包是 SDK。先用非敏感样例日志验证压缩与原文找回，记录相同问题下答案是否遗漏关键细节。短文本、已经很密集的内容未必有明显收益；本日报不采用作者压缩率作为效果保证，也不把 token 减少直接换算成账单降幅。\n\n### OpenUI：从官方脚手架做小界面\n\n[官方 Quickstart](https://www.openui.com/docs/agent/getting-started/quickstart)提供带流式界面、渲染器和模型生成服务路由的示例。先限定几种组件，试做比较表与输入表单，检查不完整输出和无效输入如何处理。这是应用里的交互界面工作流，区别于把页面生成后录制成视频；模型和后端能力仍需独立配置。本期没有修改现有日报网站。\n\n## 既有项目跟踪与口径\n\n- OpenCode 昨日未引用精确增量；今天第三方卡片给出日增 +1,311。本期只补充关注度信号，不据此声称发布了新功能。\n- REA、VoiceStudio、ArtCraft、HyperFrames 等继续出现在榜单，本期不重复介绍。同页周榜与部分卡片周增仍有差异，因此没有引用这些项目的精确周增，也不将滚动周增相减当作单日增长。\n- 今天的新增集中在安卓反馈、代码关系和上下文处理，说明本期样本覆盖这些工作流；它不是整个 AI 行业的项目类型统计。\n- [第三方周报告](https://whatstrending.ai/repos/weekly)用于补充核对统计方法，不把其不同长度观察窗口混成统一七日排名。认证标签、作者宣传和下载量口号均不作为独立质量背书。\n\n## 月报积累\n\n4 个项目已加入主要用途目录。当前 10 月尚未结束，上一个自然月 9 月早于本站收录起点，本次不补造月报。首期仍于 2026-11-01 按 10 月实际归档、去重及证据完成双榜评审；缺报日期继续体现在样本覆盖率中。\n",
+    "html": "<h2>AI 项目日报 · 2026-10-20</h2>\n<p>检索日期：2026 年 10 月 20 日（北京时间） 近一周观察窗口：10 月 13 日—10 月 20 日 对照文档：<a href=\"#date=2026-10-19\">10 月 19 日日报</a></p>\n<h3>今日重点</h3>\n<p>首次收录 4 个项目：ARTEMIS 安卓自动化、Graphify 代码知识图谱、Headroom 工具输出压缩和 OpenUI 生成式界面。这里的“首次”只指本日报新增，不代表项目刚发布。本期核实官方当前用途及安装入口，没有安装或实测，也未核实到应单独报道的当日版本发布。</p>\n<p>结合你正在做的安卓客户端，优先关注 ARTEMIS，和昨天的 agent-device 在同一小场景上比较；代码阅读方向看 Graphify。Headroom 与 OpenUI 更适合有现成 Agent 应用、愿意做前后对照的人，不能仅看作者的节省比例。推荐顺序是编辑判断，不是性能排名。</p>\n<h3>新增项目</h3>\n<div class=\"table-scroll\" tabindex=\"0\" aria-label=\"可横向滚动的项目表格\"><table><thead><tr><th scope=\"col\">项目</th><th scope=\"col\">已核实的用途</th><th scope=\"col\">第三方热度信号</th><th scope=\"col\">体验入口与前提</th><th scope=\"col\">建议先验证什么</th></tr></thead><tbody><tr><td><a href=\"https://github.com/google/artemis\" target=\"_blank\" rel=\"noopener noreferrer\">ARTEMIS ↗</a></td><td>从自然语言执行安卓跨应用流程，提供 MCP 接入、设备操作和日志诊断</td><td>今日卡片标注 +597 Star</td><td>连接开启 USB 调试的 Android 设备或模拟器；按官方启动脚本准备 ADB、scrcpy、FFmpeg、uv/Python，并核对模型配置</td><td>用测试 App 检查全屏、横屏、返回恢复，保留截图及 Logcat；作者基准成功率不等于你的 App 通过率</td></tr><tr><td><a href=\"https://github.com/Graphify-Labs/graphify\" target=\"_blank\" rel=\"noopener noreferrer\">Graphify ↗</a></td><td>将代码及相关资料组织成可查询知识图谱，代码路径采用本地 AST 解析，可配合 Skill 使用</td><td>今日卡片标注 +751 Star</td><td>Python 3.10+，推荐 uv 或 pipx；官方 PyPI 包名为 <code>graphifyy</code>，命令仍为 <code>graphify</code>；文档和媒体语义处理按需接模型</td><td>在熟悉的小仓库追踪一个跨文件调用，逐条核对图中关系与源码，区分直接提取和推断关系</td></tr><tr><td><a href=\"https://github.com/headroomlabs-ai/headroom\" target=\"_blank\" rel=\"noopener noreferrer\">Headroom ↗</a></td><td>在工具输出、日志或 RAG 内容进入模型前做压缩，提供库、代理和 MCP 入口，并支持取回原文</td><td>今日卡片标注 +310 Star</td><td>Python 3.10+，按模块选依赖；官方 CLI 示例推荐 uv 隔离环境与 Python 3.13；npm 包仅是 TypeScript SDK</td><td>对同一日志问题比较答案、关键错误保留情况和实际 token；先测库方式，再决定是否接管代理路由</td></tr><tr><td><a href=\"https://github.com/thesysdev/openui\" target=\"_blank\" rel=\"noopener noreferrer\">OpenUI ↗</a></td><td>为模型生成结构化、流式交互界面提供语言与渲染组件，可限定组件库</td><td>今日卡片标注 +401 Star</td><td>准备 Node.js 与包管理器，按官方脚手架生成应用；模型生成服务及费用另行配置；需要前端基础</td><td>做一个含表格和表单的演示，检查流式渲染、输入校验与交互结果，不只看生成截图</td></tr></tbody></table></div>\n<p>热度来自 <a href=\"https://whatstrending.ai/repos\" target=\"_blank\" rel=\"noopener noreferrer\">whatstrending.ai 当日页面 ↗</a>明确标为“stars today”的项目卡片，是第三方统计，不是官方增长审计。整页周榜窗口为 10/13—10/20，但上表采用的是日增标签，不能写成近周累计。项目功能与前提分别以表中官方仓库为依据。</p>\n<h3>怎么开始体验</h3>\n<h4>ARTEMIS：重点看设备反馈与失败诊断</h4>\n<p>从<a href=\"https://github.com/google/artemis#quick-start\" target=\"_blank\" rel=\"noopener noreferrer\">官方 Quick Start ↗</a>阅读启动流程，先确认设备可连接，再选择测试目标。启动器还可能提出安装全局 MCP 配置和规则，体验前应看清实际修改项。本期没有运行脚本或修改客户端配置。建议复用 LibreTV 的“进入全屏→旋转→退出”流程，对比任务结束状态、错误截图和日志是否足够定位问题。官方 AndroidWorld 成绩属于作者报告，没有在本机复现。</p>\n<h4>Graphify：从代码调用关系开始</h4>\n<p>按<a href=\"https://github.com/Graphify-Labs/graphify#install\" target=\"_blank\" rel=\"noopener noreferrer\">官方安装说明 ↗</a>使用 <code>graphifyy</code>，避免装到同名无关包。先在小仓库构图，再沿一个熟悉功能核对节点和路径。代码解析与文档、媒体的语义处理具有不同依赖和模型调用条件；不能把“代码本地解析”泛化为所有输入都完全离线。它与现有搜索工具的价值比较，应看关系是否正确、图是否及时更新及查询成本。</p>\n<h4>Headroom：先核对压缩后的答案</h4>\n<p>从<a href=\"https://github.com/headroomlabs-ai/headroom#get-started-60-seconds\" target=\"_blank\" rel=\"noopener noreferrer\">官方 Get started ↗</a>挑选库、代理或 MCP 接入方式。Python 包才包含 CLI；npm 的同名包是 SDK。先用非敏感样例日志验证压缩与原文找回，记录相同问题下答案是否遗漏关键细节。短文本、已经很密集的内容未必有明显收益；本日报不采用作者压缩率作为效果保证，也不把 token 减少直接换算成账单降幅。</p>\n<h4>OpenUI：从官方脚手架做小界面</h4>\n<p><a href=\"https://www.openui.com/docs/agent/getting-started/quickstart\" target=\"_blank\" rel=\"noopener noreferrer\">官方 Quickstart ↗</a>提供带流式界面、渲染器和模型生成服务路由的示例。先限定几种组件，试做比较表与输入表单，检查不完整输出和无效输入如何处理。这是应用里的交互界面工作流，区别于把页面生成后录制成视频；模型和后端能力仍需独立配置。本期没有修改现有日报网站。</p>\n<h3>既有项目跟踪与口径</h3>\n<ul><li>OpenCode 昨日未引用精确增量；今天第三方卡片给出日增 +1,311。本期只补充关注度信号，不据此声称发布了新功能。</li><li>REA、VoiceStudio、ArtCraft、HyperFrames 等继续出现在榜单，本期不重复介绍。同页周榜与部分卡片周增仍有差异，因此没有引用这些项目的精确周增，也不将滚动周增相减当作单日增长。</li><li>今天的新增集中在安卓反馈、代码关系和上下文处理，说明本期样本覆盖这些工作流；它不是整个 AI 行业的项目类型统计。</li><li><a href=\"https://whatstrending.ai/repos/weekly\" target=\"_blank\" rel=\"noopener noreferrer\">第三方周报告 ↗</a>用于补充核对统计方法，不把其不同长度观察窗口混成统一七日排名。认证标签、作者宣传和下载量口号均不作为独立质量背书。</li></ul>\n<h3>月报积累</h3>\n<p>4 个项目已加入主要用途目录。当前 10 月尚未结束，上一个自然月 9 月早于本站收录起点，本次不补造月报。首期仍于 2026-11-01 按 10 月实际归档、去重及证据完成双榜评审；缺报日期继续体现在样本覆盖率中。</p>",
+    "projects": [
+      {
+        "name": "ARTEMIS",
+        "url": "https://github.com/google/artemis",
+        "description": "从自然语言执行安卓跨应用流程，提供 MCP 接入、设备操作和日志诊断",
+        "signal": "今日卡片标注 +597 Star"
+      },
+      {
+        "name": "Graphify",
+        "url": "https://github.com/Graphify-Labs/graphify",
+        "description": "将代码及相关资料组织成可查询知识图谱，代码路径采用本地 AST 解析，可配合 Skill 使用",
+        "signal": "今日卡片标注 +751 Star"
+      },
+      {
+        "name": "Headroom",
+        "url": "https://github.com/headroomlabs-ai/headroom",
+        "description": "在工具输出、日志或 RAG 内容进入模型前做压缩，提供库、代理和 MCP 入口，并支持取回原文",
+        "signal": "今日卡片标注 +310 Star"
+      },
+      {
+        "name": "OpenUI",
+        "url": "https://github.com/thesysdev/openui",
+        "description": "为模型生成结构化、流式交互界面提供语言与渲染组件，可限定组件库",
+        "signal": "今日卡片标注 +401 Star"
+      }
+    ],
+    "observations": [
+      {
+        "name": "ARTEMIS",
+        "url": "https://github.com/google/artemis",
+        "description": "从自然语言执行安卓跨应用流程，提供 MCP 接入、设备操作和日志诊断",
+        "signal": "今日卡片标注 +597 Star"
+      },
+      {
+        "name": "Graphify",
+        "url": "https://github.com/Graphify-Labs/graphify",
+        "description": "将代码及相关资料组织成可查询知识图谱，代码路径采用本地 AST 解析，可配合 Skill 使用",
+        "signal": "今日卡片标注 +751 Star"
+      },
+      {
+        "name": "Headroom",
+        "url": "https://github.com/headroomlabs-ai/headroom",
+        "description": "在工具输出、日志或 RAG 内容进入模型前做压缩，提供库、代理和 MCP 入口，并支持取回原文",
+        "signal": "今日卡片标注 +310 Star"
+      },
+      {
+        "name": "OpenUI",
+        "url": "https://github.com/thesysdev/openui",
+        "description": "为模型生成结构化、流式交互界面提供语言与渲染组件，可限定组件库",
+        "signal": "今日卡片标注 +401 Star"
+      }
+    ]
+  },
+  {
     "date": "2026-10-19",
     "title": "AI 项目日报 · 2026-10-19",
     "filename": "AI项目日报-2026-10-19.md",

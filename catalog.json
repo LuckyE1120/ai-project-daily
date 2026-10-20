@@ -26,5 +26,9 @@
   "callstack/agent-device": "自动化测试",
   "promptfoo/promptfoo": "自动化测试",
   "anomalyco/opencode": "AI 编程与工程 Skill",
-  "jub0t/concat": "音视频创作"
+  "jub0t/concat": "音视频创作",
+  "google/artemis": "自动化测试",
+  "graphify-labs/graphify": "AI 编程与工程 Skill",
+  "headroomlabs-ai/headroom": "Agent 基础能力",
+  "thesysdev/openui": "设计与可视化"
 }
