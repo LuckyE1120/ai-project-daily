@@ -1,5 +1,64 @@
 [
   {
+    "date": "2026-10-21",
+    "title": "AI 项目日报 · 2026-10-21",
+    "filename": "AI项目日报-2026-10-21.md",
+    "text": "# AI 项目日报 · 2026-10-21\n\n检索日期：2026 年 10 月 21 日（北京时间）  \n近一周观察窗口：10 月 14 日—10 月 21 日  \n对照文档：[10 月 20 日日报](./AI项目日报-2026-10-20.md)\n\n## 今日重点\n\n首次收录 4 个项目：Cloudflare 安全审计 Skill、Ponytail 工程工作流、Ruflo Agent 协作框架和 ComfyUI 节点式创作。首次收录不表示刚发布；本期核实官方当前资料，未安装、未实测，也没有把 README 中的版本或工作流写成当日新发布。\n\n优先看 security-audit-skill 的证据记录方式，以及 Ponytail 对小范围改动的约束。创作方向可从 ComfyUI 的基础工作流开始。Ruflo 配置面较大，适合已经有多 Agent 任务、愿意核对协作成本的人。推荐顺序是编辑判断，不是质量或性能排名。\n\n## 新增项目\n\n| 项目 | 已核实的用途 | 第三方热度信号 | 体验入口与前提 | 建议先验证什么 |\n|---|---|---|---|---|\n| [security-audit-skill](https://github.com/cloudflare/security-audit-skill) | 面向编程 Agent 的分阶段代码审计，包含覆盖记录、候选复核和结构化 findings | 今日卡片标注 +1,712 Star | 需要支持 Skill 的编程 Agent、待审查代码；官方安装入口使用 Node/npm 的 Skills CLI，验证脚本需相应运行环境 | 在自有测试仓库放入一个已知缺陷，检查来源、复现与误报；报告 schema 合法不等于漏洞成立 |\n| [Ponytail](https://github.com/DietrichGebert/ponytail) | 通过工程规则与 Skill 引导 Agent 理解代码后选择必要改动，保留关键校验和测试 | 今日卡片标注 +1,208 Star | 按官方 INSTALL.md 选择客户端适配；命令能力与纯规则文件适配不同，已有工程 Skill 时需检查规则重叠 | 同一小修复比较 diff、必要测试和未检查项；代码变少不能单独代表质量提升 |\n| [Ruflo](https://github.com/ruvnet/ruflo) | 为 Agent 提供任务协作、记忆与工具编排，具有 CLI、MCP 及特定客户端集成路径 | 今日卡片标注 +684 Star | CLI 路径需 Node/npm、项目目录及所用模型或 Agent 的访问配置；插件、MCP 和 hooks 的支持范围分别核对 | 分配两个可独立验收的小任务，检查结果汇总、冲突与用量，不只看启动了多少 Agent |\n| [ComfyUI](https://github.com/Comfy-Org/ComfyUI) | 通过节点图组合图像与视频等模型工作流，可保存、复用与调用 API | 今日卡片标注 +1,206 Star | Windows/macOS 可从官方桌面版开始；需下载对应模型，硬件、内存和显存要求随工作流变化，其他平台按安装文档准备 | 固定模型、种子和输入，跑一个基础图像工作流，检查可复现性、耗时和资源占用，再扩展视频 |\n\n以上数字取自 [whatstrending.ai 2026-10-21 页面](https://whatstrending.ai/repos)标为“stars today”的卡片，为第三方统计。整页周榜观察窗口是 10/14—10/21，上表数字不是周增，也不是 GitHub 官方增长审计。功能及前提分别依据表中的官方仓库。\n\n## 体验路径与限制\n\n### security-audit-skill：看证据链与反证\n\n从[官方 Installation](https://github.com/cloudflare/security-audit-skill#installation)选择项目级或用户级安装。工作流会形成架构与覆盖记录、候选结果、独立复核及报告。建议先对一个已知缺陷核对代码位置、触发条件与复现结果，同时观察正常代码是否被误报。机器可读字段和校验器解决的是报告一致性；独立 Agent 复核也不能替代实际证据。本期没有运行审计，不对任何仓库作安全结论。\n\n### Ponytail：不要用代码行数替代验收\n\n阅读[官方 INSTALL.md](https://github.com/DietrichGebert/ponytail/blob/main/INSTALL.md)，选择与自己客户端能力匹配的规则或 Skill 入口。先拿一个已有验收标准的小任务做对照，保留必要的输入校验、错误处理和测试。作者公布的代码量、成本与耗时差异来自其特定基准，本日报未复现，不推导通用收益；也不建议同时堆叠多套相近工程规则后直接归因。\n\n### Ruflo：从最小协作流程开始\n\n[官方 Quick Start](https://github.com/ruvnet/ruflo#quick-start)区分插件与 CLI 初始化的不同范围。先在测试项目核对生成文件、工具、模型入口和退出方式，再用两个边界清楚的任务验证协作。MCP 连通不表示客户端 hooks 已生效；控制台渲染演示也不表示真实模型任务已完成。今天没有启动多 Agent、注册 MCP 或更改现有配置。\n\n### ComfyUI：先掌握一个可复现工作流\n\n从[官方 Installing](https://github.com/Comfy-Org/ComfyUI#installing)进入桌面版或适合平台的安装路径，再准备基础模型。先保存一份可重复运行的节点图，比较输入、参数、输出及资源消耗。模型文件、第三方节点与软件本身是不同依赖，不能把能启动界面等同于视频工作流已经可用。它与 HyperFrames 的代码动画、Concat 的时间线剪辑各有侧重，本期未做性能比较。\n\n## 昨日项目与证据口径\n\n- ARTEMIS、Graphify、Headroom、OpenUI 仍在第三方清单中；今天没有核实到需要重写昨日用途介绍的重要正式发布，保留观察，不重复收录。\n- 周榜与部分卡片的周增继续不一致，本期不引用这些项目的精确周增。也不把滚动周增的变化当作单日增长。\n- REA 等高增长项目仍未独立核实异常增长原因，Star、认证标签和作者基准均不进入效果评价。\n- 今天样本偏向工程流程与创作工具，只反映本站的选择，不代表互联网整体项目类型占比；所有推荐均为资料调研。\n\n## 月报积累\n\n新增主类型已写入目录。10 月尚未结束，9 月早于本站收录起点，本次不生成正式月报。首期仍于 2026-11-01 根据 10 月实际日报去重、核对官方证据，分别评选最有想法与最有落地价值 Top 项目；不以 Star 评分，不补造缺报日期。\n",
+    "html": "<h2>AI 项目日报 · 2026-10-21</h2>\n<p>检索日期：2026 年 10 月 21 日（北京时间） 近一周观察窗口：10 月 14 日—10 月 21 日 对照文档：<a href=\"#date=2026-10-20\">10 月 20 日日报</a></p>\n<h3>今日重点</h3>\n<p>首次收录 4 个项目：Cloudflare 安全审计 Skill、Ponytail 工程工作流、Ruflo Agent 协作框架和 ComfyUI 节点式创作。首次收录不表示刚发布；本期核实官方当前资料，未安装、未实测，也没有把 README 中的版本或工作流写成当日新发布。</p>\n<p>优先看 security-audit-skill 的证据记录方式，以及 Ponytail 对小范围改动的约束。创作方向可从 ComfyUI 的基础工作流开始。Ruflo 配置面较大，适合已经有多 Agent 任务、愿意核对协作成本的人。推荐顺序是编辑判断，不是质量或性能排名。</p>\n<h3>新增项目</h3>\n<div class=\"table-scroll\" tabindex=\"0\" aria-label=\"可横向滚动的项目表格\"><table><thead><tr><th scope=\"col\">项目</th><th scope=\"col\">已核实的用途</th><th scope=\"col\">第三方热度信号</th><th scope=\"col\">体验入口与前提</th><th scope=\"col\">建议先验证什么</th></tr></thead><tbody><tr><td><a href=\"https://github.com/cloudflare/security-audit-skill\" target=\"_blank\" rel=\"noopener noreferrer\">security-audit-skill ↗</a></td><td>面向编程 Agent 的分阶段代码审计，包含覆盖记录、候选复核和结构化 findings</td><td>今日卡片标注 +1,712 Star</td><td>需要支持 Skill 的编程 Agent、待审查代码；官方安装入口使用 Node/npm 的 Skills CLI，验证脚本需相应运行环境</td><td>在自有测试仓库放入一个已知缺陷，检查来源、复现与误报；报告 schema 合法不等于漏洞成立</td></tr><tr><td><a href=\"https://github.com/DietrichGebert/ponytail\" target=\"_blank\" rel=\"noopener noreferrer\">Ponytail ↗</a></td><td>通过工程规则与 Skill 引导 Agent 理解代码后选择必要改动，保留关键校验和测试</td><td>今日卡片标注 +1,208 Star</td><td>按官方 INSTALL.md 选择客户端适配；命令能力与纯规则文件适配不同，已有工程 Skill 时需检查规则重叠</td><td>同一小修复比较 diff、必要测试和未检查项；代码变少不能单独代表质量提升</td></tr><tr><td><a href=\"https://github.com/ruvnet/ruflo\" target=\"_blank\" rel=\"noopener noreferrer\">Ruflo ↗</a></td><td>为 Agent 提供任务协作、记忆与工具编排，具有 CLI、MCP 及特定客户端集成路径</td><td>今日卡片标注 +684 Star</td><td>CLI 路径需 Node/npm、项目目录及所用模型或 Agent 的访问配置；插件、MCP 和 hooks 的支持范围分别核对</td><td>分配两个可独立验收的小任务，检查结果汇总、冲突与用量，不只看启动了多少 Agent</td></tr><tr><td><a href=\"https://github.com/Comfy-Org/ComfyUI\" target=\"_blank\" rel=\"noopener noreferrer\">ComfyUI ↗</a></td><td>通过节点图组合图像与视频等模型工作流，可保存、复用与调用 API</td><td>今日卡片标注 +1,206 Star</td><td>Windows/macOS 可从官方桌面版开始；需下载对应模型，硬件、内存和显存要求随工作流变化，其他平台按安装文档准备</td><td>固定模型、种子和输入，跑一个基础图像工作流，检查可复现性、耗时和资源占用，再扩展视频</td></tr></tbody></table></div>\n<p>以上数字取自 <a href=\"https://whatstrending.ai/repos\" target=\"_blank\" rel=\"noopener noreferrer\">whatstrending.ai 2026-10-21 页面 ↗</a>标为“stars today”的卡片，为第三方统计。整页周榜观察窗口是 10/14—10/21，上表数字不是周增，也不是 GitHub 官方增长审计。功能及前提分别依据表中的官方仓库。</p>\n<h3>体验路径与限制</h3>\n<h4>security-audit-skill：看证据链与反证</h4>\n<p>从<a href=\"https://github.com/cloudflare/security-audit-skill#installation\" target=\"_blank\" rel=\"noopener noreferrer\">官方 Installation ↗</a>选择项目级或用户级安装。工作流会形成架构与覆盖记录、候选结果、独立复核及报告。建议先对一个已知缺陷核对代码位置、触发条件与复现结果，同时观察正常代码是否被误报。机器可读字段和校验器解决的是报告一致性；独立 Agent 复核也不能替代实际证据。本期没有运行审计，不对任何仓库作安全结论。</p>\n<h4>Ponytail：不要用代码行数替代验收</h4>\n<p>阅读<a href=\"https://github.com/DietrichGebert/ponytail/blob/main/INSTALL.md\" target=\"_blank\" rel=\"noopener noreferrer\">官方 INSTALL.md ↗</a>，选择与自己客户端能力匹配的规则或 Skill 入口。先拿一个已有验收标准的小任务做对照，保留必要的输入校验、错误处理和测试。作者公布的代码量、成本与耗时差异来自其特定基准，本日报未复现，不推导通用收益；也不建议同时堆叠多套相近工程规则后直接归因。</p>\n<h4>Ruflo：从最小协作流程开始</h4>\n<p><a href=\"https://github.com/ruvnet/ruflo#quick-start\" target=\"_blank\" rel=\"noopener noreferrer\">官方 Quick Start ↗</a>区分插件与 CLI 初始化的不同范围。先在测试项目核对生成文件、工具、模型入口和退出方式，再用两个边界清楚的任务验证协作。MCP 连通不表示客户端 hooks 已生效；控制台渲染演示也不表示真实模型任务已完成。今天没有启动多 Agent、注册 MCP 或更改现有配置。</p>\n<h4>ComfyUI：先掌握一个可复现工作流</h4>\n<p>从<a href=\"https://github.com/Comfy-Org/ComfyUI#installing\" target=\"_blank\" rel=\"noopener noreferrer\">官方 Installing ↗</a>进入桌面版或适合平台的安装路径，再准备基础模型。先保存一份可重复运行的节点图，比较输入、参数、输出及资源消耗。模型文件、第三方节点与软件本身是不同依赖，不能把能启动界面等同于视频工作流已经可用。它与 HyperFrames 的代码动画、Concat 的时间线剪辑各有侧重，本期未做性能比较。</p>\n<h3>昨日项目与证据口径</h3>\n<ul><li>ARTEMIS、Graphify、Headroom、OpenUI 仍在第三方清单中；今天没有核实到需要重写昨日用途介绍的重要正式发布，保留观察，不重复收录。</li><li>周榜与部分卡片的周增继续不一致，本期不引用这些项目的精确周增。也不把滚动周增的变化当作单日增长。</li><li>REA 等高增长项目仍未独立核实异常增长原因，Star、认证标签和作者基准均不进入效果评价。</li><li>今天样本偏向工程流程与创作工具，只反映本站的选择，不代表互联网整体项目类型占比；所有推荐均为资料调研。</li></ul>\n<h3>月报积累</h3>\n<p>新增主类型已写入目录。10 月尚未结束，9 月早于本站收录起点，本次不生成正式月报。首期仍于 2026-11-01 根据 10 月实际日报去重、核对官方证据，分别评选最有想法与最有落地价值 Top 项目；不以 Star 评分，不补造缺报日期。</p>",
+    "projects": [
+      {
+        "name": "security-audit-skill",
+        "url": "https://github.com/cloudflare/security-audit-skill",
+        "description": "面向编程 Agent 的分阶段代码审计，包含覆盖记录、候选复核和结构化 findings",
+        "signal": "今日卡片标注 +1,712 Star"
+      },
+      {
+        "name": "Ponytail",
+        "url": "https://github.com/DietrichGebert/ponytail",
+        "description": "通过工程规则与 Skill 引导 Agent 理解代码后选择必要改动，保留关键校验和测试",
+        "signal": "今日卡片标注 +1,208 Star"
+      },
+      {
+        "name": "Ruflo",
+        "url": "https://github.com/ruvnet/ruflo",
+        "description": "为 Agent 提供任务协作、记忆与工具编排，具有 CLI、MCP 及特定客户端集成路径",
+        "signal": "今日卡片标注 +684 Star"
+      },
+      {
+        "name": "ComfyUI",
+        "url": "https://github.com/Comfy-Org/ComfyUI",
+        "description": "通过节点图组合图像与视频等模型工作流，可保存、复用与调用 API",
+        "signal": "今日卡片标注 +1,206 Star"
+      }
+    ],
+    "observations": [
+      {
+        "name": "security-audit-skill",
+        "url": "https://github.com/cloudflare/security-audit-skill",
+        "description": "面向编程 Agent 的分阶段代码审计，包含覆盖记录、候选复核和结构化 findings",
+        "signal": "今日卡片标注 +1,712 Star"
+      },
+      {
+        "name": "Ponytail",
+        "url": "https://github.com/DietrichGebert/ponytail",
+        "description": "通过工程规则与 Skill 引导 Agent 理解代码后选择必要改动，保留关键校验和测试",
+        "signal": "今日卡片标注 +1,208 Star"
+      },
+      {
+        "name": "Ruflo",
+        "url": "https://github.com/ruvnet/ruflo",
+        "description": "为 Agent 提供任务协作、记忆与工具编排，具有 CLI、MCP 及特定客户端集成路径",
+        "signal": "今日卡片标注 +684 Star"
+      },
+      {
+        "name": "ComfyUI",
+        "url": "https://github.com/Comfy-Org/ComfyUI",
+        "description": "通过节点图组合图像与视频等模型工作流，可保存、复用与调用 API",
+        "signal": "今日卡片标注 +1,206 Star"
+      }
+    ]
+  },
+  {
     "date": "2026-10-20",
     "title": "AI 项目日报 · 2026-10-20",
     "filename": "AI项目日报-2026-10-20.md",

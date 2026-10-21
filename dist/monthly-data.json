@@ -3,21 +3,22 @@
     "month": "2026-10",
     "status": "preview",
     "title": "2026-10 · 月度采样预览",
-    "report_count": 6,
-    "project_count": 32,
+    "report_count": 7,
+    "project_count": 36,
     "calendar_days": 31,
-    "coverage": 19.4,
+    "coverage": 22.6,
     "start": "2026-10-13",
-    "end": "2026-10-20",
+    "end": "2026-10-21",
     "report_dates": [
       "2026-10-13",
       "2026-10-14",
       "2026-10-15",
       "2026-10-16",
       "2026-10-19",
-      "2026-10-20"
+      "2026-10-20",
+      "2026-10-21"
     ],
-    "source_fingerprint": "eec49c3c7ca7432812611600d0865327b4c3620f718f10e5ef7dd3de8ddeb8f8",
+    "source_fingerprint": "6cbc37a781d38de3f27691aa3103480e9a3302f056c2f3a485ce66ee45dd072a",
     "projects": [
       {
         "name": "addyosmani/agent-skills",
@@ -88,6 +89,28 @@
         ]
       },
       {
+        "name": "security-audit-skill",
+        "url": "https://github.com/cloudflare/security-audit-skill",
+        "description": "面向编程 Agent 的分阶段代码审计，包含覆盖记录、候选复核和结构化 findings",
+        "signal": "今日卡片标注 +1,712 Star",
+        "key": "cloudflare/security-audit-skill",
+        "category": "自动化测试",
+        "dates": [
+          "2026-10-21"
+        ]
+      },
+      {
+        "name": "ComfyUI",
+        "url": "https://github.com/Comfy-Org/ComfyUI",
+        "description": "通过节点图组合图像与视频等模型工作流，可保存、复用与调用 API",
+        "signal": "今日卡片标注 +1,206 Star",
+        "key": "comfy-org/comfyui",
+        "category": "音视频创作",
+        "dates": [
+          "2026-10-21"
+        ]
+      },
+      {
         "name": "VoiceStudio",
         "url": "https://github.com/debpalash/VoiceStudio",
         "description": "主打本地运行，覆盖声音克隆、配音、转录和有声书制作",
@@ -96,6 +119,17 @@
         "category": "音视频创作",
         "dates": [
           "2026-10-13"
+        ]
+      },
+      {
+        "name": "Ponytail",
+        "url": "https://github.com/DietrichGebert/ponytail",
+        "description": "通过工程规则与 Skill 引导 Agent 理解代码后选择必要改动，保留关键校验和测试",
+        "signal": "今日卡片标注 +1,208 Star",
+        "key": "dietrichgebert/ponytail",
+        "category": "AI 编程与工程 Skill",
+        "dates": [
+          "2026-10-21"
         ]
       },
       {
@@ -299,6 +333,17 @@
         ]
       },
       {
+        "name": "Ruflo",
+        "url": "https://github.com/ruvnet/ruflo",
+        "description": "为 Agent 提供任务协作、记忆与工具编排，具有 CLI、MCP 及特定客户端集成路径",
+        "signal": "今日卡片标注 +684 Star",
+        "key": "ruvnet/ruflo",
+        "category": "Agent 协作与编排",
+        "dates": [
+          "2026-10-21"
+        ]
+      },
+      {
         "name": "phone-harness",
         "url": "https://github.com/ShawnPana/phone-harness",
         "description": "提供手机屏幕读取、点击与输入等 Agent 操作能力，支持本地设备及云端手机",
@@ -380,43 +425,43 @@
     "categories": [
       {
         "name": "音视频创作",
-        "count": 7,
-        "percent": 21.9
+        "count": 8,
+        "percent": 22.2
       },
       {
         "name": "AI 编程与工程 Skill",
-        "count": 6,
-        "percent": 18.8
+        "count": 7,
+        "percent": 19.4
       },
       {
         "name": "自动化测试",
-        "count": 6,
-        "percent": 18.8
+        "count": 7,
+        "percent": 19.4
       },
       {
         "name": "Agent 基础能力",
         "count": 5,
-        "percent": 15.6
+        "percent": 13.9
       },
       {
         "name": "设计与可视化",
         "count": 4,
-        "percent": 12.5
+        "percent": 11.1
       },
       {
         "name": "Agent 协作与编排",
-        "count": 2,
-        "percent": 6.2
+        "count": 3,
+        "percent": 8.3
       },
       {
         "name": "科研与数据分析",
         "count": 1,
-        "percent": 3.1
+        "percent": 2.8
       },
       {
         "name": "软件分析与研究",
         "count": 1,
-        "percent": 3.1
+        "percent": 2.8
       }
     ],
     "idea_top": [],
