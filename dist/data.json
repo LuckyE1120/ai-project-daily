@@ -1,5 +1,52 @@
 [
   {
+    "date": "2026-10-22",
+    "title": "AI 项目日报 · 2026-10-22",
+    "filename": "AI项目日报-2026-10-22.md",
+    "text": "# AI 项目日报 · 2026-10-22\n\n检索日期：2026 年 10 月 22 日（北京时间）  \n近一周观察窗口：10 月 15 日—10 月 22 日  \n对照文档：[10 月 21 日日报](./AI项目日报-2026-10-21.md)\n\n## 今日重点\n\n首次收录 3 个项目：XERJ 本地检索、Spec Kit 开发流程工具、OmniVoice 语音合成。本期优先补充此前没有介绍清楚的用途，不以固定数量凑清单。首次收录不表示刚发布；全部为官方资料核验，没有安装或实测，也未核实到应单独报道的当日版本发布。\n\n想改善代码阅读，可先验证 XERJ；想让需求到验收更可追踪，可看 Spec Kit；创作方向可用 OmniVoice 做一段短音频试听。推荐顺序按当前开发和创作需求判断，不是性能排名。\n\n## 新增项目\n\n| 项目 | 已核实的用途 | 第三方热度信号 | 体验入口与前提 | 建议先验证什么 |\n|---|---|---|---|---|\n| [XERJ](https://github.com/xerj-org/xerj) | 本地优先搜索服务与 MCP 工具，可索引代码、文档、日志等，提供全文、向量及混合检索和 Elasticsearch 兼容接口 | 顶部周榜：10/15—10/22 增加 7,996 Star | 官方提供 Linux、macOS、Windows 预编译二进制；需启动服务并准备独立数据目录；神经检索模式另需模型文件 | 用熟悉的小仓库查询函数定义和调用相关原文，核对文件行号、更新后结果与索引成本 |\n| [Spec Kit](https://github.com/github/spec-kit) | 提供规范驱动开发及可组合流程，可通过扩展单独选择缺陷修复或想法评估 | 当日卡片标注 +208 Star | Python 3.11+、uv、支持的编程 Agent；官方包名 `specify-cli`，按客户端选择 integration | 用一个明确需求建立验收标准、计划和任务，检查实现与测试能否追溯；小修复不必先跑完整需求流程 |\n| [OmniVoice](https://github.com/k2-fsa/OmniVoice) | 多语言语音合成，提供参考音频克隆、音色设计及 CLI/Python、演示入口 | 当日卡片标注 +157 Star | 推荐独立 Python 环境，按硬件安装 PyTorch/torchaudio，下载模型；官方分别说明 NVIDIA、Apple Silicon、Intel GPU 路径 | 用自有参考音频或音色设计生成 10 秒中文，检查专有名词、停顿、音质与耗时，再扩展长配音 |\n\n热度来自 [whatstrending.ai 2026-10-22 页面](https://whatstrending.ai/repos)。XERJ 采用顶部周榜明示窗口；另外两项采用标为“stars today”的卡片，不能混作周增排行。数字为第三方快照统计，不是 GitHub 官方增长审计；用途和依赖以各官方仓库为依据。\n\n## 体验路径与限制\n\n### XERJ：让搜索结果能回到原文\n\n从[官方 Install by hand](https://github.com/xerj-org/xerj#install-by-hand)选择平台包，先索引一份小型代码副本。数据目录应放在被索引树之外，避免索引自身存储。官方示例的 `--insecure` 会关闭 TLS 和 API 鉴权，只适合明确的本机开发边界；共享服务应按其认证说明配置，不直接复制该参数公开服务。\n\n建议预先写三个有已知答案的问题，比较结果是否指向正确文件、关键片段是否完整、源码变化后是否更新。作者给出的 token 或模型效果收益没有在本机复现；兼容接口也不代表所有 Elasticsearch 功能完全一致。本期没有启动服务或配置 MCP。\n\n### Spec Kit：按任务选择流程\n\n从[官方 Get started](https://github.com/github/spec-kit#get-started)准备运行环境，在测试项目选择适合的 Agent integration。当前仓库将 SDD、缺陷修复和想法评估作为不同入口：SDD 在核心中，后两者通过对应扩展选择，不必把所有流程串成强制步骤。\n\n可以拿一个网站小功能，明确行为和验收条件后再做计划、任务及实现，检查生成文档是否帮助测试与交付。如果只是已有缺陷，先看独立修复路径。规范完整、流程报告收敛都不等于软件已经通过真实场景验证；本期没有执行这些命令，也不将当前 README 变化写成今天上线。\n\n### OmniVoice：先试听，再评估长配音\n\n优先看[官方 Installation 与 Quick Start](https://github.com/k2-fsa/OmniVoice#installation)，选择在线演示或匹配本机硬件的环境。参考音频应使用自己的或已获授权的录音；模型下载、依赖和推理资源需要单独准备。项目列出的语言覆盖、速度和效果是作者报告，没有据此保证任意语言或本机设备的表现。\n\n先生成短句，人工核对人名、缩写、数字、断句和参考音色，再考虑视频配音。它是语音模型及工具入口，不是完整的视频时间线编辑器，也不代表此前字幕或视频项目已经接入。\n\n## 既有项目与统计口径跟踪\n\n- 昨日 security-audit-skill、Ponytail、ComfyUI 继续出现在第三方列表；没有核实到需要重新介绍用途的重大正式更新，本期不重复收录。\n- 同页顶部周榜与部分卡片周增仍有差异，除上表口径清楚的 XERJ 顶部周榜外，不追加这些项目的精确周增；不把滚动周增变化解释成单日增长。\n- REA 等异常高增长原因依旧没有独立核验。关注度、作者基准和认证标签不作为质量背书，也不用于月报评分。\n\n## 月报积累\n\n新增项目已补充主类型目录。10 月尚未结束，9 月早于本站收录起点，本次不补造正式月报。首期仍于 2026-11-01 汇总 10 月实际归档、按仓库去重并核实候选证据后评审；缺报日期继续计入覆盖率限制。\n",
+    "html": "<h2>AI 项目日报 · 2026-10-22</h2>\n<p>检索日期：2026 年 10 月 22 日（北京时间） 近一周观察窗口：10 月 15 日—10 月 22 日 对照文档：<a href=\"#date=2026-10-21\">10 月 21 日日报</a></p>\n<h3>今日重点</h3>\n<p>首次收录 3 个项目：XERJ 本地检索、Spec Kit 开发流程工具、OmniVoice 语音合成。本期优先补充此前没有介绍清楚的用途，不以固定数量凑清单。首次收录不表示刚发布；全部为官方资料核验，没有安装或实测，也未核实到应单独报道的当日版本发布。</p>\n<p>想改善代码阅读，可先验证 XERJ；想让需求到验收更可追踪，可看 Spec Kit；创作方向可用 OmniVoice 做一段短音频试听。推荐顺序按当前开发和创作需求判断，不是性能排名。</p>\n<h3>新增项目</h3>\n<div class=\"table-scroll\" tabindex=\"0\" aria-label=\"可横向滚动的项目表格\"><table><thead><tr><th scope=\"col\">项目</th><th scope=\"col\">已核实的用途</th><th scope=\"col\">第三方热度信号</th><th scope=\"col\">体验入口与前提</th><th scope=\"col\">建议先验证什么</th></tr></thead><tbody><tr><td><a href=\"https://github.com/xerj-org/xerj\" target=\"_blank\" rel=\"noopener noreferrer\">XERJ ↗</a></td><td>本地优先搜索服务与 MCP 工具，可索引代码、文档、日志等，提供全文、向量及混合检索和 Elasticsearch 兼容接口</td><td>顶部周榜：10/15—10/22 增加 7,996 Star</td><td>官方提供 Linux、macOS、Windows 预编译二进制；需启动服务并准备独立数据目录；神经检索模式另需模型文件</td><td>用熟悉的小仓库查询函数定义和调用相关原文，核对文件行号、更新后结果与索引成本</td></tr><tr><td><a href=\"https://github.com/github/spec-kit\" target=\"_blank\" rel=\"noopener noreferrer\">Spec Kit ↗</a></td><td>提供规范驱动开发及可组合流程，可通过扩展单独选择缺陷修复或想法评估</td><td>当日卡片标注 +208 Star</td><td>Python 3.11+、uv、支持的编程 Agent；官方包名 <code>specify-cli</code>，按客户端选择 integration</td><td>用一个明确需求建立验收标准、计划和任务，检查实现与测试能否追溯；小修复不必先跑完整需求流程</td></tr><tr><td><a href=\"https://github.com/k2-fsa/OmniVoice\" target=\"_blank\" rel=\"noopener noreferrer\">OmniVoice ↗</a></td><td>多语言语音合成，提供参考音频克隆、音色设计及 CLI/Python、演示入口</td><td>当日卡片标注 +157 Star</td><td>推荐独立 Python 环境，按硬件安装 PyTorch/torchaudio，下载模型；官方分别说明 NVIDIA、Apple Silicon、Intel GPU 路径</td><td>用自有参考音频或音色设计生成 10 秒中文，检查专有名词、停顿、音质与耗时，再扩展长配音</td></tr></tbody></table></div>\n<p>热度来自 <a href=\"https://whatstrending.ai/repos\" target=\"_blank\" rel=\"noopener noreferrer\">whatstrending.ai 2026-10-22 页面 ↗</a>。XERJ 采用顶部周榜明示窗口；另外两项采用标为“stars today”的卡片，不能混作周增排行。数字为第三方快照统计，不是 GitHub 官方增长审计；用途和依赖以各官方仓库为依据。</p>\n<h3>体验路径与限制</h3>\n<h4>XERJ：让搜索结果能回到原文</h4>\n<p>从<a href=\"https://github.com/xerj-org/xerj#install-by-hand\" target=\"_blank\" rel=\"noopener noreferrer\">官方 Install by hand ↗</a>选择平台包，先索引一份小型代码副本。数据目录应放在被索引树之外，避免索引自身存储。官方示例的 <code>--insecure</code> 会关闭 TLS 和 API 鉴权，只适合明确的本机开发边界；共享服务应按其认证说明配置，不直接复制该参数公开服务。</p>\n<p>建议预先写三个有已知答案的问题，比较结果是否指向正确文件、关键片段是否完整、源码变化后是否更新。作者给出的 token 或模型效果收益没有在本机复现；兼容接口也不代表所有 Elasticsearch 功能完全一致。本期没有启动服务或配置 MCP。</p>\n<h4>Spec Kit：按任务选择流程</h4>\n<p>从<a href=\"https://github.com/github/spec-kit#get-started\" target=\"_blank\" rel=\"noopener noreferrer\">官方 Get started ↗</a>准备运行环境，在测试项目选择适合的 Agent integration。当前仓库将 SDD、缺陷修复和想法评估作为不同入口：SDD 在核心中，后两者通过对应扩展选择，不必把所有流程串成强制步骤。</p>\n<p>可以拿一个网站小功能，明确行为和验收条件后再做计划、任务及实现，检查生成文档是否帮助测试与交付。如果只是已有缺陷，先看独立修复路径。规范完整、流程报告收敛都不等于软件已经通过真实场景验证；本期没有执行这些命令，也不将当前 README 变化写成今天上线。</p>\n<h4>OmniVoice：先试听，再评估长配音</h4>\n<p>优先看<a href=\"https://github.com/k2-fsa/OmniVoice#installation\" target=\"_blank\" rel=\"noopener noreferrer\">官方 Installation 与 Quick Start ↗</a>，选择在线演示或匹配本机硬件的环境。参考音频应使用自己的或已获授权的录音；模型下载、依赖和推理资源需要单独准备。项目列出的语言覆盖、速度和效果是作者报告，没有据此保证任意语言或本机设备的表现。</p>\n<p>先生成短句，人工核对人名、缩写、数字、断句和参考音色，再考虑视频配音。它是语音模型及工具入口，不是完整的视频时间线编辑器，也不代表此前字幕或视频项目已经接入。</p>\n<h3>既有项目与统计口径跟踪</h3>\n<ul><li>昨日 security-audit-skill、Ponytail、ComfyUI 继续出现在第三方列表；没有核实到需要重新介绍用途的重大正式更新，本期不重复收录。</li><li>同页顶部周榜与部分卡片周增仍有差异，除上表口径清楚的 XERJ 顶部周榜外，不追加这些项目的精确周增；不把滚动周增变化解释成单日增长。</li><li>REA 等异常高增长原因依旧没有独立核验。关注度、作者基准和认证标签不作为质量背书，也不用于月报评分。</li></ul>\n<h3>月报积累</h3>\n<p>新增项目已补充主类型目录。10 月尚未结束，9 月早于本站收录起点，本次不补造正式月报。首期仍于 2026-11-01 汇总 10 月实际归档、按仓库去重并核实候选证据后评审；缺报日期继续计入覆盖率限制。</p>",
+    "projects": [
+      {
+        "name": "XERJ",
+        "url": "https://github.com/xerj-org/xerj",
+        "description": "本地优先搜索服务与 MCP 工具，可索引代码、文档、日志等，提供全文、向量及混合检索和 Elasticsearch 兼容接口",
+        "signal": "顶部周榜：10/15—10/22 增加 7,996 Star"
+      },
+      {
+        "name": "Spec Kit",
+        "url": "https://github.com/github/spec-kit",
+        "description": "提供规范驱动开发及可组合流程，可通过扩展单独选择缺陷修复或想法评估",
+        "signal": "当日卡片标注 +208 Star"
+      },
+      {
+        "name": "OmniVoice",
+        "url": "https://github.com/k2-fsa/OmniVoice",
+        "description": "多语言语音合成，提供参考音频克隆、音色设计及 CLI/Python、演示入口",
+        "signal": "当日卡片标注 +157 Star"
+      }
+    ],
+    "observations": [
+      {
+        "name": "XERJ",
+        "url": "https://github.com/xerj-org/xerj",
+        "description": "本地优先搜索服务与 MCP 工具，可索引代码、文档、日志等，提供全文、向量及混合检索和 Elasticsearch 兼容接口",
+        "signal": "顶部周榜：10/15—10/22 增加 7,996 Star"
+      },
+      {
+        "name": "Spec Kit",
+        "url": "https://github.com/github/spec-kit",
+        "description": "提供规范驱动开发及可组合流程，可通过扩展单独选择缺陷修复或想法评估",
+        "signal": "当日卡片标注 +208 Star"
+      },
+      {
+        "name": "OmniVoice",
+        "url": "https://github.com/k2-fsa/OmniVoice",
+        "description": "多语言语音合成，提供参考音频克隆、音色设计及 CLI/Python、演示入口",
+        "signal": "当日卡片标注 +157 Star"
+      }
+    ]
+  },
+  {
     "date": "2026-10-21",
     "title": "AI 项目日报 · 2026-10-21",
     "filename": "AI项目日报-2026-10-21.md",

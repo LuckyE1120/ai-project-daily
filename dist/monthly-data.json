@@ -3,12 +3,12 @@
     "month": "2026-10",
     "status": "preview",
     "title": "2026-10 · 月度采样预览",
-    "report_count": 7,
-    "project_count": 36,
+    "report_count": 8,
+    "project_count": 39,
     "calendar_days": 31,
-    "coverage": 22.6,
+    "coverage": 25.8,
     "start": "2026-10-13",
-    "end": "2026-10-21",
+    "end": "2026-10-22",
     "report_dates": [
       "2026-10-13",
       "2026-10-14",
@@ -16,9 +16,10 @@
       "2026-10-16",
       "2026-10-19",
       "2026-10-20",
-      "2026-10-21"
+      "2026-10-21",
+      "2026-10-22"
     ],
-    "source_fingerprint": "6cbc37a781d38de3f27691aa3103480e9a3302f056c2f3a485ce66ee45dd072a",
+    "source_fingerprint": "0be54d93494a420e2faa63b5b314cba19bfd02bdbe6fd9c87daf94104b2364bf",
     "projects": [
       {
         "name": "addyosmani/agent-skills",
@@ -144,6 +145,17 @@
         ]
       },
       {
+        "name": "Spec Kit",
+        "url": "https://github.com/github/spec-kit",
+        "description": "提供规范驱动开发及可组合流程，可通过扩展单独选择缺陷修复或想法评估",
+        "signal": "当日卡片标注 +208 Star",
+        "key": "github/spec-kit",
+        "category": "AI 编程与工程 Skill",
+        "dates": [
+          "2026-10-22"
+        ]
+      },
+      {
         "name": "ARTEMIS",
         "url": "https://github.com/google/artemis",
         "description": "从自然语言执行安卓跨应用流程，提供 MCP 接入、设备操作和日志诊断",
@@ -230,6 +242,17 @@
         "category": "科研与数据分析",
         "dates": [
           "2026-10-16"
+        ]
+      },
+      {
+        "name": "OmniVoice",
+        "url": "https://github.com/k2-fsa/OmniVoice",
+        "description": "多语言语音合成，提供参考音频克隆、音色设计及 CLI/Python、演示入口",
+        "signal": "当日卡片标注 +157 Star",
+        "key": "k2-fsa/omnivoice",
+        "category": "音视频创作",
+        "dates": [
+          "2026-10-22"
         ]
       },
       {
@@ -420,48 +443,59 @@
         "dates": [
           "2026-10-16"
         ]
+      },
+      {
+        "name": "XERJ",
+        "url": "https://github.com/xerj-org/xerj",
+        "description": "本地优先搜索服务与 MCP 工具，可索引代码、文档、日志等，提供全文、向量及混合检索和 Elasticsearch 兼容接口",
+        "signal": "顶部周榜：10/15—10/22 增加 7,996 Star",
+        "key": "xerj-org/xerj",
+        "category": "Agent 基础能力",
+        "dates": [
+          "2026-10-22"
+        ]
       }
     ],
     "categories": [
       {
         "name": "音视频创作",
-        "count": 8,
-        "percent": 22.2
+        "count": 9,
+        "percent": 23.1
       },
       {
         "name": "AI 编程与工程 Skill",
-        "count": 7,
-        "percent": 19.4
+        "count": 8,
+        "percent": 20.5
       },
       {
         "name": "自动化测试",
         "count": 7,
-        "percent": 19.4
+        "percent": 17.9
       },
       {
         "name": "Agent 基础能力",
-        "count": 5,
-        "percent": 13.9
+        "count": 6,
+        "percent": 15.4
       },
       {
         "name": "设计与可视化",
         "count": 4,
-        "percent": 11.1
+        "percent": 10.3
       },
       {
         "name": "Agent 协作与编排",
         "count": 3,
-        "percent": 8.3
+        "percent": 7.7
       },
       {
         "name": "科研与数据分析",
         "count": 1,
-        "percent": 2.8
+        "percent": 2.6
       },
       {
         "name": "软件分析与研究",
         "count": 1,
-        "percent": 2.8
+        "percent": 2.6
       }
     ],
     "idea_top": [],
