@@ -3,12 +3,12 @@
     "month": "2026-10",
     "status": "preview",
     "title": "2026-10 · 月度采样预览",
-    "report_count": 8,
-    "project_count": 39,
+    "report_count": 9,
+    "project_count": 42,
     "calendar_days": 31,
-    "coverage": 25.8,
+    "coverage": 29.0,
     "start": "2026-10-13",
-    "end": "2026-10-22",
+    "end": "2026-10-23",
     "report_dates": [
       "2026-10-13",
       "2026-10-14",
@@ -17,9 +17,10 @@
       "2026-10-19",
       "2026-10-20",
       "2026-10-21",
-      "2026-10-22"
+      "2026-10-22",
+      "2026-10-23"
     ],
-    "source_fingerprint": "0be54d93494a420e2faa63b5b314cba19bfd02bdbe6fd9c87daf94104b2364bf",
+    "source_fingerprint": "b2a94186da84e21e0140c2cd8771373af9929543812ffdcb31fdba6d9c6426ff",
     "projects": [
       {
         "name": "addyosmani/agent-skills",
@@ -142,6 +143,28 @@
         "category": "设计与可视化",
         "dates": [
           "2026-10-15"
+        ]
+      },
+      {
+        "name": "Firecrawl",
+        "url": "https://github.com/firecrawl/firecrawl",
+        "description": "将网页转为 Markdown 或结构化数据，提供搜索、采集与 MCP 接入",
+        "signal": "当日卡片 +424 Star",
+        "key": "firecrawl/firecrawl",
+        "category": "Agent 基础能力",
+        "dates": [
+          "2026-10-23"
+        ]
+      },
+      {
+        "name": "GenOffice",
+        "url": "https://github.com/genspark-ai/genoffice",
+        "description": "AI 办公套件，编辑真实 Office 文件，提供 CLI、Skill 和 MCP 入口",
+        "signal": "当日卡片 +193 Star",
+        "key": "genspark-ai/genoffice",
+        "category": "其他",
+        "dates": [
+          "2026-10-23"
         ]
       },
       {
@@ -356,6 +379,17 @@
         ]
       },
       {
+        "name": "Remotion",
+        "url": "https://github.com/remotion-dev/remotion",
+        "description": "以 React 代码制作视频，可结合编程 Agent，支持模板及程序化渲染",
+        "signal": "当日卡片 +348 Star",
+        "key": "remotion-dev/remotion",
+        "category": "音视频创作",
+        "dates": [
+          "2026-10-23"
+        ]
+      },
+      {
         "name": "Ruflo",
         "url": "https://github.com/ruvnet/ruflo",
         "description": "为 Agent 提供任务协作、记忆与工具编排，具有 CLI、MCP 及特定客户端集成路径",
@@ -459,43 +493,48 @@
     "categories": [
       {
         "name": "音视频创作",
-        "count": 9,
-        "percent": 23.1
+        "count": 10,
+        "percent": 23.8
       },
       {
         "name": "AI 编程与工程 Skill",
         "count": 8,
-        "percent": 20.5
+        "percent": 19.0
+      },
+      {
+        "name": "Agent 基础能力",
+        "count": 7,
+        "percent": 16.7
       },
       {
         "name": "自动化测试",
         "count": 7,
-        "percent": 17.9
-      },
-      {
-        "name": "Agent 基础能力",
-        "count": 6,
-        "percent": 15.4
+        "percent": 16.7
       },
       {
         "name": "设计与可视化",
         "count": 4,
-        "percent": 10.3
+        "percent": 9.5
       },
       {
         "name": "Agent 协作与编排",
         "count": 3,
-        "percent": 7.7
+        "percent": 7.1
+      },
+      {
+        "name": "其他",
+        "count": 1,
+        "percent": 2.4
       },
       {
         "name": "科研与数据分析",
         "count": 1,
-        "percent": 2.6
+        "percent": 2.4
       },
       {
         "name": "软件分析与研究",
         "count": 1,
-        "percent": 2.6
+        "percent": 2.4
       }
     ],
     "idea_top": [],
