@@ -40,5 +40,8 @@
   "k2-fsa/omnivoice": "音视频创作",
   "remotion-dev/remotion": "音视频创作",
   "genspark-ai/genoffice": "其他",
-  "firecrawl/firecrawl": "Agent 基础能力"
+  "firecrawl/firecrawl": "Agent 基础能力",
+  "leonxlnx/earshot": "音视频创作",
+  "vercel-labs/agent-browser": "自动化测试",
+  "fission-ai/openspec": "AI 编程与工程 Skill"
 }

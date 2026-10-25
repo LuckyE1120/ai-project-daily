@@ -3,12 +3,12 @@
     "month": "2026-10",
     "status": "preview",
     "title": "2026-10 · 月度采样预览",
-    "report_count": 9,
-    "project_count": 42,
+    "report_count": 10,
+    "project_count": 45,
     "calendar_days": 31,
-    "coverage": 29.0,
+    "coverage": 32.3,
     "start": "2026-10-13",
-    "end": "2026-10-23",
+    "end": "2026-10-25",
     "report_dates": [
       "2026-10-13",
       "2026-10-14",
@@ -18,9 +18,10 @@
       "2026-10-20",
       "2026-10-21",
       "2026-10-22",
-      "2026-10-23"
+      "2026-10-23",
+      "2026-10-25"
     ],
-    "source_fingerprint": "b2a94186da84e21e0140c2cd8771373af9929543812ffdcb31fdba6d9c6426ff",
+    "source_fingerprint": "6bd7a19fb811976799f395c7df1bf0763512f67703b40a9516223a82f51a7d74",
     "projects": [
       {
         "name": "addyosmani/agent-skills",
@@ -157,6 +158,17 @@
         ]
       },
       {
+        "name": "OpenSpec",
+        "url": "https://github.com/Fission-AI/OpenSpec",
+        "description": "用规范、设计和任务文件管理 AI 编程变更",
+        "signal": "+657 Star",
+        "key": "fission-ai/openspec",
+        "category": "AI 编程与工程 Skill",
+        "dates": [
+          "2026-10-25"
+        ]
+      },
+      {
         "name": "GenOffice",
         "url": "https://github.com/genspark-ai/genoffice",
         "description": "AI 办公套件，编辑真实 Office 文件，提供 CLI、Skill 和 MCP 入口",
@@ -287,6 +299,17 @@
         "category": "音视频创作",
         "dates": [
           "2026-10-15"
+        ]
+      },
+      {
+        "name": "earshot",
+        "url": "https://github.com/Leonxlnx/earshot",
+        "description": "本地 CPU 音频分析与代码音效工具，提供 CLI、Python API、MCP",
+        "signal": "+1,949 Star",
+        "key": "leonxlnx/earshot",
+        "category": "音视频创作",
+        "dates": [
+          "2026-10-25"
         ]
       },
       {
@@ -468,6 +491,17 @@
         ]
       },
       {
+        "name": "agent-browser",
+        "url": "https://github.com/vercel-labs/agent-browser",
+        "description": "面向 Agent 的浏览器自动化 CLI，以页面快照引用执行点击、填写及截图",
+        "signal": "+389 Star",
+        "key": "vercel-labs/agent-browser",
+        "category": "自动化测试",
+        "dates": [
+          "2026-10-25"
+        ]
+      },
+      {
         "name": "OpenViking",
         "url": "https://github.com/volcengine/OpenViking",
         "description": "以分层目录组织 Agent 记忆、知识与 Skill，提供服务端、CLI 和 SDK 接入",
@@ -493,48 +527,48 @@
     "categories": [
       {
         "name": "音视频创作",
-        "count": 10,
-        "percent": 23.8
+        "count": 11,
+        "percent": 24.4
       },
       {
         "name": "AI 编程与工程 Skill",
+        "count": 9,
+        "percent": 20.0
+      },
+      {
+        "name": "自动化测试",
         "count": 8,
-        "percent": 19.0
+        "percent": 17.8
       },
       {
         "name": "Agent 基础能力",
         "count": 7,
-        "percent": 16.7
-      },
-      {
-        "name": "自动化测试",
-        "count": 7,
-        "percent": 16.7
+        "percent": 15.6
       },
       {
         "name": "设计与可视化",
         "count": 4,
-        "percent": 9.5
+        "percent": 8.9
       },
       {
         "name": "Agent 协作与编排",
         "count": 3,
-        "percent": 7.1
+        "percent": 6.7
       },
       {
         "name": "其他",
         "count": 1,
-        "percent": 2.4
+        "percent": 2.2
       },
       {
         "name": "科研与数据分析",
         "count": 1,
-        "percent": 2.4
+        "percent": 2.2
       },
       {
         "name": "软件分析与研究",
         "count": 1,
-        "percent": 2.4
+        "percent": 2.2
       }
     ],
     "idea_top": [],
