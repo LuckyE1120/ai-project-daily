@@ -1,5 +1,52 @@
 [
   {
+    "date": "2026-10-26",
+    "title": "AI 项目日报 · 2026-10-26",
+    "filename": "AI项目日报-2026-10-26.md",
+    "text": "# AI 项目日报 · 2026-10-26\n\n检索日期：2026 年 10 月 26 日（北京时间）  \n近一周观察窗口：10 月 19 日—10 月 26 日  \n对照文档：[10 月 25 日日报](./AI项目日报-2026-10-25.md)\n\n## 今日重点\n\n首次收录 ai-memory、OpenFilm、Apify MCP Server，分别关注跨 Agent 任务接续、可编辑视频制作和网页数据采集。结合此前的视频体验需求，优先推荐关注 OpenFilm；经常切换编程助手时可验证 ai-memory。\n\n本期均为官方资料核验，没有安装、配置、调用或实测。首次收录不表示刚发布；当前 README 功能不作为当日版本发布证据。\n\n## 新增项目\n\n| 项目 | 已核实的用途 | 第三方近 7 日热度 | 体验入口与前提 | 建议先验证什么 |\n|---|---|---|---|---|\n| [ai-memory](https://github.com/akitaonrails/ai-memory) | 给编程 Agent 提供共享长期记忆、检索与任务交接，支持 MCP 和生命周期 hooks | +3,050 Star | 平台二进制与支持的 Agent；基础模式无需模型 Key；setup 会配置服务与客户端 | 在测试仓库记录一个失败方案，换会话后核对能否找回正确文件和下一步 |\n| [OpenFilm](https://github.com/openfilm/openfilm) | 编程 Agent 用网页制作视频，并在本地 Studio 编辑时间线与画面，支持 MP4 导出 | +1,865 Star | CLI 路径需 Node 22.2+、ffmpeg；保存版本需 git；首次下载约 100 MB Chromium；生成素材另需服务 Key | 用自有图片和字幕做 15 秒片段，手动改字后检查导出是否保留修改 |\n| [Apify MCP Server](https://github.com/apify/apify-mcp-server) | 把 Apify Store 的采集和自动化 Actor 暴露为 Agent 工具 | +1,269 Star | 支持 MCP 的客户端；托管连接通常经 OAuth 或 Token；运行 Actor 需核对账号额度与计费 | 选一个公开页面、限定少量结果，核对字段、来源及实际调用成本 |\n\n热度来自 [whatstrending.ai 仓库榜](https://whatstrending.ai/repos)，快照为 2026-10-26，表格明确给出 10/19—10/26 的 7 日增长。数字是第三方统计，没有进行 GitHub 官方增长审计，不代表质量，也不参与月报评分。与昨日滚动窗口不同，不能相减推导今天新增 Star。\n\n## 体验路径与限制\n\n### ai-memory：先检查计划，再验证交接\n\n按[官方 Quick start](https://github.com/akitaonrails/ai-memory#quick-start)选择平台发布包。安装后可先用 `ai-memory setup --plan` 查看配置范围，准备好测试仓库后再执行接入。默认基础路径不要求 LLM；配置外部服务后，数据流需按所选提供方另行检查。\n\n[官方仓库](https://github.com/akitaonrails/ai-memory)说明 hooks 会捕获工作过程，并将记忆整理为 Markdown。建议用明确的文件名、失败原因和待办测试交接，检查检索准确性及项目隔离。记忆可能过时或遗漏，不能替代当前源码和测试；本期未读取或导入聊天历史，也未启用服务。\n\n### OpenFilm：先验证编辑到导出的闭环\n\n从[官方 Install](https://github.com/openfilm/openfilm#install)选择 CLI 或桌面包；CLI 可运行 `npx -y openfilm@latest` 查看手册，也可打开官方示例。Studio 适合用 Chromium 系浏览器预览。先完成静态素材短片，再逐步添加动画或生成素材。\n\n[官方命令说明](https://github.com/openfilm/openfilm#commands)提供 `openfilm render` 导出 MP4。制作、编辑和渲染无需账号，生成配音、音乐、图片或视频则需另接服务。建议检查字体、时间同步、手动改动和最终文件；本期没有导出样片，也没有与 HyperFrames、OpenMontage 或 Remotion 做实测比较。\n\n### Apify MCP：先限定一个 Actor 和少量结果\n\n按[官方 Quickstart](https://github.com/apify/apify-mcp-server#-quickstart)选择托管 `https://mcp.apify.com`，或本地 stdio 的 `npx @apify/actors-mcp-server` 与 Token。部分目录查询可匿名使用，但不等于所有 Actor 都可免费运行；本地启动桥接程序也不意味着采集在本机离线完成。\n\n[官方仓库](https://github.com/apify/apify-mcp-server)说明托管与本地功能有差异，旧 `/sse` 地址已移除，需使用 Streamable HTTP 入口。优先检查 Actor 的输入、输出和计费方式，再做一条小样本采集；不同客户端的动态工具发现支持也可能不同。建议把抓取结果逐项对照原页面，不能把工具成功返回当作事实准确。\n\n## 既有项目跟踪与变化\n\n- 昨日已补充 OpenSpec v1.15.0、agent-browser v0.39.2、earshot v0.4.0 的正式发布证据，本期不重复作新增条目。\n- VoiceStudio、Orca、Ponytail 等旧项目仍在当期周榜；榜位变化只作为关注线索，未据此推断新增能力或性能提升。\n- 当前榜单中部分项目的排名或可测窗口发生变化，不能仅凭进出榜解释为项目突然走红或失去热度。本期保留来源和明确窗口，不补猜缺失统计。\n\n## 月报积累\n\n3 个新仓库已补充主类型目录。10 月尚未结束，9 月早于实际归档起点，本次没有应补正式月报。首期于 2026-11-01 评审 10 月真实样本，按仓库去重，说明缺报日期和覆盖限制；资料调研与实际体验分开，证据不足可少选或空榜。\n",
+    "html": "<h2>AI 项目日报 · 2026-10-26</h2>\n<p>检索日期：2026 年 10 月 26 日（北京时间） 近一周观察窗口：10 月 19 日—10 月 26 日 对照文档：<a href=\"#date=2026-10-25\">10 月 25 日日报</a></p>\n<h3>今日重点</h3>\n<p>首次收录 ai-memory、OpenFilm、Apify MCP Server，分别关注跨 Agent 任务接续、可编辑视频制作和网页数据采集。结合此前的视频体验需求，优先推荐关注 OpenFilm；经常切换编程助手时可验证 ai-memory。</p>\n<p>本期均为官方资料核验，没有安装、配置、调用或实测。首次收录不表示刚发布；当前 README 功能不作为当日版本发布证据。</p>\n<h3>新增项目</h3>\n<div class=\"table-scroll\" tabindex=\"0\" aria-label=\"可横向滚动的项目表格\"><table><thead><tr><th scope=\"col\">项目</th><th scope=\"col\">已核实的用途</th><th scope=\"col\">第三方近 7 日热度</th><th scope=\"col\">体验入口与前提</th><th scope=\"col\">建议先验证什么</th></tr></thead><tbody><tr><td><a href=\"https://github.com/akitaonrails/ai-memory\" target=\"_blank\" rel=\"noopener noreferrer\">ai-memory ↗</a></td><td>给编程 Agent 提供共享长期记忆、检索与任务交接，支持 MCP 和生命周期 hooks</td><td>+3,050 Star</td><td>平台二进制与支持的 Agent；基础模式无需模型 Key；setup 会配置服务与客户端</td><td>在测试仓库记录一个失败方案，换会话后核对能否找回正确文件和下一步</td></tr><tr><td><a href=\"https://github.com/openfilm/openfilm\" target=\"_blank\" rel=\"noopener noreferrer\">OpenFilm ↗</a></td><td>编程 Agent 用网页制作视频，并在本地 Studio 编辑时间线与画面，支持 MP4 导出</td><td>+1,865 Star</td><td>CLI 路径需 Node 22.2+、ffmpeg；保存版本需 git；首次下载约 100 MB Chromium；生成素材另需服务 Key</td><td>用自有图片和字幕做 15 秒片段，手动改字后检查导出是否保留修改</td></tr><tr><td><a href=\"https://github.com/apify/apify-mcp-server\" target=\"_blank\" rel=\"noopener noreferrer\">Apify MCP Server ↗</a></td><td>把 Apify Store 的采集和自动化 Actor 暴露为 Agent 工具</td><td>+1,269 Star</td><td>支持 MCP 的客户端；托管连接通常经 OAuth 或 Token；运行 Actor 需核对账号额度与计费</td><td>选一个公开页面、限定少量结果，核对字段、来源及实际调用成本</td></tr></tbody></table></div>\n<p>热度来自 <a href=\"https://whatstrending.ai/repos\" target=\"_blank\" rel=\"noopener noreferrer\">whatstrending.ai 仓库榜 ↗</a>，快照为 2026-10-26，表格明确给出 10/19—10/26 的 7 日增长。数字是第三方统计，没有进行 GitHub 官方增长审计，不代表质量，也不参与月报评分。与昨日滚动窗口不同，不能相减推导今天新增 Star。</p>\n<h3>体验路径与限制</h3>\n<h4>ai-memory：先检查计划，再验证交接</h4>\n<p>按<a href=\"https://github.com/akitaonrails/ai-memory#quick-start\" target=\"_blank\" rel=\"noopener noreferrer\">官方 Quick start ↗</a>选择平台发布包。安装后可先用 <code>ai-memory setup --plan</code> 查看配置范围，准备好测试仓库后再执行接入。默认基础路径不要求 LLM；配置外部服务后，数据流需按所选提供方另行检查。</p>\n<p><a href=\"https://github.com/akitaonrails/ai-memory\" target=\"_blank\" rel=\"noopener noreferrer\">官方仓库 ↗</a>说明 hooks 会捕获工作过程，并将记忆整理为 Markdown。建议用明确的文件名、失败原因和待办测试交接，检查检索准确性及项目隔离。记忆可能过时或遗漏，不能替代当前源码和测试；本期未读取或导入聊天历史，也未启用服务。</p>\n<h4>OpenFilm：先验证编辑到导出的闭环</h4>\n<p>从<a href=\"https://github.com/openfilm/openfilm#install\" target=\"_blank\" rel=\"noopener noreferrer\">官方 Install ↗</a>选择 CLI 或桌面包；CLI 可运行 <code>npx -y openfilm@latest</code> 查看手册，也可打开官方示例。Studio 适合用 Chromium 系浏览器预览。先完成静态素材短片，再逐步添加动画或生成素材。</p>\n<p><a href=\"https://github.com/openfilm/openfilm#commands\" target=\"_blank\" rel=\"noopener noreferrer\">官方命令说明 ↗</a>提供 <code>openfilm render</code> 导出 MP4。制作、编辑和渲染无需账号，生成配音、音乐、图片或视频则需另接服务。建议检查字体、时间同步、手动改动和最终文件；本期没有导出样片，也没有与 HyperFrames、OpenMontage 或 Remotion 做实测比较。</p>\n<h4>Apify MCP：先限定一个 Actor 和少量结果</h4>\n<p>按<a href=\"https://github.com/apify/apify-mcp-server#-quickstart\" target=\"_blank\" rel=\"noopener noreferrer\">官方 Quickstart ↗</a>选择托管 <code>https://mcp.apify.com</code>，或本地 stdio 的 <code>npx @apify/actors-mcp-server</code> 与 Token。部分目录查询可匿名使用，但不等于所有 Actor 都可免费运行；本地启动桥接程序也不意味着采集在本机离线完成。</p>\n<p><a href=\"https://github.com/apify/apify-mcp-server\" target=\"_blank\" rel=\"noopener noreferrer\">官方仓库 ↗</a>说明托管与本地功能有差异，旧 <code>/sse</code> 地址已移除，需使用 Streamable HTTP 入口。优先检查 Actor 的输入、输出和计费方式，再做一条小样本采集；不同客户端的动态工具发现支持也可能不同。建议把抓取结果逐项对照原页面，不能把工具成功返回当作事实准确。</p>\n<h3>既有项目跟踪与变化</h3>\n<ul><li>昨日已补充 OpenSpec v1.15.0、agent-browser v0.39.2、earshot v0.4.0 的正式发布证据，本期不重复作新增条目。</li><li>VoiceStudio、Orca、Ponytail 等旧项目仍在当期周榜；榜位变化只作为关注线索，未据此推断新增能力或性能提升。</li><li>当前榜单中部分项目的排名或可测窗口发生变化，不能仅凭进出榜解释为项目突然走红或失去热度。本期保留来源和明确窗口，不补猜缺失统计。</li></ul>\n<h3>月报积累</h3>\n<p>3 个新仓库已补充主类型目录。10 月尚未结束，9 月早于实际归档起点，本次没有应补正式月报。首期于 2026-11-01 评审 10 月真实样本，按仓库去重，说明缺报日期和覆盖限制；资料调研与实际体验分开，证据不足可少选或空榜。</p>",
+    "projects": [
+      {
+        "name": "ai-memory",
+        "url": "https://github.com/akitaonrails/ai-memory",
+        "description": "给编程 Agent 提供共享长期记忆、检索与任务交接，支持 MCP 和生命周期 hooks",
+        "signal": "+3,050 Star"
+      },
+      {
+        "name": "OpenFilm",
+        "url": "https://github.com/openfilm/openfilm",
+        "description": "编程 Agent 用网页制作视频，并在本地 Studio 编辑时间线与画面，支持 MP4 导出",
+        "signal": "+1,865 Star"
+      },
+      {
+        "name": "Apify MCP Server",
+        "url": "https://github.com/apify/apify-mcp-server",
+        "description": "把 Apify Store 的采集和自动化 Actor 暴露为 Agent 工具",
+        "signal": "+1,269 Star"
+      }
+    ],
+    "observations": [
+      {
+        "name": "ai-memory",
+        "url": "https://github.com/akitaonrails/ai-memory",
+        "description": "给编程 Agent 提供共享长期记忆、检索与任务交接，支持 MCP 和生命周期 hooks",
+        "signal": "+3,050 Star"
+      },
+      {
+        "name": "OpenFilm",
+        "url": "https://github.com/openfilm/openfilm",
+        "description": "编程 Agent 用网页制作视频，并在本地 Studio 编辑时间线与画面，支持 MP4 导出",
+        "signal": "+1,865 Star"
+      },
+      {
+        "name": "Apify MCP Server",
+        "url": "https://github.com/apify/apify-mcp-server",
+        "description": "把 Apify Store 的采集和自动化 Actor 暴露为 Agent 工具",
+        "signal": "+1,269 Star"
+      }
+    ]
+  },
+  {
     "date": "2026-10-25",
     "title": "AI 项目日报 · 2026-10-25",
     "filename": "AI项目日报-2026-10-25.md",

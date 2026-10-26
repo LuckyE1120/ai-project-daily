@@ -3,12 +3,12 @@
     "month": "2026-10",
     "status": "preview",
     "title": "2026-10 · 月度采样预览",
-    "report_count": 10,
-    "project_count": 45,
+    "report_count": 11,
+    "project_count": 48,
     "calendar_days": 31,
-    "coverage": 32.3,
+    "coverage": 35.5,
     "start": "2026-10-13",
-    "end": "2026-10-25",
+    "end": "2026-10-26",
     "report_dates": [
       "2026-10-13",
       "2026-10-14",
@@ -19,9 +19,10 @@
       "2026-10-21",
       "2026-10-22",
       "2026-10-23",
-      "2026-10-25"
+      "2026-10-25",
+      "2026-10-26"
     ],
-    "source_fingerprint": "6cb28ce7c669167672294a6e5bc147f17f25ff516999140b049544f8ffdcf2de",
+    "source_fingerprint": "763d677be169f159ba51c74f0e84372ee838b658670e6858ebdcf4c7c7f17a07",
     "projects": [
       {
         "name": "addyosmani/agent-skills",
@@ -35,6 +36,17 @@
         ]
       },
       {
+        "name": "ai-memory",
+        "url": "https://github.com/akitaonrails/ai-memory",
+        "description": "给编程 Agent 提供共享长期记忆、检索与任务交接，支持 MCP 和生命周期 hooks",
+        "signal": "+3,050 Star",
+        "key": "akitaonrails/ai-memory",
+        "category": "Agent 基础能力",
+        "dates": [
+          "2026-10-26"
+        ]
+      },
+      {
         "name": "OpenCode",
         "url": "https://github.com/anomalyco/opencode",
         "description": "开源编程 Agent，提供终端与桌面入口，内置 build 和 plan 工作方式",
@@ -43,6 +55,17 @@
         "category": "AI 编程与工程 Skill",
         "dates": [
           "2026-10-19"
+        ]
+      },
+      {
+        "name": "Apify MCP Server",
+        "url": "https://github.com/apify/apify-mcp-server",
+        "description": "把 Apify Store 的采集和自动化 Actor 暴露为 Agent 工具",
+        "signal": "+1,269 Star",
+        "key": "apify/apify-mcp-server",
+        "category": "Agent 基础能力",
+        "dates": [
+          "2026-10-26"
         ]
       },
       {
@@ -369,6 +392,17 @@
         ]
       },
       {
+        "name": "OpenFilm",
+        "url": "https://github.com/openfilm/openfilm",
+        "description": "编程 Agent 用网页制作视频，并在本地 Studio 编辑时间线与画面，支持 MP4 导出",
+        "signal": "+1,865 Star",
+        "key": "openfilm/openfilm",
+        "category": "音视频创作",
+        "dates": [
+          "2026-10-26"
+        ]
+      },
+      {
         "name": "Agent-Reach",
         "url": "https://github.com/Panniantong/Agent-Reach",
         "description": "为 Agent 配置、检查和选择网页、视频字幕、RSS、社交平台等访问工具",
@@ -527,48 +561,48 @@
     "categories": [
       {
         "name": "音视频创作",
-        "count": 11,
-        "percent": 24.4
+        "count": 12,
+        "percent": 25.0
       },
       {
         "name": "AI 编程与工程 Skill",
         "count": 9,
-        "percent": 20.0
+        "percent": 18.8
+      },
+      {
+        "name": "Agent 基础能力",
+        "count": 9,
+        "percent": 18.8
       },
       {
         "name": "自动化测试",
         "count": 8,
-        "percent": 17.8
-      },
-      {
-        "name": "Agent 基础能力",
-        "count": 7,
-        "percent": 15.6
+        "percent": 16.7
       },
       {
         "name": "设计与可视化",
         "count": 4,
-        "percent": 8.9
+        "percent": 8.3
       },
       {
         "name": "Agent 协作与编排",
         "count": 3,
-        "percent": 6.7
+        "percent": 6.2
       },
       {
         "name": "其他",
         "count": 1,
-        "percent": 2.2
+        "percent": 2.1
       },
       {
         "name": "科研与数据分析",
         "count": 1,
-        "percent": 2.2
+        "percent": 2.1
       },
       {
         "name": "软件分析与研究",
         "count": 1,
-        "percent": 2.2
+        "percent": 2.1
       }
     ],
     "idea_top": [],
