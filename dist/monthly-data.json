@@ -3,12 +3,12 @@
     "month": "2026-10",
     "status": "preview",
     "title": "2026-10 · 月度采样预览",
-    "report_count": 11,
-    "project_count": 48,
+    "report_count": 12,
+    "project_count": 51,
     "calendar_days": 31,
-    "coverage": 35.5,
+    "coverage": 38.7,
     "start": "2026-10-13",
-    "end": "2026-10-26",
+    "end": "2026-10-27",
     "report_dates": [
       "2026-10-13",
       "2026-10-14",
@@ -20,9 +20,10 @@
       "2026-10-22",
       "2026-10-23",
       "2026-10-25",
-      "2026-10-26"
+      "2026-10-26",
+      "2026-10-27"
     ],
-    "source_fingerprint": "763d677be169f159ba51c74f0e84372ee838b658670e6858ebdcf4c7c7f17a07",
+    "source_fingerprint": "f3dfbcbffa1b816a3cfdd125eb3d44a14bc8e0f51eef7e26b7570489b762e60d",
     "projects": [
       {
         "name": "addyosmani/agent-skills",
@@ -159,6 +160,17 @@
         ]
       },
       {
+        "name": "Pi",
+        "url": "https://github.com/earendil-works/pi",
+        "description": "可扩展的 Agent harness，包含编程 CLI、工具调用运行时与多提供方 API 库",
+        "signal": "+1,610 Star",
+        "key": "earendil-works/pi",
+        "category": "AI 编程与工程 Skill",
+        "dates": [
+          "2026-10-27"
+        ]
+      },
+      {
         "name": "text-to-cad",
         "url": "https://github.com/earthtojake/text-to-cad",
         "description": "为 Agent 提供本地 3D 建模、工程图和制造检查工作流，可输出 STEP、STL、GLB、3MF",
@@ -281,6 +293,17 @@
         ]
       },
       {
+        "name": "iFixAi",
+        "url": "https://github.com/ifixai-ai/iFixAi",
+        "description": "在模拟业务环境中检查 Agent 的角色边界、任务遵循等行为，输出带证据的评估报告",
+        "signal": "+4,842 Star",
+        "key": "ifixai-ai/ifixai",
+        "category": "自动化测试",
+        "dates": [
+          "2026-10-27"
+        ]
+      },
+      {
         "name": "Concat",
         "url": "https://github.com/jub0t/Concat",
         "description": "本地视频编辑器，提供多轨剪辑、字幕等能力及 MCP、JSON-RPC 接口",
@@ -378,6 +401,17 @@
         "dates": [
           "2026-10-13",
           "2026-10-14"
+        ]
+      },
+      {
+        "name": "OpenDesign",
+        "url": "https://github.com/nexu-io/open-design",
+        "description": "以现有编程助手驱动设计工作区，结合设计规范生成并预览作品",
+        "signal": "+1,632 Star",
+        "key": "nexu-io/open-design",
+        "category": "设计与可视化",
+        "dates": [
+          "2026-10-27"
         ]
       },
       {
@@ -562,47 +596,47 @@
       {
         "name": "音视频创作",
         "count": 12,
-        "percent": 25.0
+        "percent": 23.5
       },
       {
         "name": "AI 编程与工程 Skill",
-        "count": 9,
-        "percent": 18.8
+        "count": 10,
+        "percent": 19.6
       },
       {
         "name": "Agent 基础能力",
         "count": 9,
-        "percent": 18.8
+        "percent": 17.6
       },
       {
         "name": "自动化测试",
-        "count": 8,
-        "percent": 16.7
+        "count": 9,
+        "percent": 17.6
       },
       {
         "name": "设计与可视化",
-        "count": 4,
-        "percent": 8.3
+        "count": 5,
+        "percent": 9.8
       },
       {
         "name": "Agent 协作与编排",
         "count": 3,
-        "percent": 6.2
+        "percent": 5.9
       },
       {
         "name": "其他",
         "count": 1,
-        "percent": 2.1
+        "percent": 2.0
       },
       {
         "name": "科研与数据分析",
         "count": 1,
-        "percent": 2.1
+        "percent": 2.0
       },
       {
         "name": "软件分析与研究",
         "count": 1,
-        "percent": 2.1
+        "percent": 2.0
       }
     ],
     "idea_top": [],
