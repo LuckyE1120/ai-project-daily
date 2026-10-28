@@ -1,5 +1,52 @@
 [
   {
+    "date": "2026-10-28",
+    "title": "AI 项目日报 · 2026-10-28",
+    "filename": "AI项目日报-2026-10-28.md",
+    "text": "# AI 项目日报 · 2026-10-28\n\n检索日期：2026 年 10 月 28 日（北京时间）  \n近一周观察窗口：10 月 21 日—10 月 28 日  \n对照文档：[10 月 27 日日报](./AI项目日报-2026-10-27.md)\n\n## 今日重点\n\n首次收录 Langfuse、Browser Use、Humanizer。测试与工程方向优先关注 Langfuse：把失败回答追溯到模型、检索和工具调用；浏览器任务可看 Browser Use；写作方向可用 Humanizer 检查模板化表达。\n\n本期均为官方资料核验，没有安装、配置或实测。首次收录不表示新发布；当前 README 的能力也不作为当日版本更新证据。推荐顺序依据任务适配度，不代表性能排名。\n\n## 新增项目\n\n| 项目 | 已核实的用途 | 第三方近 7 日热度 | 体验入口与前提 | 建议先验证什么 |\n|---|---|---|---|---|\n| [Langfuse](https://github.com/langfuse/langfuse) | LLM 应用调用追踪、提示词管理、数据集与评估平台 | +516 Star | 可用托管服务或 Docker Compose 自部署；接入应用需 SDK 与项目配置；模型评审另需模型服务 | 记录一次成功和一次失败调用，检查能否定位到具体步骤并关联评估结果 |\n| [Browser Use](https://github.com/browser-use/browser-use) | 浏览器 Agent Python 库，并提供 CLI 与独立云端服务入口 | +648 Star | Python 库要求 3.11+，新项目示例用 3.12；需可用模型与浏览器；云服务另需账号配置 | 在测试网页完成短任务，逐步核对页面状态与最后结果 |\n| [Humanizer](https://github.com/blader/humanizer) | 面向读者改写模板化 AI 文本的 Agent Skill | +2,588 Star | 支持 Skill 的 Agent；安装本身不是独立模型，改写仍使用 Agent 模型 | 用一段自己的介绍文对照改写，核对事实、语气及信息是否完整 |\n\n热度来自 [whatstrending.ai 仓库榜](https://whatstrending.ai/repos)，快照日期为 2026-10-28，明确窗口为 10/21—10/28。数字属于第三方 7 日增长，未进行 GitHub 官方审计，不作为质量背书或月报评分依据。与昨日滚动周增的差值不能当作单日增长。\n\n## 体验路径与限制\n\n### Langfuse：先把一个失败追踪清楚\n\n从[官方仓库部署与集成说明](https://github.com/langfuse/langfuse#-deploy-langfuse)选择托管或自部署，再用 Python、JS/TS SDK 等入口接入一条小型测试流程。先查看模型调用和相关步骤，再把人工标注、代码评分或模型评审关联到样本。\n\n自部署可按[官方 Docker Compose 指南](https://langfuse.com/self-hosting/deployment/docker-compose)准备环境，不应把启动容器等同于已完成生产部署。建议使用测试数据，确认记录内容、保留范围和费用统计。追踪能帮助定位问题，评估是否有效仍取决于样本和评分标准；本期未部署服务，也未验证其对现有测试体系的收益。\n\n### Browser Use：先选清库、CLI 还是云服务\n\n[官方 Quickstart](https://github.com/browser-use/browser-use#quickstart)区分三种入口：托管 Agent API、给现有 Agent 使用的 CLI，以及由自己的 Python 程序运行的库。CLI 和库均可连接本地或云浏览器；云浏览器与连 Agent 一起托管的 API 也不是同一层服务。\n\n新 Python 项目可按官方示例用 uv 准备环境并安装 `browser-use`，配置所选模型后运行小任务。建议在不含真实业务数据的测试页面核对页面证据、失败处理与重复执行成本，再扩大流程。作者基准和功能宣传没有在本机复现；本期没有接管用户浏览器，也未与 agent-browser 做性能比较。\n\n### Humanizer：优化文字后仍要核对事实\n\n[官方 Installation](https://github.com/blader/humanizer#installation)提供不同 Agent 的入口；支持 Skills CLI 的项目可选择项目级安装，避免一开始改动全局配置。调用后给出原文和自己的语气样本，比较修改前后是否更适合目标读者。\n\n[官方说明](https://github.com/blader/humanizer)定位于改善文字可读性，并明确不以绕过 AI 检测器为目标。建议保留原稿，逐项检查人名、数字、日期、引用与立场。它是写作指令集合，不是事实核查引擎；作者的偏好实验也不能保证中文或所有文本都更好。本期没有安装 Skill 或改写其他文档。\n\n## 既有项目与发布跟踪\n\n- 昨日 iFixAi、Pi、OpenDesign 已归档，昨日网站部署已补查确认成功；本期不重复作新项目介绍。\n- security-audit-skill、VoiceStudio 等旧项目仍有周增热度，但未据此形成有发布证据支撑的新版本条目。\n- 本期新增条目分别补充观测、浏览器执行和写作流程，未验证它们与现有工具的替代关系。官方用途、第三方关注度与本机体验继续分开记录。\n\n## 月报积累\n\n3 个新仓库已补充主类型目录。10 月尚未结束，9 月早于实际收录起点，本次没有应补正式月报。首期于 2026-11-01 汇总 10 月真实归档，按仓库去重，说明缺报日期与样本覆盖限制；创意和落地价值分别评审，证据不足可少选或空榜。\n",
+    "html": "<h2>AI 项目日报 · 2026-10-28</h2>\n<p>检索日期：2026 年 10 月 28 日（北京时间） 近一周观察窗口：10 月 21 日—10 月 28 日 对照文档：<a href=\"#date=2026-10-27\">10 月 27 日日报</a></p>\n<h3>今日重点</h3>\n<p>首次收录 Langfuse、Browser Use、Humanizer。测试与工程方向优先关注 Langfuse：把失败回答追溯到模型、检索和工具调用；浏览器任务可看 Browser Use；写作方向可用 Humanizer 检查模板化表达。</p>\n<p>本期均为官方资料核验，没有安装、配置或实测。首次收录不表示新发布；当前 README 的能力也不作为当日版本更新证据。推荐顺序依据任务适配度，不代表性能排名。</p>\n<h3>新增项目</h3>\n<div class=\"table-scroll\" tabindex=\"0\" aria-label=\"可横向滚动的项目表格\"><table><thead><tr><th scope=\"col\">项目</th><th scope=\"col\">已核实的用途</th><th scope=\"col\">第三方近 7 日热度</th><th scope=\"col\">体验入口与前提</th><th scope=\"col\">建议先验证什么</th></tr></thead><tbody><tr><td><a href=\"https://github.com/langfuse/langfuse\" target=\"_blank\" rel=\"noopener noreferrer\">Langfuse ↗</a></td><td>LLM 应用调用追踪、提示词管理、数据集与评估平台</td><td>+516 Star</td><td>可用托管服务或 Docker Compose 自部署；接入应用需 SDK 与项目配置；模型评审另需模型服务</td><td>记录一次成功和一次失败调用，检查能否定位到具体步骤并关联评估结果</td></tr><tr><td><a href=\"https://github.com/browser-use/browser-use\" target=\"_blank\" rel=\"noopener noreferrer\">Browser Use ↗</a></td><td>浏览器 Agent Python 库，并提供 CLI 与独立云端服务入口</td><td>+648 Star</td><td>Python 库要求 3.11+，新项目示例用 3.12；需可用模型与浏览器；云服务另需账号配置</td><td>在测试网页完成短任务，逐步核对页面状态与最后结果</td></tr><tr><td><a href=\"https://github.com/blader/humanizer\" target=\"_blank\" rel=\"noopener noreferrer\">Humanizer ↗</a></td><td>面向读者改写模板化 AI 文本的 Agent Skill</td><td>+2,588 Star</td><td>支持 Skill 的 Agent；安装本身不是独立模型，改写仍使用 Agent 模型</td><td>用一段自己的介绍文对照改写，核对事实、语气及信息是否完整</td></tr></tbody></table></div>\n<p>热度来自 <a href=\"https://whatstrending.ai/repos\" target=\"_blank\" rel=\"noopener noreferrer\">whatstrending.ai 仓库榜 ↗</a>，快照日期为 2026-10-28，明确窗口为 10/21—10/28。数字属于第三方 7 日增长，未进行 GitHub 官方审计，不作为质量背书或月报评分依据。与昨日滚动周增的差值不能当作单日增长。</p>\n<h3>体验路径与限制</h3>\n<h4>Langfuse：先把一个失败追踪清楚</h4>\n<p>从<a href=\"https://github.com/langfuse/langfuse#-deploy-langfuse\" target=\"_blank\" rel=\"noopener noreferrer\">官方仓库部署与集成说明 ↗</a>选择托管或自部署，再用 Python、JS/TS SDK 等入口接入一条小型测试流程。先查看模型调用和相关步骤，再把人工标注、代码评分或模型评审关联到样本。</p>\n<p>自部署可按<a href=\"https://langfuse.com/self-hosting/deployment/docker-compose\" target=\"_blank\" rel=\"noopener noreferrer\">官方 Docker Compose 指南 ↗</a>准备环境，不应把启动容器等同于已完成生产部署。建议使用测试数据，确认记录内容、保留范围和费用统计。追踪能帮助定位问题，评估是否有效仍取决于样本和评分标准；本期未部署服务，也未验证其对现有测试体系的收益。</p>\n<h4>Browser Use：先选清库、CLI 还是云服务</h4>\n<p><a href=\"https://github.com/browser-use/browser-use#quickstart\" target=\"_blank\" rel=\"noopener noreferrer\">官方 Quickstart ↗</a>区分三种入口：托管 Agent API、给现有 Agent 使用的 CLI，以及由自己的 Python 程序运行的库。CLI 和库均可连接本地或云浏览器；云浏览器与连 Agent 一起托管的 API 也不是同一层服务。</p>\n<p>新 Python 项目可按官方示例用 uv 准备环境并安装 <code>browser-use</code>，配置所选模型后运行小任务。建议在不含真实业务数据的测试页面核对页面证据、失败处理与重复执行成本，再扩大流程。作者基准和功能宣传没有在本机复现；本期没有接管用户浏览器，也未与 agent-browser 做性能比较。</p>\n<h4>Humanizer：优化文字后仍要核对事实</h4>\n<p><a href=\"https://github.com/blader/humanizer#installation\" target=\"_blank\" rel=\"noopener noreferrer\">官方 Installation ↗</a>提供不同 Agent 的入口；支持 Skills CLI 的项目可选择项目级安装，避免一开始改动全局配置。调用后给出原文和自己的语气样本，比较修改前后是否更适合目标读者。</p>\n<p><a href=\"https://github.com/blader/humanizer\" target=\"_blank\" rel=\"noopener noreferrer\">官方说明 ↗</a>定位于改善文字可读性，并明确不以绕过 AI 检测器为目标。建议保留原稿，逐项检查人名、数字、日期、引用与立场。它是写作指令集合，不是事实核查引擎；作者的偏好实验也不能保证中文或所有文本都更好。本期没有安装 Skill 或改写其他文档。</p>\n<h3>既有项目与发布跟踪</h3>\n<ul><li>昨日 iFixAi、Pi、OpenDesign 已归档，昨日网站部署已补查确认成功；本期不重复作新项目介绍。</li><li>security-audit-skill、VoiceStudio 等旧项目仍有周增热度，但未据此形成有发布证据支撑的新版本条目。</li><li>本期新增条目分别补充观测、浏览器执行和写作流程，未验证它们与现有工具的替代关系。官方用途、第三方关注度与本机体验继续分开记录。</li></ul>\n<h3>月报积累</h3>\n<p>3 个新仓库已补充主类型目录。10 月尚未结束，9 月早于实际收录起点，本次没有应补正式月报。首期于 2026-11-01 汇总 10 月真实归档，按仓库去重，说明缺报日期与样本覆盖限制；创意和落地价值分别评审，证据不足可少选或空榜。</p>",
+    "projects": [
+      {
+        "name": "Langfuse",
+        "url": "https://github.com/langfuse/langfuse",
+        "description": "LLM 应用调用追踪、提示词管理、数据集与评估平台",
+        "signal": "+516 Star"
+      },
+      {
+        "name": "Browser Use",
+        "url": "https://github.com/browser-use/browser-use",
+        "description": "浏览器 Agent Python 库，并提供 CLI 与独立云端服务入口",
+        "signal": "+648 Star"
+      },
+      {
+        "name": "Humanizer",
+        "url": "https://github.com/blader/humanizer",
+        "description": "面向读者改写模板化 AI 文本的 Agent Skill",
+        "signal": "+2,588 Star"
+      }
+    ],
+    "observations": [
+      {
+        "name": "Langfuse",
+        "url": "https://github.com/langfuse/langfuse",
+        "description": "LLM 应用调用追踪、提示词管理、数据集与评估平台",
+        "signal": "+516 Star"
+      },
+      {
+        "name": "Browser Use",
+        "url": "https://github.com/browser-use/browser-use",
+        "description": "浏览器 Agent Python 库，并提供 CLI 与独立云端服务入口",
+        "signal": "+648 Star"
+      },
+      {
+        "name": "Humanizer",
+        "url": "https://github.com/blader/humanizer",
+        "description": "面向读者改写模板化 AI 文本的 Agent Skill",
+        "signal": "+2,588 Star"
+      }
+    ]
+  },
+  {
     "date": "2026-10-27",
     "title": "AI 项目日报 · 2026-10-27",
     "filename": "AI项目日报-2026-10-27.md",

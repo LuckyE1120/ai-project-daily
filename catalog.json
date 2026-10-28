@@ -49,5 +49,8 @@
   "apify/apify-mcp-server": "Agent 基础能力",
   "ifixai-ai/ifixai": "自动化测试",
   "earendil-works/pi": "AI 编程与工程 Skill",
-  "nexu-io/open-design": "设计与可视化"
+  "nexu-io/open-design": "设计与可视化",
+  "langfuse/langfuse": "自动化测试",
+  "browser-use/browser-use": "自动化测试",
+  "blader/humanizer": "其他"
 }

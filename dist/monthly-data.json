@@ -3,12 +3,12 @@
     "month": "2026-10",
     "status": "preview",
     "title": "2026-10 · 月度采样预览",
-    "report_count": 12,
-    "project_count": 51,
+    "report_count": 13,
+    "project_count": 54,
     "calendar_days": 31,
-    "coverage": 38.7,
+    "coverage": 41.9,
     "start": "2026-10-13",
-    "end": "2026-10-27",
+    "end": "2026-10-28",
     "report_dates": [
       "2026-10-13",
       "2026-10-14",
@@ -21,9 +21,10 @@
       "2026-10-23",
       "2026-10-25",
       "2026-10-26",
-      "2026-10-27"
+      "2026-10-27",
+      "2026-10-28"
     ],
-    "source_fingerprint": "f3dfbcbffa1b816a3cfdd125eb3d44a14bc8e0f51eef7e26b7570489b762e60d",
+    "source_fingerprint": "48267b6cc211421a0d05793af36e00a55b2ffa85975b7960d7d8a6d5234a7b28",
     "projects": [
       {
         "name": "addyosmani/agent-skills",
@@ -67,6 +68,28 @@
         "category": "Agent 基础能力",
         "dates": [
           "2026-10-26"
+        ]
+      },
+      {
+        "name": "Humanizer",
+        "url": "https://github.com/blader/humanizer",
+        "description": "面向读者改写模板化 AI 文本的 Agent Skill",
+        "signal": "+2,588 Star",
+        "key": "blader/humanizer",
+        "category": "其他",
+        "dates": [
+          "2026-10-28"
+        ]
+      },
+      {
+        "name": "Browser Use",
+        "url": "https://github.com/browser-use/browser-use",
+        "description": "浏览器 Agent Python 库，并提供 CLI 与独立云端服务入口",
+        "signal": "+648 Star",
+        "key": "browser-use/browser-use",
+        "category": "自动化测试",
+        "dates": [
+          "2026-10-28"
         ]
       },
       {
@@ -348,6 +371,17 @@
         ]
       },
       {
+        "name": "Langfuse",
+        "url": "https://github.com/langfuse/langfuse",
+        "description": "LLM 应用调用追踪、提示词管理、数据集与评估平台",
+        "signal": "+516 Star",
+        "key": "langfuse/langfuse",
+        "category": "自动化测试",
+        "dates": [
+          "2026-10-28"
+        ]
+      },
+      {
         "name": "earshot",
         "url": "https://github.com/Leonxlnx/earshot",
         "description": "本地 CPU 音频分析与代码音效工具，提供 CLI、Python API、MCP",
@@ -596,47 +630,47 @@
       {
         "name": "音视频创作",
         "count": 12,
-        "percent": 23.5
+        "percent": 22.2
+      },
+      {
+        "name": "自动化测试",
+        "count": 11,
+        "percent": 20.4
       },
       {
         "name": "AI 编程与工程 Skill",
         "count": 10,
-        "percent": 19.6
+        "percent": 18.5
       },
       {
         "name": "Agent 基础能力",
         "count": 9,
-        "percent": 17.6
-      },
-      {
-        "name": "自动化测试",
-        "count": 9,
-        "percent": 17.6
+        "percent": 16.7
       },
       {
         "name": "设计与可视化",
         "count": 5,
-        "percent": 9.8
+        "percent": 9.3
       },
       {
         "name": "Agent 协作与编排",
         "count": 3,
-        "percent": 5.9
+        "percent": 5.6
       },
       {
         "name": "其他",
-        "count": 1,
-        "percent": 2.0
+        "count": 2,
+        "percent": 3.7
       },
       {
         "name": "科研与数据分析",
         "count": 1,
-        "percent": 2.0
+        "percent": 1.9
       },
       {
         "name": "软件分析与研究",
         "count": 1,
-        "percent": 2.0
+        "percent": 1.9
       }
     ],
     "idea_top": [],
