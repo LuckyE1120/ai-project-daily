@@ -3,12 +3,12 @@
     "month": "2026-10",
     "status": "preview",
     "title": "2026-10 · 月度采样预览",
-    "report_count": 13,
-    "project_count": 54,
+    "report_count": 14,
+    "project_count": 57,
     "calendar_days": 31,
-    "coverage": 41.9,
+    "coverage": 45.2,
     "start": "2026-10-13",
-    "end": "2026-10-28",
+    "end": "2026-10-29",
     "report_dates": [
       "2026-10-13",
       "2026-10-14",
@@ -22,9 +22,10 @@
       "2026-10-25",
       "2026-10-26",
       "2026-10-27",
-      "2026-10-28"
+      "2026-10-28",
+      "2026-10-29"
     ],
-    "source_fingerprint": "48267b6cc211421a0d05793af36e00a55b2ffa85975b7960d7d8a6d5234a7b28",
+    "source_fingerprint": "13a912002b5a0988cfbd17551205d19ce453500c6aa07f20a12c770739d450a3",
     "projects": [
       {
         "name": "addyosmani/agent-skills",
@@ -449,6 +450,17 @@
         ]
       },
       {
+        "name": "Hermes Agent",
+        "url": "https://github.com/NousResearch/hermes-agent",
+        "description": "带记忆、Skill、工具和消息入口的 Agent，可配置模型与运行后端",
+        "signal": "+2,174 Star",
+        "key": "nousresearch/hermes-agent",
+        "category": "Agent 基础能力",
+        "dates": [
+          "2026-10-29"
+        ]
+      },
+      {
         "name": "Superpowers",
         "url": "https://github.com/obra/superpowers",
         "description": "将需求澄清、计划、测试驱动开发及审查组织为可组合的 Agent 工程工作流",
@@ -515,6 +527,17 @@
         ]
       },
       {
+        "name": "RocketRide",
+        "url": "https://github.com/rocketride-org/rocketride-server",
+        "description": "在 IDE 中构建、调试节点式 AI 数据流程，提供 Python/TypeScript SDK",
+        "signal": "+722 Star",
+        "key": "rocketride-org/rocketride-server",
+        "category": "Agent 协作与编排",
+        "dates": [
+          "2026-10-29"
+        ]
+      },
+      {
         "name": "Ruflo",
         "url": "https://github.com/ruvnet/ruflo",
         "description": "为 Agent 提供任务协作、记忆与工具编排，具有 CLI、MCP 及特定客户端集成路径",
@@ -556,6 +579,17 @@
         "category": "音视频创作",
         "dates": [
           "2026-10-14"
+        ]
+      },
+      {
+        "name": "WeKnora",
+        "url": "https://github.com/Tencent/WeKnora",
+        "description": "将文档用于 RAG 问答、Agent 推理和 Wiki 整理",
+        "signal": "+789 Star",
+        "key": "tencent/weknora",
+        "category": "Agent 基础能力",
+        "dates": [
+          "2026-10-29"
         ]
       },
       {
@@ -630,47 +664,47 @@
       {
         "name": "音视频创作",
         "count": 12,
-        "percent": 22.2
+        "percent": 21.1
+      },
+      {
+        "name": "Agent 基础能力",
+        "count": 11,
+        "percent": 19.3
       },
       {
         "name": "自动化测试",
         "count": 11,
-        "percent": 20.4
+        "percent": 19.3
       },
       {
         "name": "AI 编程与工程 Skill",
         "count": 10,
-        "percent": 18.5
-      },
-      {
-        "name": "Agent 基础能力",
-        "count": 9,
-        "percent": 16.7
+        "percent": 17.5
       },
       {
         "name": "设计与可视化",
         "count": 5,
-        "percent": 9.3
+        "percent": 8.8
       },
       {
         "name": "Agent 协作与编排",
-        "count": 3,
-        "percent": 5.6
+        "count": 4,
+        "percent": 7.0
       },
       {
         "name": "其他",
         "count": 2,
-        "percent": 3.7
+        "percent": 3.5
       },
       {
         "name": "科研与数据分析",
         "count": 1,
-        "percent": 1.9
+        "percent": 1.8
       },
       {
         "name": "软件分析与研究",
         "count": 1,
-        "percent": 1.9
+        "percent": 1.8
       }
     ],
     "idea_top": [],

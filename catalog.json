@@ -52,5 +52,8 @@
   "nexu-io/open-design": "设计与可视化",
   "langfuse/langfuse": "自动化测试",
   "browser-use/browser-use": "自动化测试",
-  "blader/humanizer": "其他"
+  "blader/humanizer": "其他",
+  "nousresearch/hermes-agent": "Agent 基础能力",
+  "tencent/weknora": "Agent 基础能力",
+  "rocketride-org/rocketride-server": "Agent 协作与编排"
 }
