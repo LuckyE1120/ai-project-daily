@@ -1,8 +1,63 @@
 [
   {
-    "month": "2026-10",
+    "month": "2026-11",
     "status": "preview",
-    "title": "2026-10 · 月度采样预览",
+    "title": "2026-11 · 月度采样预览",
+    "report_count": 1,
+    "project_count": 2,
+    "calendar_days": 30,
+    "coverage": 3.3,
+    "start": "2026-11-02",
+    "end": "2026-11-02",
+    "report_dates": [
+      "2026-11-02"
+    ],
+    "source_fingerprint": "6bdff1270bbfa1954e15ad621caa0eea4d15546a86e190233527f398ffb63f13",
+    "projects": [
+      {
+        "name": "ThinkRail",
+        "url": "https://github.com/JetBrains/thinkrail",
+        "description": "围绕 Pi 的开发工作区，结合 Git worktree、SPEC.md、Skill、编辑与差异查看",
+        "signal": "+5,276 Star",
+        "key": "jetbrains/thinkrail",
+        "category": "AI 编程与工程 Skill",
+        "dates": [
+          "2026-11-02"
+        ]
+      },
+      {
+        "name": "Impeccable",
+        "url": "https://github.com/pbakaus/impeccable",
+        "description": "用设计词汇、审查指令与规则检测帮助编程助手改进界面",
+        "signal": "+11,631 Star",
+        "key": "pbakaus/impeccable",
+        "category": "设计与可视化",
+        "dates": [
+          "2026-11-02"
+        ]
+      }
+    ],
+    "categories": [
+      {
+        "name": "AI 编程与工程 Skill",
+        "count": 1,
+        "percent": 50.0
+      },
+      {
+        "name": "设计与可视化",
+        "count": 1,
+        "percent": 50.0
+      }
+    ],
+    "idea_top": [],
+    "value_top": [],
+    "summary": "基于已归档日报的采样预览，尚未完成月度评选。",
+    "insights": []
+  },
+  {
+    "month": "2026-10",
+    "status": "published",
+    "title": "2026-10 · AI 项目月报",
     "report_count": 15,
     "project_count": 59,
     "calendar_days": 31,
@@ -37,7 +92,9 @@
         "category": "AI 编程与工程 Skill",
         "dates": [
           "2026-10-14"
-        ]
+        ],
+        "eligible": false,
+        "exclusion_reason": "归档用途为工程 Skill 集合，包括代码 Review、需求访谈、测试驱动开发等；本期未补足依赖、结果验证及三维比较的同深度复核证据，暂不评分，不作质量负面判断。"
       },
       {
         "name": "ai-memory",
@@ -48,7 +105,9 @@
         "category": "Agent 基础能力",
         "dates": [
           "2026-10-26"
-        ]
+        ],
+        "eligible": false,
+        "exclusion_reason": "归档用途为给编程 Agent 提供共享长期记忆、检索与任务交接，支持 MCP 和生命周期 hooks；本期未补足依赖、结果验证及三维比较的同深度复核证据，暂不评分，不作质量负面判断。"
       },
       {
         "name": "OpenCode",
@@ -59,7 +118,9 @@
         "category": "AI 编程与工程 Skill",
         "dates": [
           "2026-10-19"
-        ]
+        ],
+        "eligible": false,
+        "exclusion_reason": "归档用途为开源编程 Agent，提供终端与桌面入口，内置 build 和 plan 工作方式；本期未补足依赖、结果验证及三维比较的同深度复核证据，暂不评分，不作质量负面判断。"
       },
       {
         "name": "Apify MCP Server",
@@ -70,7 +131,9 @@
         "category": "Agent 基础能力",
         "dates": [
           "2026-10-26"
-        ]
+        ],
+        "eligible": false,
+        "exclusion_reason": "归档用途为把 Apify Store 的采集和自动化 Actor 暴露为 Agent 工具；本期未补足依赖、结果验证及三维比较的同深度复核证据，暂不评分，不作质量负面判断。"
       },
       {
         "name": "Unlimited-OCR",
@@ -81,7 +144,9 @@
         "category": "Agent 基础能力",
         "dates": [
           "2026-10-30"
-        ]
+        ],
+        "eligible": false,
+        "exclusion_reason": "归档用途为当前介绍 Unlimited-OCR 2，支持多页文档联合解析，提供 Transformers 与定制 SGLang 路径；本期未补足依赖、结果验证及三维比较的同深度复核证据，暂不评分，不作质量负面判断。"
       },
       {
         "name": "Humanizer",
@@ -92,7 +157,9 @@
         "category": "其他",
         "dates": [
           "2026-10-28"
-        ]
+        ],
+        "eligible": false,
+        "exclusion_reason": "归档用途为面向读者改写模板化 AI 文本的 Agent Skill；本期未补足依赖、结果验证及三维比较的同深度复核证据，暂不评分，不作质量负面判断。"
       },
       {
         "name": "Browser Use",
@@ -103,7 +170,9 @@
         "category": "自动化测试",
         "dates": [
           "2026-10-28"
-        ]
+        ],
+        "eligible": false,
+        "exclusion_reason": "归档用途为浏览器 Agent Python 库，并提供 CLI 与独立云端服务入口；本期未补足依赖、结果验证及三维比较的同深度复核证据，暂不评分，不作质量负面判断。"
       },
       {
         "name": "OpenMontage",
@@ -115,7 +184,32 @@
         "dates": [
           "2026-10-13",
           "2026-10-14"
-        ]
+        ],
+        "eligible": true,
+        "idea_reason": "把视频拆成管线、工具与 Skill，流程组织有价值，多阶段扩展强；并非每个环节有新技术。",
+        "value_reason": "适合串联脚本、素材与剪辑，可检查阶段产物；多语言环境和可选服务使上手成本高。",
+        "trial": "用自有素材做 20 秒无旁白片，核对字幕、音量与导出。",
+        "caveat": "Python 3.10+、Node 18+、FFmpeg、编程助手；外部生成服务另配，自动质检效果未实测。",
+        "evidence_level": "2026-11-02 官方说明已核验，本次未实测；不将此前聊天体验当性能证据",
+        "evidence": [
+          {
+            "url": "https://github.com/calesthio/OpenMontage",
+            "note": "管线式制作与阶段检查，Quick Start 依赖",
+            "checked_at": "2026-11-02"
+          }
+        ],
+        "idea_scores": [
+          4,
+          4,
+          5
+        ],
+        "idea_score": 85.0,
+        "value_scores": [
+          4,
+          2,
+          4
+        ],
+        "value_score": 68.0
       },
       {
         "name": "agent-device",
@@ -126,7 +220,32 @@
         "category": "自动化测试",
         "dates": [
           "2026-10-19"
-        ]
+        ],
+        "eligible": true,
+        "idea_reason": "设备操作不是新问题，但会话、证据和回放联结清楚，多设备扩展强。",
+        "value_reason": "贴合运行时验收，可记录屏幕和日志并回放；设备与平台依赖使准备成本中等。",
+        "trial": "对测试 App 验证全屏、横屏、返回，保存屏幕证据并回放检查。",
+        "caveat": "Node 22.12+，web 需 24+；目标另有 SDK/设备要求，支持深度不同，未连接设备实测。",
+        "evidence_level": "2026-11-02 官方说明已核验，本次未实测；不将此前聊天体验当性能证据",
+        "evidence": [
+          {
+            "url": "https://github.com/callstack/agent-device",
+            "note": "Quick start、回放、设备会话与能力差异",
+            "checked_at": "2026-11-02"
+          }
+        ],
+        "idea_scores": [
+          3,
+          4,
+          5
+        ],
+        "idea_score": 77.0,
+        "value_scores": [
+          5,
+          3,
+          5
+        ],
+        "value_score": 88.0
       },
       {
         "name": "diagram-design",
@@ -138,7 +257,9 @@
         "dates": [
           "2026-10-13",
           "2026-10-14"
-        ]
+        ],
+        "eligible": false,
+        "exclusion_reason": "归档用途为图表设计 Skill，生成 HTML/SVG 架构图、流程图等，提供 44 类图表；本期未补足依赖、结果验证及三维比较的同深度复核证据，暂不评分，不作质量负面判断。"
       },
       {
         "name": "Chrome DevTools MCP",
@@ -149,7 +270,9 @@
         "category": "自动化测试",
         "dates": [
           "2026-10-15"
-        ]
+        ],
+        "eligible": false,
+        "exclusion_reason": "归档用途为让编程 Agent 检查 Chrome 页面、网络请求、控制台及性能轨迹，支持浏览器自动化；本期未补足依赖、结果验证及三维比较的同深度复核证据，暂不评分，不作质量负面判断。"
       },
       {
         "name": "security-audit-skill",
@@ -160,7 +283,9 @@
         "category": "自动化测试",
         "dates": [
           "2026-10-21"
-        ]
+        ],
+        "eligible": false,
+        "exclusion_reason": "归档用途为面向编程 Agent 的分阶段代码审计，包含覆盖记录、候选复核和结构化 findings；本期未补足依赖、结果验证及三维比较的同深度复核证据，暂不评分，不作质量负面判断。"
       },
       {
         "name": "ComfyUI",
@@ -171,7 +296,9 @@
         "category": "音视频创作",
         "dates": [
           "2026-10-21"
-        ]
+        ],
+        "eligible": false,
+        "exclusion_reason": "归档用途为通过节点图组合图像与视频等模型工作流，可保存、复用与调用 API；本期未补足依赖、结果验证及三维比较的同深度复核证据，暂不评分，不作质量负面判断。"
       },
       {
         "name": "OpenBot",
@@ -182,7 +309,9 @@
         "category": "Agent 协作与编排",
         "dates": [
           "2026-10-30"
-        ]
+        ],
+        "eligible": false,
+        "exclusion_reason": "归档用途为可改造的 Agent 工作区模板，通过 AG-UI 连接 Agent，为各 Bot 提供浏览器、文件和工具权限；本期未补足依赖、结果验证及三维比较的同深度复核证据，暂不评分，不作质量负面判断。"
       },
       {
         "name": "VoiceStudio",
@@ -193,7 +322,9 @@
         "category": "音视频创作",
         "dates": [
           "2026-10-13"
-        ]
+        ],
+        "eligible": false,
+        "exclusion_reason": "归档用途为主打本地运行，覆盖声音克隆、配音、转录和有声书制作；本期未补足依赖、结果验证及三维比较的同深度复核证据，暂不评分，不作质量负面判断。"
       },
       {
         "name": "Ponytail",
@@ -204,7 +335,9 @@
         "category": "AI 编程与工程 Skill",
         "dates": [
           "2026-10-21"
-        ]
+        ],
+        "eligible": false,
+        "exclusion_reason": "归档用途为通过工程规则与 Skill 引导 Agent 理解代码后选择必要改动，保留关键校验和测试；本期未补足依赖、结果验证及三维比较的同深度复核证据，暂不评分，不作质量负面判断。"
       },
       {
         "name": "Pi",
@@ -215,7 +348,9 @@
         "category": "AI 编程与工程 Skill",
         "dates": [
           "2026-10-27"
-        ]
+        ],
+        "eligible": false,
+        "exclusion_reason": "归档用途为可扩展的 Agent harness，包含编程 CLI、工具调用运行时与多提供方 API 库；本期未补足依赖、结果验证及三维比较的同深度复核证据，暂不评分，不作质量负面判断。"
       },
       {
         "name": "text-to-cad",
@@ -226,7 +361,9 @@
         "category": "设计与可视化",
         "dates": [
           "2026-10-15"
-        ]
+        ],
+        "eligible": false,
+        "exclusion_reason": "归档用途为为 Agent 提供本地 3D 建模、工程图和制造检查工作流，可输出 STEP、STL、GLB、3MF；本期未补足依赖、结果验证及三维比较的同深度复核证据，暂不评分，不作质量负面判断。"
       },
       {
         "name": "Firecrawl",
@@ -237,7 +374,9 @@
         "category": "Agent 基础能力",
         "dates": [
           "2026-10-23"
-        ]
+        ],
+        "eligible": false,
+        "exclusion_reason": "归档用途为将网页转为 Markdown 或结构化数据，提供搜索、采集与 MCP 接入；本期未补足依赖、结果验证及三维比较的同深度复核证据，暂不评分，不作质量负面判断。"
       },
       {
         "name": "OpenSpec",
@@ -248,7 +387,9 @@
         "category": "AI 编程与工程 Skill",
         "dates": [
           "2026-10-25"
-        ]
+        ],
+        "eligible": false,
+        "exclusion_reason": "归档用途为用规范、设计和任务文件管理 AI 编程变更；本期未补足依赖、结果验证及三维比较的同深度复核证据，暂不评分，不作质量负面判断。"
       },
       {
         "name": "GenOffice",
@@ -259,7 +400,9 @@
         "category": "其他",
         "dates": [
           "2026-10-23"
-        ]
+        ],
+        "eligible": false,
+        "exclusion_reason": "归档用途为AI 办公套件，编辑真实 Office 文件，提供 CLI、Skill 和 MCP 入口；本期未补足依赖、结果验证及三维比较的同深度复核证据，暂不评分，不作质量负面判断。"
       },
       {
         "name": "Spec Kit",
@@ -270,7 +413,9 @@
         "category": "AI 编程与工程 Skill",
         "dates": [
           "2026-10-22"
-        ]
+        ],
+        "eligible": false,
+        "exclusion_reason": "归档用途为提供规范驱动开发及可组合流程，可通过扩展单独选择缺陷修复或想法评估；本期未补足依赖、结果验证及三维比较的同深度复核证据，暂不评分，不作质量负面判断。"
       },
       {
         "name": "ARTEMIS",
@@ -281,7 +426,9 @@
         "category": "自动化测试",
         "dates": [
           "2026-10-20"
-        ]
+        ],
+        "eligible": false,
+        "exclusion_reason": "归档用途为从自然语言执行安卓跨应用流程，提供 MCP 接入、设备操作和日志诊断；本期未补足依赖、结果验证及三维比较的同深度复核证据，暂不评分，不作质量负面判断。"
       },
       {
         "name": "Graphify",
@@ -292,7 +439,9 @@
         "category": "AI 编程与工程 Skill",
         "dates": [
           "2026-10-20"
-        ]
+        ],
+        "eligible": false,
+        "exclusion_reason": "归档用途为将代码及相关资料组织成可查询知识图谱，代码路径采用本地 AST 解析，可配合 Skill 使用；本期未补足依赖、结果验证及三维比较的同深度复核证据，暂不评分，不作质量负面判断。"
       },
       {
         "name": "MoneyPrinterTurbo",
@@ -303,7 +452,9 @@
         "category": "音视频创作",
         "dates": [
           "2026-10-16"
-        ]
+        ],
+        "eligible": false,
+        "exclusion_reason": "归档用途为串联脚本、素材、配音、字幕与剪辑，支持 WebUI、API 和 CLI 的短视频工作流；本期未补足依赖、结果验证及三维比较的同深度复核证据，暂不评分，不作质量负面判断。"
       },
       {
         "name": "Headroom",
@@ -314,7 +465,9 @@
         "category": "Agent 基础能力",
         "dates": [
           "2026-10-20"
-        ]
+        ],
+        "eligible": false,
+        "exclusion_reason": "归档用途为在工具输出、日志或 RAG 内容进入模型前做压缩，提供库、代理和 MCP 入口，并支持取回原文；本期未补足依赖、结果验证及三维比较的同深度复核证据，暂不评分，不作质量负面判断。"
       },
       {
         "name": "HyperFrames",
@@ -326,7 +479,32 @@
         "dates": [
           "2026-10-13",
           "2026-10-14"
-        ]
+        ],
+        "eligible": true,
+        "idea_reason": "网页技术转为视频的入口有新意；预览到导出流程清楚，可复用渲染核心，但不是独有视频范式。",
+        "value_reason": "适合字幕和网页动画；MP4 可直接验收。Node、FFmpeg 和浏览器准备增加上手成本。",
+        "trial": "制作 15 秒字幕片，检查预览与 MP4 字体、时间和画面一致性。",
+        "caveat": "当前 CLI 需 Node.js 22+、FFmpeg、渲染浏览器；长片稳定性未实测。",
+        "evidence_level": "2026-11-02 官方说明已核验，本次未实测；不将此前聊天体验当性能证据",
+        "evidence": [
+          {
+            "url": "https://github.com/heygen-com/hyperframes",
+            "note": "HTML 到 MP4 的渲染定位、CLI 预览导出及依赖",
+            "checked_at": "2026-11-02"
+          }
+        ],
+        "idea_scores": [
+          4,
+          5,
+          4
+        ],
+        "idea_score": 87.0,
+        "value_scores": [
+          4,
+          3,
+          5
+        ],
+        "value_score": 80.0
       },
       {
         "name": "CLI-Anything",
@@ -337,7 +515,32 @@
         "category": "AI 编程与工程 Skill",
         "dates": [
           "2026-10-16"
-        ]
+        ],
+        "eligible": true,
+        "idea_reason": "从现有软件源码生成 Agent 可调用 CLI 的接口思路突出；生成与消费双入口清楚，跨软件扩展性强。",
+        "value_reason": "适合重复软件操作，可核对真实产物；源码、目标软件及多轮修正带来较高准备成本。",
+        "trial": "只封装一个已知软件转换操作，对照原工具结果。",
+        "caveat": "依赖源码与目标环境；单次生成可能不完整，未验证任意软件都可封装。",
+        "evidence_level": "2026-11-02 官方说明已核验，本次未实测；不将此前聊天体验当性能证据",
+        "evidence": [
+          {
+            "url": "https://github.com/HKUDS/CLI-Anything",
+            "note": "CLI-Hub 与七阶段生成路径、源码及迭代限制",
+            "checked_at": "2026-11-02"
+          }
+        ],
+        "idea_scores": [
+          5,
+          4,
+          5
+        ],
+        "idea_score": 93.0,
+        "value_scores": [
+          4,
+          2,
+          4
+        ],
+        "value_score": 68.0
       },
       {
         "name": "iFixAi",
@@ -348,7 +551,9 @@
         "category": "自动化测试",
         "dates": [
           "2026-10-27"
-        ]
+        ],
+        "eligible": false,
+        "exclusion_reason": "归档用途为在模拟业务环境中检查 Agent 的角色边界、任务遵循等行为，输出带证据的评估报告；本期未补足依赖、结果验证及三维比较的同深度复核证据，暂不评分，不作质量负面判断。"
       },
       {
         "name": "Concat",
@@ -359,7 +564,9 @@
         "category": "音视频创作",
         "dates": [
           "2026-10-19"
-        ]
+        ],
+        "eligible": false,
+        "exclusion_reason": "归档用途为本地视频编辑器，提供多轨剪辑、字幕等能力及 MCP、JSON-RPC 接口；本期未补足依赖、结果验证及三维比较的同深度复核证据，暂不评分，不作质量负面判断。"
       },
       {
         "name": "Scientific Agent Skills",
@@ -370,7 +577,9 @@
         "category": "科研与数据分析",
         "dates": [
           "2026-10-16"
-        ]
+        ],
+        "eligible": false,
+        "exclusion_reason": "归档用途为为科学计算、数据分析与数据库查询提供领域工作流 Skill；本期未补足依赖、结果验证及三维比较的同深度复核证据，暂不评分，不作质量负面判断。"
       },
       {
         "name": "OmniVoice",
@@ -381,7 +590,9 @@
         "category": "音视频创作",
         "dates": [
           "2026-10-22"
-        ]
+        ],
+        "eligible": false,
+        "exclusion_reason": "归档用途为多语言语音合成，提供参考音频克隆、音色设计及 CLI/Python、演示入口；本期未补足依赖、结果验证及三维比较的同深度复核证据，暂不评分，不作质量负面判断。"
       },
       {
         "name": "OpenCreator",
@@ -392,7 +603,9 @@
         "category": "音视频创作",
         "dates": [
           "2026-10-15"
-        ]
+        ],
+        "eligible": false,
+        "exclusion_reason": "归档用途为将视频翻译、脚本、图像、配音和编辑等工作放入本地创作与 Agent 工作台；前身为 KrillinAI；本期未补足依赖、结果验证及三维比较的同深度复核证据，暂不评分，不作质量负面判断。"
       },
       {
         "name": "Langfuse",
@@ -403,7 +616,32 @@
         "category": "自动化测试",
         "dates": [
           "2026-10-28"
-        ]
+        ],
+        "eligible": true,
+        "idea_reason": "追踪与评估并非独有，提示词、调用和评分联结有工程价值，SDK 接入灵活。",
+        "value_reason": "适合定位失败和管理评估数据；部署、埋点与数据治理增加成本，收益仍需业务样本验证。",
+        "trial": "记录一次成功与失败调用，关联人工评分并定位具体步骤。",
+        "caveat": "需项目配置与 SDK；自部署需维护，模型评审可能收费；追踪完整不等于回答正确，未实测。",
+        "evidence_level": "2026-11-02 官方说明已核验，本次未实测；不将此前聊天体验当性能证据",
+        "evidence": [
+          {
+            "url": "https://github.com/langfuse/langfuse",
+            "note": "Core Features 的调用追踪、提示词版本和评估方式",
+            "checked_at": "2026-11-02"
+          }
+        ],
+        "idea_scores": [
+          3,
+          4,
+          4
+        ],
+        "idea_score": 72.0,
+        "value_scores": [
+          5,
+          3,
+          4
+        ],
+        "value_score": 82.0
       },
       {
         "name": "earshot",
@@ -414,7 +652,9 @@
         "category": "音视频创作",
         "dates": [
           "2026-10-25"
-        ]
+        ],
+        "eligible": false,
+        "exclusion_reason": "归档用途为本地 CPU 音频分析与代码音效工具，提供 CLI、Python API、MCP；本期未补足依赖、结果验证及三维比较的同深度复核证据，暂不评分，不作质量负面判断。"
       },
       {
         "name": "taste-skill",
@@ -425,7 +665,9 @@
         "category": "设计与可视化",
         "dates": [
           "2026-10-14"
-        ]
+        ],
+        "eligible": false,
+        "exclusion_reason": "归档用途为帮助 Agent 确定网站视觉方向、使用参考素材，并在浏览器中检查页面；本期未补足依赖、结果验证及三维比较的同深度复核证据，暂不评分，不作质量负面判断。"
       },
       {
         "name": "mattpocock/skills",
@@ -436,7 +678,9 @@
         "category": "AI 编程与工程 Skill",
         "dates": [
           "2026-10-14"
-        ]
+        ],
+        "eligible": false,
+        "exclusion_reason": "归档用途为可组合的工程工作流 Skill，覆盖需求澄清、诊断等开发任务；本期未补足依赖、结果验证及三维比较的同深度复核证据，暂不评分，不作质量负面判断。"
       },
       {
         "name": "context-mode",
@@ -447,7 +691,9 @@
         "category": "Agent 基础能力",
         "dates": [
           "2026-10-14"
-        ]
+        ],
+        "eligible": false,
+        "exclusion_reason": "归档用途为通过 MCP 处理工具输出、索引内容，并提供会话记忆和平台 hooks 集成；本期未补足依赖、结果验证及三维比较的同深度复核证据，暂不评分，不作质量负面判断。"
       },
       {
         "name": "REA",
@@ -459,7 +705,9 @@
         "dates": [
           "2026-10-13",
           "2026-10-14"
-        ]
+        ],
+        "eligible": false,
+        "exclusion_reason": "归档用途为让 AI 分析应用、二进制和运行行为，追踪功能实现并提供证据；本期未补足依赖、结果验证及三维比较的同深度复核证据，暂不评分，不作质量负面判断。"
       },
       {
         "name": "OpenDesign",
@@ -470,7 +718,9 @@
         "category": "设计与可视化",
         "dates": [
           "2026-10-27"
-        ]
+        ],
+        "eligible": false,
+        "exclusion_reason": "归档用途为以现有编程助手驱动设计工作区，结合设计规范生成并预览作品；本期未补足依赖、结果验证及三维比较的同深度复核证据，暂不评分，不作质量负面判断。"
       },
       {
         "name": "Hermes Agent",
@@ -481,7 +731,9 @@
         "category": "Agent 基础能力",
         "dates": [
           "2026-10-29"
-        ]
+        ],
+        "eligible": false,
+        "exclusion_reason": "归档用途为带记忆、Skill、工具和消息入口的 Agent，可配置模型与运行后端；本期未补足依赖、结果验证及三维比较的同深度复核证据，暂不评分，不作质量负面判断。"
       },
       {
         "name": "Superpowers",
@@ -492,7 +744,9 @@
         "category": "AI 编程与工程 Skill",
         "dates": [
           "2026-10-15"
-        ]
+        ],
+        "eligible": false,
+        "exclusion_reason": "归档用途为将需求澄清、计划、测试驱动开发及审查组织为可组合的 Agent 工程工作流；本期未补足依赖、结果验证及三维比较的同深度复核证据，暂不评分，不作质量负面判断。"
       },
       {
         "name": "OpenFilm",
@@ -503,7 +757,9 @@
         "category": "音视频创作",
         "dates": [
           "2026-10-26"
-        ]
+        ],
+        "eligible": false,
+        "exclusion_reason": "归档用途为编程 Agent 用网页制作视频，并在本地 Studio 编辑时间线与画面，支持 MP4 导出；本期未补足依赖、结果验证及三维比较的同深度复核证据，暂不评分，不作质量负面判断。"
       },
       {
         "name": "Agent-Reach",
@@ -514,7 +770,9 @@
         "category": "Agent 基础能力",
         "dates": [
           "2026-10-14"
-        ]
+        ],
+        "eligible": false,
+        "exclusion_reason": "归档用途为为 Agent 配置、检查和选择网页、视频字幕、RSS、社交平台等访问工具；本期未补足依赖、结果验证及三维比较的同深度复核证据，暂不评分，不作质量负面判断。"
       },
       {
         "name": "Paperclip",
@@ -525,7 +783,9 @@
         "category": "Agent 协作与编排",
         "dates": [
           "2026-10-13"
-        ]
+        ],
+        "eligible": false,
+        "exclusion_reason": "归档用途为管理多个 AI Agent 的任务、工作流程和成本；本期未补足依赖、结果验证及三维比较的同深度复核证据，暂不评分，不作质量负面判断。"
       },
       {
         "name": "Promptfoo",
@@ -536,7 +796,32 @@
         "category": "自动化测试",
         "dates": [
           "2026-10-19"
-        ]
+        ],
+        "eligible": true,
+        "idea_reason": "声明式评测、模型适配及 CI 形成清楚工程流程；自动评测本身并非独有。",
+        "value_reason": "直接解决提示词/RAG/Agent 回归比较；小样本可启动，逐条断言可核查，仍需模型与测试数据。",
+        "trial": "固定 10 条标准答案，比较两个提示词版本与失败原因。",
+        "caveat": "模型调用可能收费且发送输入到提供方；样本与判分决定有效性，未实测。",
+        "evidence_level": "2026-11-02 官方说明已核验，本次未实测；不将此前聊天体验当性能证据",
+        "evidence": [
+          {
+            "url": "https://github.com/promptfoo/promptfoo",
+            "note": "CLI 入门、评测结果、模型与 CI 入口",
+            "checked_at": "2026-11-02"
+          }
+        ],
+        "idea_scores": [
+          3,
+          4,
+          4
+        ],
+        "idea_score": 72.0,
+        "value_scores": [
+          5,
+          4,
+          5
+        ],
+        "value_score": 94.0
       },
       {
         "name": "Remotion",
@@ -547,7 +832,9 @@
         "category": "音视频创作",
         "dates": [
           "2026-10-23"
-        ]
+        ],
+        "eligible": false,
+        "exclusion_reason": "归档用途为以 React 代码制作视频，可结合编程 Agent，支持模板及程序化渲染；本期未补足依赖、结果验证及三维比较的同深度复核证据，暂不评分，不作质量负面判断。"
       },
       {
         "name": "RocketRide",
@@ -558,7 +845,9 @@
         "category": "Agent 协作与编排",
         "dates": [
           "2026-10-29"
-        ]
+        ],
+        "eligible": false,
+        "exclusion_reason": "归档用途为在 IDE 中构建、调试节点式 AI 数据流程，提供 Python/TypeScript SDK；本期未补足依赖、结果验证及三维比较的同深度复核证据，暂不评分，不作质量负面判断。"
       },
       {
         "name": "Ruflo",
@@ -569,7 +858,9 @@
         "category": "Agent 协作与编排",
         "dates": [
           "2026-10-21"
-        ]
+        ],
+        "eligible": false,
+        "exclusion_reason": "归档用途为为 Agent 提供任务协作、记忆与工具编排，具有 CLI、MCP 及特定客户端集成路径；本期未补足依赖、结果验证及三维比较的同深度复核证据，暂不评分，不作质量负面判断。"
       },
       {
         "name": "phone-harness",
@@ -580,7 +871,9 @@
         "category": "自动化测试",
         "dates": [
           "2026-10-16"
-        ]
+        ],
+        "eligible": false,
+        "exclusion_reason": "归档用途为提供手机屏幕读取、点击与输入等 Agent 操作能力，支持本地设备及云端手机；本期未补足依赖、结果验证及三维比较的同深度复核证据，暂不评分，不作质量负面判断。"
       },
       {
         "name": "Orca",
@@ -591,7 +884,9 @@
         "category": "Agent 协作与编排",
         "dates": [
           "2026-10-15"
-        ]
+        ],
+        "eligible": false,
+        "exclusion_reason": "归档用途为在独立 Git worktree 中并行运行与追踪多个编程 Agent，并提供移动伴随端；本期未补足依赖、结果验证及三维比较的同深度复核证据，暂不评分，不作质量负面判断。"
       },
       {
         "name": "ArtCraft",
@@ -602,7 +897,9 @@
         "category": "音视频创作",
         "dates": [
           "2026-10-14"
-        ]
+        ],
+        "eligible": false,
+        "exclusion_reason": "归档用途为面向图像与视频创作的可视化工作台，支持 2D 合成、3D 场景布置、角色姿态与镜头控制；本期未补足依赖、结果验证及三维比较的同深度复核证据，暂不评分，不作质量负面判断。"
       },
       {
         "name": "WeKnora",
@@ -613,7 +910,9 @@
         "category": "Agent 基础能力",
         "dates": [
           "2026-10-29"
-        ]
+        ],
+        "eligible": false,
+        "exclusion_reason": "归档用途为将文档用于 RAG 问答、Agent 推理和 Wiki 整理；本期未补足依赖、结果验证及三维比较的同深度复核证据，暂不评分，不作质量负面判断。"
       },
       {
         "name": "tester-army/e2e",
@@ -625,7 +924,9 @@
         "dates": [
           "2026-10-13",
           "2026-10-14"
-        ]
+        ],
+        "eligible": false,
+        "exclusion_reason": "归档用途为用自然语言驱动网页或移动应用，结合定位器与断言验证结果；本期未补足依赖、结果验证及三维比较的同深度复核证据，暂不评分，不作质量负面判断。"
       },
       {
         "name": "claude-mem",
@@ -636,7 +937,9 @@
         "category": "Agent 基础能力",
         "dates": [
           "2026-10-13"
-        ]
+        ],
+        "eligible": false,
+        "exclusion_reason": "归档用途为保存、压缩 Agent 工作记录，在后续会话找回相关上下文；本期未补足依赖、结果验证及三维比较的同深度复核证据，暂不评分，不作质量负面判断。"
       },
       {
         "name": "OpenUI",
@@ -647,7 +950,9 @@
         "category": "设计与可视化",
         "dates": [
           "2026-10-20"
-        ]
+        ],
+        "eligible": false,
+        "exclusion_reason": "归档用途为为模型生成结构化、流式交互界面提供语言与渲染组件，可限定组件库；本期未补足依赖、结果验证及三维比较的同深度复核证据，暂不评分，不作质量负面判断。"
       },
       {
         "name": "agent-browser",
@@ -658,7 +963,9 @@
         "category": "自动化测试",
         "dates": [
           "2026-10-25"
-        ]
+        ],
+        "eligible": false,
+        "exclusion_reason": "归档用途为面向 Agent 的浏览器自动化 CLI，以页面快照引用执行点击、填写及截图；本期未补足依赖、结果验证及三维比较的同深度复核证据，暂不评分，不作质量负面判断。"
       },
       {
         "name": "OpenViking",
@@ -669,7 +976,9 @@
         "category": "Agent 基础能力",
         "dates": [
           "2026-10-16"
-        ]
+        ],
+        "eligible": false,
+        "exclusion_reason": "归档用途为以分层目录组织 Agent 记忆、知识与 Skill，提供服务端、CLI 和 SDK 接入；本期未补足依赖、结果验证及三维比较的同深度复核证据，暂不评分，不作质量负面判断。"
       },
       {
         "name": "XERJ",
@@ -680,7 +989,9 @@
         "category": "Agent 基础能力",
         "dates": [
           "2026-10-22"
-        ]
+        ],
+        "eligible": false,
+        "exclusion_reason": "归档用途为本地优先搜索服务与 MCP 工具，可索引代码、文档、日志等，提供全文、向量及混合检索和 Elasticsearch 兼容接口；本期未补足依赖、结果验证及三维比较的同深度复核证据，暂不评分，不作质量负面判断。"
       }
     ],
     "categories": [
@@ -730,9 +1041,240 @@
         "percent": 1.7
       }
     ],
-    "idea_top": [],
-    "value_top": [],
-    "summary": "基于已归档日报的采样预览，尚未完成月度评选。",
-    "insights": []
+    "idea_top": [
+      {
+        "name": "CLI-Anything",
+        "url": "https://github.com/HKUDS/CLI-Anything",
+        "description": "为软件生成可由 Agent 调用的 CLI；CLI-Hub 可发现与安装已有工具封装",
+        "signal": "今日页面卡片标注 +716 Star",
+        "key": "hkuds/cli-anything",
+        "category": "AI 编程与工程 Skill",
+        "dates": [
+          "2026-10-16"
+        ],
+        "eligible": true,
+        "idea_reason": "从现有软件源码生成 Agent 可调用 CLI 的接口思路突出；生成与消费双入口清楚，跨软件扩展性强。",
+        "value_reason": "适合重复软件操作，可核对真实产物；源码、目标软件及多轮修正带来较高准备成本。",
+        "trial": "只封装一个已知软件转换操作，对照原工具结果。",
+        "caveat": "依赖源码与目标环境；单次生成可能不完整，未验证任意软件都可封装。",
+        "evidence_level": "2026-11-02 官方说明已核验，本次未实测；不将此前聊天体验当性能证据",
+        "evidence": [
+          {
+            "url": "https://github.com/HKUDS/CLI-Anything",
+            "note": "CLI-Hub 与七阶段生成路径、源码及迭代限制",
+            "checked_at": "2026-11-02"
+          }
+        ],
+        "idea_scores": [
+          5,
+          4,
+          5
+        ],
+        "idea_score": 93.0,
+        "value_scores": [
+          4,
+          2,
+          4
+        ],
+        "value_score": 68.0
+      },
+      {
+        "name": "HyperFrames",
+        "url": "https://github.com/heygen-com/hyperframes",
+        "description": "把 HTML 动画渲染为视频，支持 Agent 参与制作",
+        "signal": "4,500",
+        "key": "heygen-com/hyperframes",
+        "category": "音视频创作",
+        "dates": [
+          "2026-10-13",
+          "2026-10-14"
+        ],
+        "eligible": true,
+        "idea_reason": "网页技术转为视频的入口有新意；预览到导出流程清楚，可复用渲染核心，但不是独有视频范式。",
+        "value_reason": "适合字幕和网页动画；MP4 可直接验收。Node、FFmpeg 和浏览器准备增加上手成本。",
+        "trial": "制作 15 秒字幕片，检查预览与 MP4 字体、时间和画面一致性。",
+        "caveat": "当前 CLI 需 Node.js 22+、FFmpeg、渲染浏览器；长片稳定性未实测。",
+        "evidence_level": "2026-11-02 官方说明已核验，本次未实测；不将此前聊天体验当性能证据",
+        "evidence": [
+          {
+            "url": "https://github.com/heygen-com/hyperframes",
+            "note": "HTML 到 MP4 的渲染定位、CLI 预览导出及依赖",
+            "checked_at": "2026-11-02"
+          }
+        ],
+        "idea_scores": [
+          4,
+          5,
+          4
+        ],
+        "idea_score": 87.0,
+        "value_scores": [
+          4,
+          3,
+          5
+        ],
+        "value_score": 80.0
+      },
+      {
+        "name": "OpenMontage",
+        "url": "https://github.com/calesthio/OpenMontage",
+        "description": "面向 Agent 的视频制作体系，组合制作流程、工具和 Skill",
+        "signal": "3,500",
+        "key": "calesthio/openmontage",
+        "category": "音视频创作",
+        "dates": [
+          "2026-10-13",
+          "2026-10-14"
+        ],
+        "eligible": true,
+        "idea_reason": "把视频拆成管线、工具与 Skill，流程组织有价值，多阶段扩展强；并非每个环节有新技术。",
+        "value_reason": "适合串联脚本、素材与剪辑，可检查阶段产物；多语言环境和可选服务使上手成本高。",
+        "trial": "用自有素材做 20 秒无旁白片，核对字幕、音量与导出。",
+        "caveat": "Python 3.10+、Node 18+、FFmpeg、编程助手；外部生成服务另配，自动质检效果未实测。",
+        "evidence_level": "2026-11-02 官方说明已核验，本次未实测；不将此前聊天体验当性能证据",
+        "evidence": [
+          {
+            "url": "https://github.com/calesthio/OpenMontage",
+            "note": "管线式制作与阶段检查，Quick Start 依赖",
+            "checked_at": "2026-11-02"
+          }
+        ],
+        "idea_scores": [
+          4,
+          4,
+          5
+        ],
+        "idea_score": 85.0,
+        "value_scores": [
+          4,
+          2,
+          4
+        ],
+        "value_score": 68.0
+      }
+    ],
+    "value_top": [
+      {
+        "name": "Promptfoo",
+        "url": "https://github.com/promptfoo/promptfoo",
+        "description": "对提示词、Agent、RAG 做自动评测和红队测试，可接入 CI",
+        "signal": "实用工具补充；未核实可靠近期增长，不以目录评分背书",
+        "key": "promptfoo/promptfoo",
+        "category": "自动化测试",
+        "dates": [
+          "2026-10-19"
+        ],
+        "eligible": true,
+        "idea_reason": "声明式评测、模型适配及 CI 形成清楚工程流程；自动评测本身并非独有。",
+        "value_reason": "直接解决提示词/RAG/Agent 回归比较；小样本可启动，逐条断言可核查，仍需模型与测试数据。",
+        "trial": "固定 10 条标准答案，比较两个提示词版本与失败原因。",
+        "caveat": "模型调用可能收费且发送输入到提供方；样本与判分决定有效性，未实测。",
+        "evidence_level": "2026-11-02 官方说明已核验，本次未实测；不将此前聊天体验当性能证据",
+        "evidence": [
+          {
+            "url": "https://github.com/promptfoo/promptfoo",
+            "note": "CLI 入门、评测结果、模型与 CI 入口",
+            "checked_at": "2026-11-02"
+          }
+        ],
+        "idea_scores": [
+          3,
+          4,
+          4
+        ],
+        "idea_score": 72.0,
+        "value_scores": [
+          5,
+          4,
+          5
+        ],
+        "value_score": 94.0
+      },
+      {
+        "name": "agent-device",
+        "url": "https://github.com/callstack/agent-device",
+        "description": "为编程 Agent 提供运行中应用的检查、操作、调试与验证，支持 CLI、MCP 和 Node.js API",
+        "signal": "近期工具目录出现；未核实可靠周增，不作热门排名",
+        "key": "callstack/agent-device",
+        "category": "自动化测试",
+        "dates": [
+          "2026-10-19"
+        ],
+        "eligible": true,
+        "idea_reason": "设备操作不是新问题，但会话、证据和回放联结清楚，多设备扩展强。",
+        "value_reason": "贴合运行时验收，可记录屏幕和日志并回放；设备与平台依赖使准备成本中等。",
+        "trial": "对测试 App 验证全屏、横屏、返回，保存屏幕证据并回放检查。",
+        "caveat": "Node 22.12+，web 需 24+；目标另有 SDK/设备要求，支持深度不同，未连接设备实测。",
+        "evidence_level": "2026-11-02 官方说明已核验，本次未实测；不将此前聊天体验当性能证据",
+        "evidence": [
+          {
+            "url": "https://github.com/callstack/agent-device",
+            "note": "Quick start、回放、设备会话与能力差异",
+            "checked_at": "2026-11-02"
+          }
+        ],
+        "idea_scores": [
+          3,
+          4,
+          5
+        ],
+        "idea_score": 77.0,
+        "value_scores": [
+          5,
+          3,
+          5
+        ],
+        "value_score": 88.0
+      },
+      {
+        "name": "Langfuse",
+        "url": "https://github.com/langfuse/langfuse",
+        "description": "LLM 应用调用追踪、提示词管理、数据集与评估平台",
+        "signal": "+516 Star",
+        "key": "langfuse/langfuse",
+        "category": "自动化测试",
+        "dates": [
+          "2026-10-28"
+        ],
+        "eligible": true,
+        "idea_reason": "追踪与评估并非独有，提示词、调用和评分联结有工程价值，SDK 接入灵活。",
+        "value_reason": "适合定位失败和管理评估数据；部署、埋点与数据治理增加成本，收益仍需业务样本验证。",
+        "trial": "记录一次成功与失败调用，关联人工评分并定位具体步骤。",
+        "caveat": "需项目配置与 SDK；自部署需维护，模型评审可能收费；追踪完整不等于回答正确，未实测。",
+        "evidence_level": "2026-11-02 官方说明已核验，本次未实测；不将此前聊天体验当性能证据",
+        "evidence": [
+          {
+            "url": "https://github.com/langfuse/langfuse",
+            "note": "Core Features 的调用追踪、提示词版本和评估方式",
+            "checked_at": "2026-11-02"
+          }
+        ],
+        "idea_scores": [
+          3,
+          4,
+          4
+        ],
+        "idea_score": 72.0,
+        "value_scores": [
+          5,
+          3,
+          4
+        ],
+        "value_score": 82.0
+      }
+    ],
+    "summary": "10 月归档 15 期、59 个去重项目，覆盖自然日 48.4%。Agent 基础能力与音视频创作各 12 个（20.3%），自动化测试 11 个（18.6%），AI 编程与工程 Skill 10 个（16.9%）。仅代表本站围绕开发、测试与创作需求的有限样本。11 月 2 日补发时，仅对 6 个项目完成同深度官方资料复核并评分，其余 53 个保留全量清单、注明证据缺口。两榜是复核子集的编辑推荐，不是全行业或全部 59 项的优劣证明。",
+    "insights": [
+      "归档范围 10/13—10/30。10/1—10/12 尚未开始，10/17、10/18、10/24、10/31 缺报；没有用后续快照回填。11/1 无日报，首期月报 11/2 补发；没有上月可比样本，不做环比。",
+      "基础能力处理记忆、检索和工具接入；工程 Skill 把需求、计划和审查变成工作流。按主用途每仓库计一类，MCP/Skill 是接入形式，不额外重复计数。",
+      "创作类既有代码渲染也有素材与剪辑编排。判断落地价值需区分本地导出依赖和外部模型成本，生成画面不等于稳定完成成片。",
+      "测试类连接设备或网页操作、LLM 评测与追踪。操作成功、模型评分、业务验收是不同证据，固定样本和明确断言应优先验证。",
+      "评审覆盖：全部 59 项保留分类与归档用途；6 项进入评分，其余没有补足本期依赖、验证路径与三维比较的同深度复核证据。未参评不等于低质量，不用默认低分代替评审。",
+      "来源日期：入围新增核验均为 2026-11-02 官方当前资料，不暗示月底已有全部功能。全部评分是资料调研下的编辑判断，本次未实测；Star、滚动周增、作者基准都不计分。"
+    ],
+    "published_at": "2026-11-02",
+    "filename": "AI项目月报-2026-10.md",
+    "text": "# 2026-10 · AI 项目月报\n\n统计月份：2026-10；发布日期：2026-11-02（北京时间）\n\n样本：15 期日报、59 个去重项目；覆盖 48.4% 的自然日。仅代表本站样本，不代表整个行业。\n\n## 月度分析\n\n10 月归档 15 期、59 个去重项目，覆盖自然日 48.4%。Agent 基础能力与音视频创作各 12 个（20.3%），自动化测试 11 个（18.6%），AI 编程与工程 Skill 10 个（16.9%）。仅代表本站围绕开发、测试与创作需求的有限样本。11 月 2 日补发时，仅对 6 个项目完成同深度官方资料复核并评分，其余 53 个保留全量清单、注明证据缺口。两榜是复核子集的编辑推荐，不是全行业或全部 59 项的优劣证明。\n\n- 归档范围 10/13—10/30。10/1—10/12 尚未开始，10/17、10/18、10/24、10/31 缺报；没有用后续快照回填。11/1 无日报，首期月报 11/2 补发；没有上月可比样本，不做环比。\n- 基础能力处理记忆、检索和工具接入；工程 Skill 把需求、计划和审查变成工作流。按主用途每仓库计一类，MCP/Skill 是接入形式，不额外重复计数。\n- 创作类既有代码渲染也有素材与剪辑编排。判断落地价值需区分本地导出依赖和外部模型成本，生成画面不等于稳定完成成片。\n- 测试类连接设备或网页操作、LLM 评测与追踪。操作成功、模型评分、业务验收是不同证据，固定样本和明确断言应优先验证。\n- 评审覆盖：全部 59 项保留分类与归档用途；6 项进入评分，其余没有补足本期依赖、验证路径与三维比较的同深度复核证据。未参评不等于低质量，不用默认低分代替评审。\n- 来源日期：入围新增核验均为 2026-11-02 官方当前资料，不暗示月底已有全部功能。全部评分是资料调研下的编辑判断，本次未实测；Star、滚动周增、作者基准都不计分。\n\n## 项目类型分布\n\n每个项目按主要用途归入一个类型，按规范化仓库地址去重；跟踪项目也计入。\n\n| 类型 | 项目数 | 占比 |\n|---|---|---|\n| Agent 基础能力 | 12 | 20.3% |\n| 音视频创作 | 12 | 20.3% |\n| 自动化测试 | 11 | 18.6% |\n| AI 编程与工程 Skill | 10 | 16.9% |\n| Agent 协作与编排 | 5 | 8.5% |\n| 设计与可视化 | 5 | 8.5% |\n| 其他 | 2 | 3.4% |\n| 科研与数据分析 | 1 | 1.7% |\n| 软件分析与研究 | 1 | 1.7% |\n\n## 评选方法\n\n以下评分是依据来源的编辑判断，不是性能基准或行业排名。Star 不参与评分。最有想法：新颖性 40%、工作流设计 35%、可扩展性 25%；最有落地价值：解决实际问题 40%、上手成本 30%、可验证性 30%。每项 1—5 分，换算为 100 分；并列时按仓库名排序。同一项目可入选两榜；证据不足时少选或空榜。\n\n## 最有想法 Top 3\n\n### 1. [CLI-Anything](https://github.com/HKUDS/CLI-Anything) · 93.0 分\n\n从现有软件源码生成 Agent 可调用 CLI 的接口思路突出；生成与消费双入口清楚，跨软件扩展性强。\n\n建议验证：只封装一个已知软件转换操作，对照原工具结果。\n\n限制：依赖源码与目标环境；单次生成可能不完整，未验证任意软件都可封装。；证据等级：2026-11-02 官方说明已核验，本次未实测；不将此前聊天体验当性能证据。\n\n- [CLI-Hub 与七阶段生成路径、源码及迭代限制](https://github.com/HKUDS/CLI-Anything)（核验 2026-11-02）\n### 2. [HyperFrames](https://github.com/heygen-com/hyperframes) · 87.0 分\n\n网页技术转为视频的入口有新意；预览到导出流程清楚，可复用渲染核心，但不是独有视频范式。\n\n建议验证：制作 15 秒字幕片，检查预览与 MP4 字体、时间和画面一致性。\n\n限制：当前 CLI 需 Node.js 22+、FFmpeg、渲染浏览器；长片稳定性未实测。；证据等级：2026-11-02 官方说明已核验，本次未实测；不将此前聊天体验当性能证据。\n\n- [HTML 到 MP4 的渲染定位、CLI 预览导出及依赖](https://github.com/heygen-com/hyperframes)（核验 2026-11-02）\n### 3. [OpenMontage](https://github.com/calesthio/OpenMontage) · 85.0 分\n\n把视频拆成管线、工具与 Skill，流程组织有价值，多阶段扩展强；并非每个环节有新技术。\n\n建议验证：用自有素材做 20 秒无旁白片，核对字幕、音量与导出。\n\n限制：Python 3.10+、Node 18+、FFmpeg、编程助手；外部生成服务另配，自动质检效果未实测。；证据等级：2026-11-02 官方说明已核验，本次未实测；不将此前聊天体验当性能证据。\n\n- [管线式制作与阶段检查，Quick Start 依赖](https://github.com/calesthio/OpenMontage)（核验 2026-11-02）\n\n## 最有落地价值 Top 3\n\n### 1. [Promptfoo](https://github.com/promptfoo/promptfoo) · 94.0 分\n\n直接解决提示词/RAG/Agent 回归比较；小样本可启动，逐条断言可核查，仍需模型与测试数据。\n\n建议验证：固定 10 条标准答案，比较两个提示词版本与失败原因。\n\n限制：模型调用可能收费且发送输入到提供方；样本与判分决定有效性，未实测。；证据等级：2026-11-02 官方说明已核验，本次未实测；不将此前聊天体验当性能证据。\n\n- [CLI 入门、评测结果、模型与 CI 入口](https://github.com/promptfoo/promptfoo)（核验 2026-11-02）\n### 2. [agent-device](https://github.com/callstack/agent-device) · 88.0 分\n\n贴合运行时验收，可记录屏幕和日志并回放；设备与平台依赖使准备成本中等。\n\n建议验证：对测试 App 验证全屏、横屏、返回，保存屏幕证据并回放检查。\n\n限制：Node 22.12+，web 需 24+；目标另有 SDK/设备要求，支持深度不同，未连接设备实测。；证据等级：2026-11-02 官方说明已核验，本次未实测；不将此前聊天体验当性能证据。\n\n- [Quick start、回放、设备会话与能力差异](https://github.com/callstack/agent-device)（核验 2026-11-02）\n### 3. [Langfuse](https://github.com/langfuse/langfuse) · 82.0 分\n\n适合定位失败和管理评估数据；部署、埋点与数据治理增加成本，收益仍需业务样本验证。\n\n建议验证：记录一次成功与失败调用，关联人工评分并定位具体步骤。\n\n限制：需项目配置与 SDK；自部署需维护，模型评审可能收费；追踪完整不等于回答正确，未实测。；证据等级：2026-11-02 官方说明已核验，本次未实测；不将此前聊天体验当性能证据。\n\n- [Core Features 的调用追踪、提示词版本和评估方式](https://github.com/langfuse/langfuse)（核验 2026-11-02）\n\n## 全量项目与评选覆盖\n\n| 项目 | 类型 | 收录日期 | 评选状态 |\n|---|---|---|---|\n| [addyosmani/agent-skills](https://github.com/addyosmani/agent-skills) | AI 编程与工程 Skill | 2026-10-14 | 未参评：归档用途为工程 Skill 集合，包括代码 Review、需求访谈、测试驱动开发等；本期未补足依赖、结果验证及三维比较的同深度复核证据，暂不评分，不作质量负面判断。 |\n| [ai-memory](https://github.com/akitaonrails/ai-memory) | Agent 基础能力 | 2026-10-26 | 未参评：归档用途为给编程 Agent 提供共享长期记忆、检索与任务交接，支持 MCP 和生命周期 hooks；本期未补足依赖、结果验证及三维比较的同深度复核证据，暂不评分，不作质量负面判断。 |\n| [OpenCode](https://github.com/anomalyco/opencode) | AI 编程与工程 Skill | 2026-10-19 | 未参评：归档用途为开源编程 Agent，提供终端与桌面入口，内置 build 和 plan 工作方式；本期未补足依赖、结果验证及三维比较的同深度复核证据，暂不评分，不作质量负面判断。 |\n| [Apify MCP Server](https://github.com/apify/apify-mcp-server) | Agent 基础能力 | 2026-10-26 | 未参评：归档用途为把 Apify Store 的采集和自动化 Actor 暴露为 Agent 工具；本期未补足依赖、结果验证及三维比较的同深度复核证据，暂不评分，不作质量负面判断。 |\n| [Unlimited-OCR](https://github.com/baidu/Unlimited-OCR) | Agent 基础能力 | 2026-10-30 | 未参评：归档用途为当前介绍 Unlimited-OCR 2，支持多页文档联合解析，提供 Transformers 与定制 SGLang 路径；本期未补足依赖、结果验证及三维比较的同深度复核证据，暂不评分，不作质量负面判断。 |\n| [Humanizer](https://github.com/blader/humanizer) | 其他 | 2026-10-28 | 未参评：归档用途为面向读者改写模板化 AI 文本的 Agent Skill；本期未补足依赖、结果验证及三维比较的同深度复核证据，暂不评分，不作质量负面判断。 |\n| [Browser Use](https://github.com/browser-use/browser-use) | 自动化测试 | 2026-10-28 | 未参评：归档用途为浏览器 Agent Python 库，并提供 CLI 与独立云端服务入口；本期未补足依赖、结果验证及三维比较的同深度复核证据，暂不评分，不作质量负面判断。 |\n| [OpenMontage](https://github.com/calesthio/OpenMontage) | 音视频创作 | 2026-10-13, 2026-10-14 | 参与两榜评分 |\n| [agent-device](https://github.com/callstack/agent-device) | 自动化测试 | 2026-10-19 | 参与两榜评分 |\n| [diagram-design](https://github.com/cathrynlavery/diagram-design) | 设计与可视化 | 2026-10-13, 2026-10-14 | 未参评：归档用途为图表设计 Skill，生成 HTML/SVG 架构图、流程图等，提供 44 类图表；本期未补足依赖、结果验证及三维比较的同深度复核证据，暂不评分，不作质量负面判断。 |\n| [Chrome DevTools MCP](https://github.com/ChromeDevTools/chrome-devtools-mcp) | 自动化测试 | 2026-10-15 | 未参评：归档用途为让编程 Agent 检查 Chrome 页面、网络请求、控制台及性能轨迹，支持浏览器自动化；本期未补足依赖、结果验证及三维比较的同深度复核证据，暂不评分，不作质量负面判断。 |\n| [security-audit-skill](https://github.com/cloudflare/security-audit-skill) | 自动化测试 | 2026-10-21 | 未参评：归档用途为面向编程 Agent 的分阶段代码审计，包含覆盖记录、候选复核和结构化 findings；本期未补足依赖、结果验证及三维比较的同深度复核证据，暂不评分，不作质量负面判断。 |\n| [ComfyUI](https://github.com/Comfy-Org/ComfyUI) | 音视频创作 | 2026-10-21 | 未参评：归档用途为通过节点图组合图像与视频等模型工作流，可保存、复用与调用 API；本期未补足依赖、结果验证及三维比较的同深度复核证据，暂不评分，不作质量负面判断。 |\n| [OpenBot](https://github.com/CopilotKit/OpenBot) | Agent 协作与编排 | 2026-10-30 | 未参评：归档用途为可改造的 Agent 工作区模板，通过 AG-UI 连接 Agent，为各 Bot 提供浏览器、文件和工具权限；本期未补足依赖、结果验证及三维比较的同深度复核证据，暂不评分，不作质量负面判断。 |\n| [VoiceStudio](https://github.com/debpalash/VoiceStudio) | 音视频创作 | 2026-10-13 | 未参评：归档用途为主打本地运行，覆盖声音克隆、配音、转录和有声书制作；本期未补足依赖、结果验证及三维比较的同深度复核证据，暂不评分，不作质量负面判断。 |\n| [Ponytail](https://github.com/DietrichGebert/ponytail) | AI 编程与工程 Skill | 2026-10-21 | 未参评：归档用途为通过工程规则与 Skill 引导 Agent 理解代码后选择必要改动，保留关键校验和测试；本期未补足依赖、结果验证及三维比较的同深度复核证据，暂不评分，不作质量负面判断。 |\n| [Pi](https://github.com/earendil-works/pi) | AI 编程与工程 Skill | 2026-10-27 | 未参评：归档用途为可扩展的 Agent harness，包含编程 CLI、工具调用运行时与多提供方 API 库；本期未补足依赖、结果验证及三维比较的同深度复核证据，暂不评分，不作质量负面判断。 |\n| [text-to-cad](https://github.com/earthtojake/text-to-cad) | 设计与可视化 | 2026-10-15 | 未参评：归档用途为为 Agent 提供本地 3D 建模、工程图和制造检查工作流，可输出 STEP、STL、GLB、3MF；本期未补足依赖、结果验证及三维比较的同深度复核证据，暂不评分，不作质量负面判断。 |\n| [Firecrawl](https://github.com/firecrawl/firecrawl) | Agent 基础能力 | 2026-10-23 | 未参评：归档用途为将网页转为 Markdown 或结构化数据，提供搜索、采集与 MCP 接入；本期未补足依赖、结果验证及三维比较的同深度复核证据，暂不评分，不作质量负面判断。 |\n| [OpenSpec](https://github.com/Fission-AI/OpenSpec) | AI 编程与工程 Skill | 2026-10-25 | 未参评：归档用途为用规范、设计和任务文件管理 AI 编程变更；本期未补足依赖、结果验证及三维比较的同深度复核证据，暂不评分，不作质量负面判断。 |\n| [GenOffice](https://github.com/genspark-ai/genoffice) | 其他 | 2026-10-23 | 未参评：归档用途为AI 办公套件，编辑真实 Office 文件，提供 CLI、Skill 和 MCP 入口；本期未补足依赖、结果验证及三维比较的同深度复核证据，暂不评分，不作质量负面判断。 |\n| [Spec Kit](https://github.com/github/spec-kit) | AI 编程与工程 Skill | 2026-10-22 | 未参评：归档用途为提供规范驱动开发及可组合流程，可通过扩展单独选择缺陷修复或想法评估；本期未补足依赖、结果验证及三维比较的同深度复核证据，暂不评分，不作质量负面判断。 |\n| [ARTEMIS](https://github.com/google/artemis) | 自动化测试 | 2026-10-20 | 未参评：归档用途为从自然语言执行安卓跨应用流程，提供 MCP 接入、设备操作和日志诊断；本期未补足依赖、结果验证及三维比较的同深度复核证据，暂不评分，不作质量负面判断。 |\n| [Graphify](https://github.com/Graphify-Labs/graphify) | AI 编程与工程 Skill | 2026-10-20 | 未参评：归档用途为将代码及相关资料组织成可查询知识图谱，代码路径采用本地 AST 解析，可配合 Skill 使用；本期未补足依赖、结果验证及三维比较的同深度复核证据，暂不评分，不作质量负面判断。 |\n| [MoneyPrinterTurbo](https://github.com/harry0703/MoneyPrinterTurbo) | 音视频创作 | 2026-10-16 | 未参评：归档用途为串联脚本、素材、配音、字幕与剪辑，支持 WebUI、API 和 CLI 的短视频工作流；本期未补足依赖、结果验证及三维比较的同深度复核证据，暂不评分，不作质量负面判断。 |\n| [Headroom](https://github.com/headroomlabs-ai/headroom) | Agent 基础能力 | 2026-10-20 | 未参评：归档用途为在工具输出、日志或 RAG 内容进入模型前做压缩，提供库、代理和 MCP 入口，并支持取回原文；本期未补足依赖、结果验证及三维比较的同深度复核证据，暂不评分，不作质量负面判断。 |\n| [HyperFrames](https://github.com/heygen-com/hyperframes) | 音视频创作 | 2026-10-13, 2026-10-14 | 参与两榜评分 |\n| [CLI-Anything](https://github.com/HKUDS/CLI-Anything) | AI 编程与工程 Skill | 2026-10-16 | 参与两榜评分 |\n| [iFixAi](https://github.com/ifixai-ai/iFixAi) | 自动化测试 | 2026-10-27 | 未参评：归档用途为在模拟业务环境中检查 Agent 的角色边界、任务遵循等行为，输出带证据的评估报告；本期未补足依赖、结果验证及三维比较的同深度复核证据，暂不评分，不作质量负面判断。 |\n| [Concat](https://github.com/jub0t/Concat) | 音视频创作 | 2026-10-19 | 未参评：归档用途为本地视频编辑器，提供多轨剪辑、字幕等能力及 MCP、JSON-RPC 接口；本期未补足依赖、结果验证及三维比较的同深度复核证据，暂不评分，不作质量负面判断。 |\n| [Scientific Agent Skills](https://github.com/K-Dense-AI/scientific-agent-skills) | 科研与数据分析 | 2026-10-16 | 未参评：归档用途为为科学计算、数据分析与数据库查询提供领域工作流 Skill；本期未补足依赖、结果验证及三维比较的同深度复核证据，暂不评分，不作质量负面判断。 |\n| [OmniVoice](https://github.com/k2-fsa/OmniVoice) | 音视频创作 | 2026-10-22 | 未参评：归档用途为多语言语音合成，提供参考音频克隆、音色设计及 CLI/Python、演示入口；本期未补足依赖、结果验证及三维比较的同深度复核证据，暂不评分，不作质量负面判断。 |\n| [OpenCreator](https://github.com/krillinai/OpenCreator) | 音视频创作 | 2026-10-15 | 未参评：归档用途为将视频翻译、脚本、图像、配音和编辑等工作放入本地创作与 Agent 工作台；前身为 KrillinAI；本期未补足依赖、结果验证及三维比较的同深度复核证据，暂不评分，不作质量负面判断。 |\n| [Langfuse](https://github.com/langfuse/langfuse) | 自动化测试 | 2026-10-28 | 参与两榜评分 |\n| [earshot](https://github.com/Leonxlnx/earshot) | 音视频创作 | 2026-10-25 | 未参评：归档用途为本地 CPU 音频分析与代码音效工具，提供 CLI、Python API、MCP；本期未补足依赖、结果验证及三维比较的同深度复核证据，暂不评分，不作质量负面判断。 |\n| [taste-skill](https://github.com/Leonxlnx/taste-skill) | 设计与可视化 | 2026-10-14 | 未参评：归档用途为帮助 Agent 确定网站视觉方向、使用参考素材，并在浏览器中检查页面；本期未补足依赖、结果验证及三维比较的同深度复核证据，暂不评分，不作质量负面判断。 |\n| [mattpocock/skills](https://github.com/mattpocock/skills) | AI 编程与工程 Skill | 2026-10-14 | 未参评：归档用途为可组合的工程工作流 Skill，覆盖需求澄清、诊断等开发任务；本期未补足依赖、结果验证及三维比较的同深度复核证据，暂不评分，不作质量负面判断。 |\n| [context-mode](https://github.com/mksglu/context-mode) | Agent 基础能力 | 2026-10-14 | 未参评：归档用途为通过 MCP 处理工具输出、索引内容，并提供会话记忆和平台 hooks 集成；本期未补足依赖、结果验证及三维比较的同深度复核证据，暂不评分，不作质量负面判断。 |\n| [REA](https://github.com/morluto/rea) | 软件分析与研究 | 2026-10-13, 2026-10-14 | 未参评：归档用途为让 AI 分析应用、二进制和运行行为，追踪功能实现并提供证据；本期未补足依赖、结果验证及三维比较的同深度复核证据，暂不评分，不作质量负面判断。 |\n| [OpenDesign](https://github.com/nexu-io/open-design) | 设计与可视化 | 2026-10-27 | 未参评：归档用途为以现有编程助手驱动设计工作区，结合设计规范生成并预览作品；本期未补足依赖、结果验证及三维比较的同深度复核证据，暂不评分，不作质量负面判断。 |\n| [Hermes Agent](https://github.com/NousResearch/hermes-agent) | Agent 基础能力 | 2026-10-29 | 未参评：归档用途为带记忆、Skill、工具和消息入口的 Agent，可配置模型与运行后端；本期未补足依赖、结果验证及三维比较的同深度复核证据，暂不评分，不作质量负面判断。 |\n| [Superpowers](https://github.com/obra/superpowers) | AI 编程与工程 Skill | 2026-10-15 | 未参评：归档用途为将需求澄清、计划、测试驱动开发及审查组织为可组合的 Agent 工程工作流；本期未补足依赖、结果验证及三维比较的同深度复核证据，暂不评分，不作质量负面判断。 |\n| [OpenFilm](https://github.com/openfilm/openfilm) | 音视频创作 | 2026-10-26 | 未参评：归档用途为编程 Agent 用网页制作视频，并在本地 Studio 编辑时间线与画面，支持 MP4 导出；本期未补足依赖、结果验证及三维比较的同深度复核证据，暂不评分，不作质量负面判断。 |\n| [Agent-Reach](https://github.com/Panniantong/Agent-Reach) | Agent 基础能力 | 2026-10-14 | 未参评：归档用途为为 Agent 配置、检查和选择网页、视频字幕、RSS、社交平台等访问工具；本期未补足依赖、结果验证及三维比较的同深度复核证据，暂不评分，不作质量负面判断。 |\n| [Paperclip](https://github.com/paperclipai/paperclip) | Agent 协作与编排 | 2026-10-13 | 未参评：归档用途为管理多个 AI Agent 的任务、工作流程和成本；本期未补足依赖、结果验证及三维比较的同深度复核证据，暂不评分，不作质量负面判断。 |\n| [Promptfoo](https://github.com/promptfoo/promptfoo) | 自动化测试 | 2026-10-19 | 参与两榜评分 |\n| [Remotion](https://github.com/remotion-dev/remotion) | 音视频创作 | 2026-10-23 | 未参评：归档用途为以 React 代码制作视频，可结合编程 Agent，支持模板及程序化渲染；本期未补足依赖、结果验证及三维比较的同深度复核证据，暂不评分，不作质量负面判断。 |\n| [RocketRide](https://github.com/rocketride-org/rocketride-server) | Agent 协作与编排 | 2026-10-29 | 未参评：归档用途为在 IDE 中构建、调试节点式 AI 数据流程，提供 Python/TypeScript SDK；本期未补足依赖、结果验证及三维比较的同深度复核证据，暂不评分，不作质量负面判断。 |\n| [Ruflo](https://github.com/ruvnet/ruflo) | Agent 协作与编排 | 2026-10-21 | 未参评：归档用途为为 Agent 提供任务协作、记忆与工具编排，具有 CLI、MCP 及特定客户端集成路径；本期未补足依赖、结果验证及三维比较的同深度复核证据，暂不评分，不作质量负面判断。 |\n| [phone-harness](https://github.com/ShawnPana/phone-harness) | 自动化测试 | 2026-10-16 | 未参评：归档用途为提供手机屏幕读取、点击与输入等 Agent 操作能力，支持本地设备及云端手机；本期未补足依赖、结果验证及三维比较的同深度复核证据，暂不评分，不作质量负面判断。 |\n| [Orca](https://github.com/stablyai/orca) | Agent 协作与编排 | 2026-10-15 | 未参评：归档用途为在独立 Git worktree 中并行运行与追踪多个编程 Agent，并提供移动伴随端；本期未补足依赖、结果验证及三维比较的同深度复核证据，暂不评分，不作质量负面判断。 |\n| [ArtCraft](https://github.com/storytold/artcraft) | 音视频创作 | 2026-10-14 | 未参评：归档用途为面向图像与视频创作的可视化工作台，支持 2D 合成、3D 场景布置、角色姿态与镜头控制；本期未补足依赖、结果验证及三维比较的同深度复核证据，暂不评分，不作质量负面判断。 |\n| [WeKnora](https://github.com/Tencent/WeKnora) | Agent 基础能力 | 2026-10-29 | 未参评：归档用途为将文档用于 RAG 问答、Agent 推理和 Wiki 整理；本期未补足依赖、结果验证及三维比较的同深度复核证据，暂不评分，不作质量负面判断。 |\n| [tester-army/e2e](https://github.com/tester-army/e2e) | 自动化测试 | 2026-10-13, 2026-10-14 | 未参评：归档用途为用自然语言驱动网页或移动应用，结合定位器与断言验证结果；本期未补足依赖、结果验证及三维比较的同深度复核证据，暂不评分，不作质量负面判断。 |\n| [claude-mem](https://github.com/thedotmack/claude-mem) | Agent 基础能力 | 2026-10-13 | 未参评：归档用途为保存、压缩 Agent 工作记录，在后续会话找回相关上下文；本期未补足依赖、结果验证及三维比较的同深度复核证据，暂不评分，不作质量负面判断。 |\n| [OpenUI](https://github.com/thesysdev/openui) | 设计与可视化 | 2026-10-20 | 未参评：归档用途为为模型生成结构化、流式交互界面提供语言与渲染组件，可限定组件库；本期未补足依赖、结果验证及三维比较的同深度复核证据，暂不评分，不作质量负面判断。 |\n| [agent-browser](https://github.com/vercel-labs/agent-browser) | 自动化测试 | 2026-10-25 | 未参评：归档用途为面向 Agent 的浏览器自动化 CLI，以页面快照引用执行点击、填写及截图；本期未补足依赖、结果验证及三维比较的同深度复核证据，暂不评分，不作质量负面判断。 |\n| [OpenViking](https://github.com/volcengine/OpenViking) | Agent 基础能力 | 2026-10-16 | 未参评：归档用途为以分层目录组织 Agent 记忆、知识与 Skill，提供服务端、CLI 和 SDK 接入；本期未补足依赖、结果验证及三维比较的同深度复核证据，暂不评分，不作质量负面判断。 |\n| [XERJ](https://github.com/xerj-org/xerj) | Agent 基础能力 | 2026-10-22 | 未参评：归档用途为本地优先搜索服务与 MCP 工具，可索引代码、文档、日志等，提供全文、向量及混合检索和 Elasticsearch 兼容接口；本期未补足依赖、结果验证及三维比较的同深度复核证据，暂不评分，不作质量负面判断。 |\n\n## 原始日报\n\n- [日报 2026-10-13](https://luckye1120.github.io/ai-project-daily/#date=2026-10-13)\n- [日报 2026-10-14](https://luckye1120.github.io/ai-project-daily/#date=2026-10-14)\n- [日报 2026-10-15](https://luckye1120.github.io/ai-project-daily/#date=2026-10-15)\n- [日报 2026-10-16](https://luckye1120.github.io/ai-project-daily/#date=2026-10-16)\n- [日报 2026-10-19](https://luckye1120.github.io/ai-project-daily/#date=2026-10-19)\n- [日报 2026-10-20](https://luckye1120.github.io/ai-project-daily/#date=2026-10-20)\n- [日报 2026-10-21](https://luckye1120.github.io/ai-project-daily/#date=2026-10-21)\n- [日报 2026-10-22](https://luckye1120.github.io/ai-project-daily/#date=2026-10-22)\n- [日报 2026-10-23](https://luckye1120.github.io/ai-project-daily/#date=2026-10-23)\n- [日报 2026-10-25](https://luckye1120.github.io/ai-project-daily/#date=2026-10-25)\n- [日报 2026-10-26](https://luckye1120.github.io/ai-project-daily/#date=2026-10-26)\n- [日报 2026-10-27](https://luckye1120.github.io/ai-project-daily/#date=2026-10-27)\n- [日报 2026-10-28](https://luckye1120.github.io/ai-project-daily/#date=2026-10-28)\n- [日报 2026-10-29](https://luckye1120.github.io/ai-project-daily/#date=2026-10-29)\n- [日报 2026-10-30](https://luckye1120.github.io/ai-project-daily/#date=2026-10-30)\n",
+    "html": "<h2>2026-10 · AI 项目月报</h2>\n<p>统计月份：2026-10；发布日期：2026-11-02（北京时间）</p>\n<p>样本：15 期日报、59 个去重项目；覆盖 48.4% 的自然日。仅代表本站样本，不代表整个行业。</p>\n<h3>月度分析</h3>\n<p>10 月归档 15 期、59 个去重项目，覆盖自然日 48.4%。Agent 基础能力与音视频创作各 12 个（20.3%），自动化测试 11 个（18.6%），AI 编程与工程 Skill 10 个（16.9%）。仅代表本站围绕开发、测试与创作需求的有限样本。11 月 2 日补发时，仅对 6 个项目完成同深度官方资料复核并评分，其余 53 个保留全量清单、注明证据缺口。两榜是复核子集的编辑推荐，不是全行业或全部 59 项的优劣证明。</p>\n<ul><li>归档范围 10/13—10/30。10/1—10/12 尚未开始，10/17、10/18、10/24、10/31 缺报；没有用后续快照回填。11/1 无日报，首期月报 11/2 补发；没有上月可比样本，不做环比。</li><li>基础能力处理记忆、检索和工具接入；工程 Skill 把需求、计划和审查变成工作流。按主用途每仓库计一类，MCP/Skill 是接入形式，不额外重复计数。</li><li>创作类既有代码渲染也有素材与剪辑编排。判断落地价值需区分本地导出依赖和外部模型成本，生成画面不等于稳定完成成片。</li><li>测试类连接设备或网页操作、LLM 评测与追踪。操作成功、模型评分、业务验收是不同证据，固定样本和明确断言应优先验证。</li><li>评审覆盖：全部 59 项保留分类与归档用途；6 项进入评分，其余没有补足本期依赖、验证路径与三维比较的同深度复核证据。未参评不等于低质量，不用默认低分代替评审。</li><li>来源日期：入围新增核验均为 2026-11-02 官方当前资料，不暗示月底已有全部功能。全部评分是资料调研下的编辑判断，本次未实测；Star、滚动周增、作者基准都不计分。</li></ul>\n<h3>项目类型分布</h3>\n<p>每个项目按主要用途归入一个类型，按规范化仓库地址去重；跟踪项目也计入。</p>\n<div class=\"table-scroll\" tabindex=\"0\" aria-label=\"可横向滚动的项目表格\"><table><thead><tr><th scope=\"col\">类型</th><th scope=\"col\">项目数</th><th scope=\"col\">占比</th></tr></thead><tbody><tr><td>Agent 基础能力</td><td>12</td><td>20.3%</td></tr><tr><td>音视频创作</td><td>12</td><td>20.3%</td></tr><tr><td>自动化测试</td><td>11</td><td>18.6%</td></tr><tr><td>AI 编程与工程 Skill</td><td>10</td><td>16.9%</td></tr><tr><td>Agent 协作与编排</td><td>5</td><td>8.5%</td></tr><tr><td>设计与可视化</td><td>5</td><td>8.5%</td></tr><tr><td>其他</td><td>2</td><td>3.4%</td></tr><tr><td>科研与数据分析</td><td>1</td><td>1.7%</td></tr><tr><td>软件分析与研究</td><td>1</td><td>1.7%</td></tr></tbody></table></div>\n<h3>评选方法</h3>\n<p>以下评分是依据来源的编辑判断，不是性能基准或行业排名。Star 不参与评分。最有想法：新颖性 40%、工作流设计 35%、可扩展性 25%；最有落地价值：解决实际问题 40%、上手成本 30%、可验证性 30%。每项 1—5 分，换算为 100 分；并列时按仓库名排序。同一项目可入选两榜；证据不足时少选或空榜。</p>\n<h3>最有想法 Top 3</h3>\n<h4>1. <a href=\"https://github.com/HKUDS/CLI-Anything\" target=\"_blank\" rel=\"noopener noreferrer\">CLI-Anything ↗</a> · 93.0 分</h4>\n<p>从现有软件源码生成 Agent 可调用 CLI 的接口思路突出；生成与消费双入口清楚，跨软件扩展性强。</p>\n<p>建议验证：只封装一个已知软件转换操作，对照原工具结果。</p>\n<p>限制：依赖源码与目标环境；单次生成可能不完整，未验证任意软件都可封装。；证据等级：2026-11-02 官方说明已核验，本次未实测；不将此前聊天体验当性能证据。</p>\n<ul><li><a href=\"https://github.com/HKUDS/CLI-Anything\" target=\"_blank\" rel=\"noopener noreferrer\">CLI-Hub 与七阶段生成路径、源码及迭代限制 ↗</a>（核验 2026-11-02）</li></ul>\n<h4>2. <a href=\"https://github.com/heygen-com/hyperframes\" target=\"_blank\" rel=\"noopener noreferrer\">HyperFrames ↗</a> · 87.0 分</h4>\n<p>网页技术转为视频的入口有新意；预览到导出流程清楚，可复用渲染核心，但不是独有视频范式。</p>\n<p>建议验证：制作 15 秒字幕片，检查预览与 MP4 字体、时间和画面一致性。</p>\n<p>限制：当前 CLI 需 Node.js 22+、FFmpeg、渲染浏览器；长片稳定性未实测。；证据等级：2026-11-02 官方说明已核验，本次未实测；不将此前聊天体验当性能证据。</p>\n<ul><li><a href=\"https://github.com/heygen-com/hyperframes\" target=\"_blank\" rel=\"noopener noreferrer\">HTML 到 MP4 的渲染定位、CLI 预览导出及依赖 ↗</a>（核验 2026-11-02）</li></ul>\n<h4>3. <a href=\"https://github.com/calesthio/OpenMontage\" target=\"_blank\" rel=\"noopener noreferrer\">OpenMontage ↗</a> · 85.0 分</h4>\n<p>把视频拆成管线、工具与 Skill，流程组织有价值，多阶段扩展强；并非每个环节有新技术。</p>\n<p>建议验证：用自有素材做 20 秒无旁白片，核对字幕、音量与导出。</p>\n<p>限制：Python 3.10+、Node 18+、FFmpeg、编程助手；外部生成服务另配，自动质检效果未实测。；证据等级：2026-11-02 官方说明已核验，本次未实测；不将此前聊天体验当性能证据。</p>\n<ul><li><a href=\"https://github.com/calesthio/OpenMontage\" target=\"_blank\" rel=\"noopener noreferrer\">管线式制作与阶段检查，Quick Start 依赖 ↗</a>（核验 2026-11-02）</li></ul>\n<h3>最有落地价值 Top 3</h3>\n<h4>1. <a href=\"https://github.com/promptfoo/promptfoo\" target=\"_blank\" rel=\"noopener noreferrer\">Promptfoo ↗</a> · 94.0 分</h4>\n<p>直接解决提示词/RAG/Agent 回归比较；小样本可启动，逐条断言可核查，仍需模型与测试数据。</p>\n<p>建议验证：固定 10 条标准答案，比较两个提示词版本与失败原因。</p>\n<p>限制：模型调用可能收费且发送输入到提供方；样本与判分决定有效性，未实测。；证据等级：2026-11-02 官方说明已核验，本次未实测；不将此前聊天体验当性能证据。</p>\n<ul><li><a href=\"https://github.com/promptfoo/promptfoo\" target=\"_blank\" rel=\"noopener noreferrer\">CLI 入门、评测结果、模型与 CI 入口 ↗</a>（核验 2026-11-02）</li></ul>\n<h4>2. <a href=\"https://github.com/callstack/agent-device\" target=\"_blank\" rel=\"noopener noreferrer\">agent-device ↗</a> · 88.0 分</h4>\n<p>贴合运行时验收，可记录屏幕和日志并回放；设备与平台依赖使准备成本中等。</p>\n<p>建议验证：对测试 App 验证全屏、横屏、返回，保存屏幕证据并回放检查。</p>\n<p>限制：Node 22.12+，web 需 24+；目标另有 SDK/设备要求，支持深度不同，未连接设备实测。；证据等级：2026-11-02 官方说明已核验，本次未实测；不将此前聊天体验当性能证据。</p>\n<ul><li><a href=\"https://github.com/callstack/agent-device\" target=\"_blank\" rel=\"noopener noreferrer\">Quick start、回放、设备会话与能力差异 ↗</a>（核验 2026-11-02）</li></ul>\n<h4>3. <a href=\"https://github.com/langfuse/langfuse\" target=\"_blank\" rel=\"noopener noreferrer\">Langfuse ↗</a> · 82.0 分</h4>\n<p>适合定位失败和管理评估数据；部署、埋点与数据治理增加成本，收益仍需业务样本验证。</p>\n<p>建议验证：记录一次成功与失败调用，关联人工评分并定位具体步骤。</p>\n<p>限制：需项目配置与 SDK；自部署需维护，模型评审可能收费；追踪完整不等于回答正确，未实测。；证据等级：2026-11-02 官方说明已核验，本次未实测；不将此前聊天体验当性能证据。</p>\n<ul><li><a href=\"https://github.com/langfuse/langfuse\" target=\"_blank\" rel=\"noopener noreferrer\">Core Features 的调用追踪、提示词版本和评估方式 ↗</a>（核验 2026-11-02）</li></ul>\n<h3>全量项目与评选覆盖</h3>\n<div class=\"table-scroll\" tabindex=\"0\" aria-label=\"可横向滚动的项目表格\"><table><thead><tr><th scope=\"col\">项目</th><th scope=\"col\">类型</th><th scope=\"col\">收录日期</th><th scope=\"col\">评选状态</th></tr></thead><tbody><tr><td><a href=\"https://github.com/addyosmani/agent-skills\" target=\"_blank\" rel=\"noopener noreferrer\">addyosmani/agent-skills ↗</a></td><td>AI 编程与工程 Skill</td><td>2026-10-14</td><td>未参评：归档用途为工程 Skill 集合，包括代码 Review、需求访谈、测试驱动开发等；本期未补足依赖、结果验证及三维比较的同深度复核证据，暂不评分，不作质量负面判断。</td></tr><tr><td><a href=\"https://github.com/akitaonrails/ai-memory\" target=\"_blank\" rel=\"noopener noreferrer\">ai-memory ↗</a></td><td>Agent 基础能力</td><td>2026-10-26</td><td>未参评：归档用途为给编程 Agent 提供共享长期记忆、检索与任务交接，支持 MCP 和生命周期 hooks；本期未补足依赖、结果验证及三维比较的同深度复核证据，暂不评分，不作质量负面判断。</td></tr><tr><td><a href=\"https://github.com/anomalyco/opencode\" target=\"_blank\" rel=\"noopener noreferrer\">OpenCode ↗</a></td><td>AI 编程与工程 Skill</td><td>2026-10-19</td><td>未参评：归档用途为开源编程 Agent，提供终端与桌面入口，内置 build 和 plan 工作方式；本期未补足依赖、结果验证及三维比较的同深度复核证据，暂不评分，不作质量负面判断。</td></tr><tr><td><a href=\"https://github.com/apify/apify-mcp-server\" target=\"_blank\" rel=\"noopener noreferrer\">Apify MCP Server ↗</a></td><td>Agent 基础能力</td><td>2026-10-26</td><td>未参评：归档用途为把 Apify Store 的采集和自动化 Actor 暴露为 Agent 工具；本期未补足依赖、结果验证及三维比较的同深度复核证据，暂不评分，不作质量负面判断。</td></tr><tr><td><a href=\"https://github.com/baidu/Unlimited-OCR\" target=\"_blank\" rel=\"noopener noreferrer\">Unlimited-OCR ↗</a></td><td>Agent 基础能力</td><td>2026-10-30</td><td>未参评：归档用途为当前介绍 Unlimited-OCR 2，支持多页文档联合解析，提供 Transformers 与定制 SGLang 路径；本期未补足依赖、结果验证及三维比较的同深度复核证据，暂不评分，不作质量负面判断。</td></tr><tr><td><a href=\"https://github.com/blader/humanizer\" target=\"_blank\" rel=\"noopener noreferrer\">Humanizer ↗</a></td><td>其他</td><td>2026-10-28</td><td>未参评：归档用途为面向读者改写模板化 AI 文本的 Agent Skill；本期未补足依赖、结果验证及三维比较的同深度复核证据，暂不评分，不作质量负面判断。</td></tr><tr><td><a href=\"https://github.com/browser-use/browser-use\" target=\"_blank\" rel=\"noopener noreferrer\">Browser Use ↗</a></td><td>自动化测试</td><td>2026-10-28</td><td>未参评：归档用途为浏览器 Agent Python 库，并提供 CLI 与独立云端服务入口；本期未补足依赖、结果验证及三维比较的同深度复核证据，暂不评分，不作质量负面判断。</td></tr><tr><td><a href=\"https://github.com/calesthio/OpenMontage\" target=\"_blank\" rel=\"noopener noreferrer\">OpenMontage ↗</a></td><td>音视频创作</td><td>2026-10-13, 2026-10-14</td><td>参与两榜评分</td></tr><tr><td><a href=\"https://github.com/callstack/agent-device\" target=\"_blank\" rel=\"noopener noreferrer\">agent-device ↗</a></td><td>自动化测试</td><td>2026-10-19</td><td>参与两榜评分</td></tr><tr><td><a href=\"https://github.com/cathrynlavery/diagram-design\" target=\"_blank\" rel=\"noopener noreferrer\">diagram-design ↗</a></td><td>设计与可视化</td><td>2026-10-13, 2026-10-14</td><td>未参评：归档用途为图表设计 Skill，生成 HTML/SVG 架构图、流程图等，提供 44 类图表；本期未补足依赖、结果验证及三维比较的同深度复核证据，暂不评分，不作质量负面判断。</td></tr><tr><td><a href=\"https://github.com/ChromeDevTools/chrome-devtools-mcp\" target=\"_blank\" rel=\"noopener noreferrer\">Chrome DevTools MCP ↗</a></td><td>自动化测试</td><td>2026-10-15</td><td>未参评：归档用途为让编程 Agent 检查 Chrome 页面、网络请求、控制台及性能轨迹，支持浏览器自动化；本期未补足依赖、结果验证及三维比较的同深度复核证据，暂不评分，不作质量负面判断。</td></tr><tr><td><a href=\"https://github.com/cloudflare/security-audit-skill\" target=\"_blank\" rel=\"noopener noreferrer\">security-audit-skill ↗</a></td><td>自动化测试</td><td>2026-10-21</td><td>未参评：归档用途为面向编程 Agent 的分阶段代码审计，包含覆盖记录、候选复核和结构化 findings；本期未补足依赖、结果验证及三维比较的同深度复核证据，暂不评分，不作质量负面判断。</td></tr><tr><td><a href=\"https://github.com/Comfy-Org/ComfyUI\" target=\"_blank\" rel=\"noopener noreferrer\">ComfyUI ↗</a></td><td>音视频创作</td><td>2026-10-21</td><td>未参评：归档用途为通过节点图组合图像与视频等模型工作流，可保存、复用与调用 API；本期未补足依赖、结果验证及三维比较的同深度复核证据，暂不评分，不作质量负面判断。</td></tr><tr><td><a href=\"https://github.com/CopilotKit/OpenBot\" target=\"_blank\" rel=\"noopener noreferrer\">OpenBot ↗</a></td><td>Agent 协作与编排</td><td>2026-10-30</td><td>未参评：归档用途为可改造的 Agent 工作区模板，通过 AG-UI 连接 Agent，为各 Bot 提供浏览器、文件和工具权限；本期未补足依赖、结果验证及三维比较的同深度复核证据，暂不评分，不作质量负面判断。</td></tr><tr><td><a href=\"https://github.com/debpalash/VoiceStudio\" target=\"_blank\" rel=\"noopener noreferrer\">VoiceStudio ↗</a></td><td>音视频创作</td><td>2026-10-13</td><td>未参评：归档用途为主打本地运行，覆盖声音克隆、配音、转录和有声书制作；本期未补足依赖、结果验证及三维比较的同深度复核证据，暂不评分，不作质量负面判断。</td></tr><tr><td><a href=\"https://github.com/DietrichGebert/ponytail\" target=\"_blank\" rel=\"noopener noreferrer\">Ponytail ↗</a></td><td>AI 编程与工程 Skill</td><td>2026-10-21</td><td>未参评：归档用途为通过工程规则与 Skill 引导 Agent 理解代码后选择必要改动，保留关键校验和测试；本期未补足依赖、结果验证及三维比较的同深度复核证据，暂不评分，不作质量负面判断。</td></tr><tr><td><a href=\"https://github.com/earendil-works/pi\" target=\"_blank\" rel=\"noopener noreferrer\">Pi ↗</a></td><td>AI 编程与工程 Skill</td><td>2026-10-27</td><td>未参评：归档用途为可扩展的 Agent harness，包含编程 CLI、工具调用运行时与多提供方 API 库；本期未补足依赖、结果验证及三维比较的同深度复核证据，暂不评分，不作质量负面判断。</td></tr><tr><td><a href=\"https://github.com/earthtojake/text-to-cad\" target=\"_blank\" rel=\"noopener noreferrer\">text-to-cad ↗</a></td><td>设计与可视化</td><td>2026-10-15</td><td>未参评：归档用途为为 Agent 提供本地 3D 建模、工程图和制造检查工作流，可输出 STEP、STL、GLB、3MF；本期未补足依赖、结果验证及三维比较的同深度复核证据，暂不评分，不作质量负面判断。</td></tr><tr><td><a href=\"https://github.com/firecrawl/firecrawl\" target=\"_blank\" rel=\"noopener noreferrer\">Firecrawl ↗</a></td><td>Agent 基础能力</td><td>2026-10-23</td><td>未参评：归档用途为将网页转为 Markdown 或结构化数据，提供搜索、采集与 MCP 接入；本期未补足依赖、结果验证及三维比较的同深度复核证据，暂不评分，不作质量负面判断。</td></tr><tr><td><a href=\"https://github.com/Fission-AI/OpenSpec\" target=\"_blank\" rel=\"noopener noreferrer\">OpenSpec ↗</a></td><td>AI 编程与工程 Skill</td><td>2026-10-25</td><td>未参评：归档用途为用规范、设计和任务文件管理 AI 编程变更；本期未补足依赖、结果验证及三维比较的同深度复核证据，暂不评分，不作质量负面判断。</td></tr><tr><td><a href=\"https://github.com/genspark-ai/genoffice\" target=\"_blank\" rel=\"noopener noreferrer\">GenOffice ↗</a></td><td>其他</td><td>2026-10-23</td><td>未参评：归档用途为AI 办公套件，编辑真实 Office 文件，提供 CLI、Skill 和 MCP 入口；本期未补足依赖、结果验证及三维比较的同深度复核证据，暂不评分，不作质量负面判断。</td></tr><tr><td><a href=\"https://github.com/github/spec-kit\" target=\"_blank\" rel=\"noopener noreferrer\">Spec Kit ↗</a></td><td>AI 编程与工程 Skill</td><td>2026-10-22</td><td>未参评：归档用途为提供规范驱动开发及可组合流程，可通过扩展单独选择缺陷修复或想法评估；本期未补足依赖、结果验证及三维比较的同深度复核证据，暂不评分，不作质量负面判断。</td></tr><tr><td><a href=\"https://github.com/google/artemis\" target=\"_blank\" rel=\"noopener noreferrer\">ARTEMIS ↗</a></td><td>自动化测试</td><td>2026-10-20</td><td>未参评：归档用途为从自然语言执行安卓跨应用流程，提供 MCP 接入、设备操作和日志诊断；本期未补足依赖、结果验证及三维比较的同深度复核证据，暂不评分，不作质量负面判断。</td></tr><tr><td><a href=\"https://github.com/Graphify-Labs/graphify\" target=\"_blank\" rel=\"noopener noreferrer\">Graphify ↗</a></td><td>AI 编程与工程 Skill</td><td>2026-10-20</td><td>未参评：归档用途为将代码及相关资料组织成可查询知识图谱，代码路径采用本地 AST 解析，可配合 Skill 使用；本期未补足依赖、结果验证及三维比较的同深度复核证据，暂不评分，不作质量负面判断。</td></tr><tr><td><a href=\"https://github.com/harry0703/MoneyPrinterTurbo\" target=\"_blank\" rel=\"noopener noreferrer\">MoneyPrinterTurbo ↗</a></td><td>音视频创作</td><td>2026-10-16</td><td>未参评：归档用途为串联脚本、素材、配音、字幕与剪辑，支持 WebUI、API 和 CLI 的短视频工作流；本期未补足依赖、结果验证及三维比较的同深度复核证据，暂不评分，不作质量负面判断。</td></tr><tr><td><a href=\"https://github.com/headroomlabs-ai/headroom\" target=\"_blank\" rel=\"noopener noreferrer\">Headroom ↗</a></td><td>Agent 基础能力</td><td>2026-10-20</td><td>未参评：归档用途为在工具输出、日志或 RAG 内容进入模型前做压缩，提供库、代理和 MCP 入口，并支持取回原文；本期未补足依赖、结果验证及三维比较的同深度复核证据，暂不评分，不作质量负面判断。</td></tr><tr><td><a href=\"https://github.com/heygen-com/hyperframes\" target=\"_blank\" rel=\"noopener noreferrer\">HyperFrames ↗</a></td><td>音视频创作</td><td>2026-10-13, 2026-10-14</td><td>参与两榜评分</td></tr><tr><td><a href=\"https://github.com/HKUDS/CLI-Anything\" target=\"_blank\" rel=\"noopener noreferrer\">CLI-Anything ↗</a></td><td>AI 编程与工程 Skill</td><td>2026-10-16</td><td>参与两榜评分</td></tr><tr><td><a href=\"https://github.com/ifixai-ai/iFixAi\" target=\"_blank\" rel=\"noopener noreferrer\">iFixAi ↗</a></td><td>自动化测试</td><td>2026-10-27</td><td>未参评：归档用途为在模拟业务环境中检查 Agent 的角色边界、任务遵循等行为，输出带证据的评估报告；本期未补足依赖、结果验证及三维比较的同深度复核证据，暂不评分，不作质量负面判断。</td></tr><tr><td><a href=\"https://github.com/jub0t/Concat\" target=\"_blank\" rel=\"noopener noreferrer\">Concat ↗</a></td><td>音视频创作</td><td>2026-10-19</td><td>未参评：归档用途为本地视频编辑器，提供多轨剪辑、字幕等能力及 MCP、JSON-RPC 接口；本期未补足依赖、结果验证及三维比较的同深度复核证据，暂不评分，不作质量负面判断。</td></tr><tr><td><a href=\"https://github.com/K-Dense-AI/scientific-agent-skills\" target=\"_blank\" rel=\"noopener noreferrer\">Scientific Agent Skills ↗</a></td><td>科研与数据分析</td><td>2026-10-16</td><td>未参评：归档用途为为科学计算、数据分析与数据库查询提供领域工作流 Skill；本期未补足依赖、结果验证及三维比较的同深度复核证据，暂不评分，不作质量负面判断。</td></tr><tr><td><a href=\"https://github.com/k2-fsa/OmniVoice\" target=\"_blank\" rel=\"noopener noreferrer\">OmniVoice ↗</a></td><td>音视频创作</td><td>2026-10-22</td><td>未参评：归档用途为多语言语音合成，提供参考音频克隆、音色设计及 CLI/Python、演示入口；本期未补足依赖、结果验证及三维比较的同深度复核证据，暂不评分，不作质量负面判断。</td></tr><tr><td><a href=\"https://github.com/krillinai/OpenCreator\" target=\"_blank\" rel=\"noopener noreferrer\">OpenCreator ↗</a></td><td>音视频创作</td><td>2026-10-15</td><td>未参评：归档用途为将视频翻译、脚本、图像、配音和编辑等工作放入本地创作与 Agent 工作台；前身为 KrillinAI；本期未补足依赖、结果验证及三维比较的同深度复核证据，暂不评分，不作质量负面判断。</td></tr><tr><td><a href=\"https://github.com/langfuse/langfuse\" target=\"_blank\" rel=\"noopener noreferrer\">Langfuse ↗</a></td><td>自动化测试</td><td>2026-10-28</td><td>参与两榜评分</td></tr><tr><td><a href=\"https://github.com/Leonxlnx/earshot\" target=\"_blank\" rel=\"noopener noreferrer\">earshot ↗</a></td><td>音视频创作</td><td>2026-10-25</td><td>未参评：归档用途为本地 CPU 音频分析与代码音效工具，提供 CLI、Python API、MCP；本期未补足依赖、结果验证及三维比较的同深度复核证据，暂不评分，不作质量负面判断。</td></tr><tr><td><a href=\"https://github.com/Leonxlnx/taste-skill\" target=\"_blank\" rel=\"noopener noreferrer\">taste-skill ↗</a></td><td>设计与可视化</td><td>2026-10-14</td><td>未参评：归档用途为帮助 Agent 确定网站视觉方向、使用参考素材，并在浏览器中检查页面；本期未补足依赖、结果验证及三维比较的同深度复核证据，暂不评分，不作质量负面判断。</td></tr><tr><td><a href=\"https://github.com/mattpocock/skills\" target=\"_blank\" rel=\"noopener noreferrer\">mattpocock/skills ↗</a></td><td>AI 编程与工程 Skill</td><td>2026-10-14</td><td>未参评：归档用途为可组合的工程工作流 Skill，覆盖需求澄清、诊断等开发任务；本期未补足依赖、结果验证及三维比较的同深度复核证据，暂不评分，不作质量负面判断。</td></tr><tr><td><a href=\"https://github.com/mksglu/context-mode\" target=\"_blank\" rel=\"noopener noreferrer\">context-mode ↗</a></td><td>Agent 基础能力</td><td>2026-10-14</td><td>未参评：归档用途为通过 MCP 处理工具输出、索引内容，并提供会话记忆和平台 hooks 集成；本期未补足依赖、结果验证及三维比较的同深度复核证据，暂不评分，不作质量负面判断。</td></tr><tr><td><a href=\"https://github.com/morluto/rea\" target=\"_blank\" rel=\"noopener noreferrer\">REA ↗</a></td><td>软件分析与研究</td><td>2026-10-13, 2026-10-14</td><td>未参评：归档用途为让 AI 分析应用、二进制和运行行为，追踪功能实现并提供证据；本期未补足依赖、结果验证及三维比较的同深度复核证据，暂不评分，不作质量负面判断。</td></tr><tr><td><a href=\"https://github.com/nexu-io/open-design\" target=\"_blank\" rel=\"noopener noreferrer\">OpenDesign ↗</a></td><td>设计与可视化</td><td>2026-10-27</td><td>未参评：归档用途为以现有编程助手驱动设计工作区，结合设计规范生成并预览作品；本期未补足依赖、结果验证及三维比较的同深度复核证据，暂不评分，不作质量负面判断。</td></tr><tr><td><a href=\"https://github.com/NousResearch/hermes-agent\" target=\"_blank\" rel=\"noopener noreferrer\">Hermes Agent ↗</a></td><td>Agent 基础能力</td><td>2026-10-29</td><td>未参评：归档用途为带记忆、Skill、工具和消息入口的 Agent，可配置模型与运行后端；本期未补足依赖、结果验证及三维比较的同深度复核证据，暂不评分，不作质量负面判断。</td></tr><tr><td><a href=\"https://github.com/obra/superpowers\" target=\"_blank\" rel=\"noopener noreferrer\">Superpowers ↗</a></td><td>AI 编程与工程 Skill</td><td>2026-10-15</td><td>未参评：归档用途为将需求澄清、计划、测试驱动开发及审查组织为可组合的 Agent 工程工作流；本期未补足依赖、结果验证及三维比较的同深度复核证据，暂不评分，不作质量负面判断。</td></tr><tr><td><a href=\"https://github.com/openfilm/openfilm\" target=\"_blank\" rel=\"noopener noreferrer\">OpenFilm ↗</a></td><td>音视频创作</td><td>2026-10-26</td><td>未参评：归档用途为编程 Agent 用网页制作视频，并在本地 Studio 编辑时间线与画面，支持 MP4 导出；本期未补足依赖、结果验证及三维比较的同深度复核证据，暂不评分，不作质量负面判断。</td></tr><tr><td><a href=\"https://github.com/Panniantong/Agent-Reach\" target=\"_blank\" rel=\"noopener noreferrer\">Agent-Reach ↗</a></td><td>Agent 基础能力</td><td>2026-10-14</td><td>未参评：归档用途为为 Agent 配置、检查和选择网页、视频字幕、RSS、社交平台等访问工具；本期未补足依赖、结果验证及三维比较的同深度复核证据，暂不评分，不作质量负面判断。</td></tr><tr><td><a href=\"https://github.com/paperclipai/paperclip\" target=\"_blank\" rel=\"noopener noreferrer\">Paperclip ↗</a></td><td>Agent 协作与编排</td><td>2026-10-13</td><td>未参评：归档用途为管理多个 AI Agent 的任务、工作流程和成本；本期未补足依赖、结果验证及三维比较的同深度复核证据，暂不评分，不作质量负面判断。</td></tr><tr><td><a href=\"https://github.com/promptfoo/promptfoo\" target=\"_blank\" rel=\"noopener noreferrer\">Promptfoo ↗</a></td><td>自动化测试</td><td>2026-10-19</td><td>参与两榜评分</td></tr><tr><td><a href=\"https://github.com/remotion-dev/remotion\" target=\"_blank\" rel=\"noopener noreferrer\">Remotion ↗</a></td><td>音视频创作</td><td>2026-10-23</td><td>未参评：归档用途为以 React 代码制作视频，可结合编程 Agent，支持模板及程序化渲染；本期未补足依赖、结果验证及三维比较的同深度复核证据，暂不评分，不作质量负面判断。</td></tr><tr><td><a href=\"https://github.com/rocketride-org/rocketride-server\" target=\"_blank\" rel=\"noopener noreferrer\">RocketRide ↗</a></td><td>Agent 协作与编排</td><td>2026-10-29</td><td>未参评：归档用途为在 IDE 中构建、调试节点式 AI 数据流程，提供 Python/TypeScript SDK；本期未补足依赖、结果验证及三维比较的同深度复核证据，暂不评分，不作质量负面判断。</td></tr><tr><td><a href=\"https://github.com/ruvnet/ruflo\" target=\"_blank\" rel=\"noopener noreferrer\">Ruflo ↗</a></td><td>Agent 协作与编排</td><td>2026-10-21</td><td>未参评：归档用途为为 Agent 提供任务协作、记忆与工具编排，具有 CLI、MCP 及特定客户端集成路径；本期未补足依赖、结果验证及三维比较的同深度复核证据，暂不评分，不作质量负面判断。</td></tr><tr><td><a href=\"https://github.com/ShawnPana/phone-harness\" target=\"_blank\" rel=\"noopener noreferrer\">phone-harness ↗</a></td><td>自动化测试</td><td>2026-10-16</td><td>未参评：归档用途为提供手机屏幕读取、点击与输入等 Agent 操作能力，支持本地设备及云端手机；本期未补足依赖、结果验证及三维比较的同深度复核证据，暂不评分，不作质量负面判断。</td></tr><tr><td><a href=\"https://github.com/stablyai/orca\" target=\"_blank\" rel=\"noopener noreferrer\">Orca ↗</a></td><td>Agent 协作与编排</td><td>2026-10-15</td><td>未参评：归档用途为在独立 Git worktree 中并行运行与追踪多个编程 Agent，并提供移动伴随端；本期未补足依赖、结果验证及三维比较的同深度复核证据，暂不评分，不作质量负面判断。</td></tr><tr><td><a href=\"https://github.com/storytold/artcraft\" target=\"_blank\" rel=\"noopener noreferrer\">ArtCraft ↗</a></td><td>音视频创作</td><td>2026-10-14</td><td>未参评：归档用途为面向图像与视频创作的可视化工作台，支持 2D 合成、3D 场景布置、角色姿态与镜头控制；本期未补足依赖、结果验证及三维比较的同深度复核证据，暂不评分，不作质量负面判断。</td></tr><tr><td><a href=\"https://github.com/Tencent/WeKnora\" target=\"_blank\" rel=\"noopener noreferrer\">WeKnora ↗</a></td><td>Agent 基础能力</td><td>2026-10-29</td><td>未参评：归档用途为将文档用于 RAG 问答、Agent 推理和 Wiki 整理；本期未补足依赖、结果验证及三维比较的同深度复核证据，暂不评分，不作质量负面判断。</td></tr><tr><td><a href=\"https://github.com/tester-army/e2e\" target=\"_blank\" rel=\"noopener noreferrer\">tester-army/e2e ↗</a></td><td>自动化测试</td><td>2026-10-13, 2026-10-14</td><td>未参评：归档用途为用自然语言驱动网页或移动应用，结合定位器与断言验证结果；本期未补足依赖、结果验证及三维比较的同深度复核证据，暂不评分，不作质量负面判断。</td></tr><tr><td><a href=\"https://github.com/thedotmack/claude-mem\" target=\"_blank\" rel=\"noopener noreferrer\">claude-mem ↗</a></td><td>Agent 基础能力</td><td>2026-10-13</td><td>未参评：归档用途为保存、压缩 Agent 工作记录，在后续会话找回相关上下文；本期未补足依赖、结果验证及三维比较的同深度复核证据，暂不评分，不作质量负面判断。</td></tr><tr><td><a href=\"https://github.com/thesysdev/openui\" target=\"_blank\" rel=\"noopener noreferrer\">OpenUI ↗</a></td><td>设计与可视化</td><td>2026-10-20</td><td>未参评：归档用途为为模型生成结构化、流式交互界面提供语言与渲染组件，可限定组件库；本期未补足依赖、结果验证及三维比较的同深度复核证据，暂不评分，不作质量负面判断。</td></tr><tr><td><a href=\"https://github.com/vercel-labs/agent-browser\" target=\"_blank\" rel=\"noopener noreferrer\">agent-browser ↗</a></td><td>自动化测试</td><td>2026-10-25</td><td>未参评：归档用途为面向 Agent 的浏览器自动化 CLI，以页面快照引用执行点击、填写及截图；本期未补足依赖、结果验证及三维比较的同深度复核证据，暂不评分，不作质量负面判断。</td></tr><tr><td><a href=\"https://github.com/volcengine/OpenViking\" target=\"_blank\" rel=\"noopener noreferrer\">OpenViking ↗</a></td><td>Agent 基础能力</td><td>2026-10-16</td><td>未参评：归档用途为以分层目录组织 Agent 记忆、知识与 Skill，提供服务端、CLI 和 SDK 接入；本期未补足依赖、结果验证及三维比较的同深度复核证据，暂不评分，不作质量负面判断。</td></tr><tr><td><a href=\"https://github.com/xerj-org/xerj\" target=\"_blank\" rel=\"noopener noreferrer\">XERJ ↗</a></td><td>Agent 基础能力</td><td>2026-10-22</td><td>未参评：归档用途为本地优先搜索服务与 MCP 工具，可索引代码、文档、日志等，提供全文、向量及混合检索和 Elasticsearch 兼容接口；本期未补足依赖、结果验证及三维比较的同深度复核证据，暂不评分，不作质量负面判断。</td></tr></tbody></table></div>\n<h3>原始日报</h3>\n<ul><li><a href=\"https://luckye1120.github.io/ai-project-daily/#date=2026-10-13\" target=\"_blank\" rel=\"noopener noreferrer\">日报 2026-10-13 ↗</a></li><li><a href=\"https://luckye1120.github.io/ai-project-daily/#date=2026-10-14\" target=\"_blank\" rel=\"noopener noreferrer\">日报 2026-10-14 ↗</a></li><li><a href=\"https://luckye1120.github.io/ai-project-daily/#date=2026-10-15\" target=\"_blank\" rel=\"noopener noreferrer\">日报 2026-10-15 ↗</a></li><li><a href=\"https://luckye1120.github.io/ai-project-daily/#date=2026-10-16\" target=\"_blank\" rel=\"noopener noreferrer\">日报 2026-10-16 ↗</a></li><li><a href=\"https://luckye1120.github.io/ai-project-daily/#date=2026-10-19\" target=\"_blank\" rel=\"noopener noreferrer\">日报 2026-10-19 ↗</a></li><li><a href=\"https://luckye1120.github.io/ai-project-daily/#date=2026-10-20\" target=\"_blank\" rel=\"noopener noreferrer\">日报 2026-10-20 ↗</a></li><li><a href=\"https://luckye1120.github.io/ai-project-daily/#date=2026-10-21\" target=\"_blank\" rel=\"noopener noreferrer\">日报 2026-10-21 ↗</a></li><li><a href=\"https://luckye1120.github.io/ai-project-daily/#date=2026-10-22\" target=\"_blank\" rel=\"noopener noreferrer\">日报 2026-10-22 ↗</a></li><li><a href=\"https://luckye1120.github.io/ai-project-daily/#date=2026-10-23\" target=\"_blank\" rel=\"noopener noreferrer\">日报 2026-10-23 ↗</a></li><li><a href=\"https://luckye1120.github.io/ai-project-daily/#date=2026-10-25\" target=\"_blank\" rel=\"noopener noreferrer\">日报 2026-10-25 ↗</a></li><li><a href=\"https://luckye1120.github.io/ai-project-daily/#date=2026-10-26\" target=\"_blank\" rel=\"noopener noreferrer\">日报 2026-10-26 ↗</a></li><li><a href=\"https://luckye1120.github.io/ai-project-daily/#date=2026-10-27\" target=\"_blank\" rel=\"noopener noreferrer\">日报 2026-10-27 ↗</a></li><li><a href=\"https://luckye1120.github.io/ai-project-daily/#date=2026-10-28\" target=\"_blank\" rel=\"noopener noreferrer\">日报 2026-10-28 ↗</a></li><li><a href=\"https://luckye1120.github.io/ai-project-daily/#date=2026-10-29\" target=\"_blank\" rel=\"noopener noreferrer\">日报 2026-10-29 ↗</a></li><li><a href=\"https://luckye1120.github.io/ai-project-daily/#date=2026-10-30\" target=\"_blank\" rel=\"noopener noreferrer\">日报 2026-10-30 ↗</a></li></ul>"
   }
 ]

@@ -11,7 +11,7 @@ from urllib.parse import urlparse
 from zoneinfo import ZoneInfo
 
 ROOT = Path(__file__).resolve().parent
-CATEGORIES = ['AI 编程与工程 Skill', 'Agent 基础能力', 'Agent 协作与编排', '自动化测试', '设计与可视化', '音视频创作', '软件分析与研究', '其他', '待分类']
+CATEGORIES = ['AI 编程与工程 Skill', 'Agent 基础能力', 'Agent 协作与编排', '自动化测试', '设计与可视化', '音视频创作', '软件分析与研究', '科研与数据分析', '其他', '待分类']
 WEIGHTS = {'idea': [40, 35, 25], 'value': [40, 30, 30]}
 
 def previous_month(today):
