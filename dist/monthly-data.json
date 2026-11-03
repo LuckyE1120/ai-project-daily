@@ -3,17 +3,29 @@
     "month": "2026-11",
     "status": "preview",
     "title": "2026-11 · 月度采样预览",
-    "report_count": 1,
-    "project_count": 2,
+    "report_count": 2,
+    "project_count": 4,
     "calendar_days": 30,
-    "coverage": 3.3,
+    "coverage": 6.7,
     "start": "2026-11-02",
-    "end": "2026-11-02",
+    "end": "2026-11-03",
     "report_dates": [
-      "2026-11-02"
+      "2026-11-02",
+      "2026-11-03"
     ],
-    "source_fingerprint": "5953f971d2798dadd0812cd8f2d94cec8981d7bad59408a40095c461dbe7929d",
+    "source_fingerprint": "f56c306801f0af928c1bbee4453d88a01fe0ef34c37f1210cd754a44680afd17",
     "projects": [
+      {
+        "name": "ECC",
+        "url": "https://github.com/affaan-m/ECC",
+        "description": "整合规划、测试、审查、记忆、Skill、规则与 hooks 的工程工具集",
+        "signal": "+5,829 Star",
+        "key": "affaan-m/ecc",
+        "category": "AI 编程与工程 Skill",
+        "dates": [
+          "2026-11-03"
+        ]
+      },
       {
         "name": "ThinkRail",
         "url": "https://github.com/JetBrains/thinkrail",
@@ -23,6 +35,17 @@
         "category": "AI 编程与工程 Skill",
         "dates": [
           "2026-11-02"
+        ]
+      },
+      {
+        "name": "Hallmark",
+        "url": "https://github.com/Nutlope/hallmark",
+        "description": "为编程助手提供页面主题、设计约束、重设计与审查流程，含静态及浏览器检查",
+        "signal": "+9,718 Star",
+        "key": "nutlope/hallmark",
+        "category": "设计与可视化",
+        "dates": [
+          "2026-11-03"
         ]
       },
       {
@@ -40,12 +63,12 @@
     "categories": [
       {
         "name": "AI 编程与工程 Skill",
-        "count": 1,
+        "count": 2,
         "percent": 50.0
       },
       {
         "name": "设计与可视化",
-        "count": 1,
+        "count": 2,
         "percent": 50.0
       }
     ],

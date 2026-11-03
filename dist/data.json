@@ -1,5 +1,40 @@
 [
   {
+    "date": "2026-11-03",
+    "title": "AI 项目日报 · 2026-11-03",
+    "filename": "AI项目日报-2026-11-03.md",
+    "text": "# AI 项目日报 · 2026-11-03\n\n检索日期：2026 年 11 月 3 日（北京时间）  \n近一周观察窗口：10 月 27 日—11 月 3 日  \n对照文档：[11 月 2 日日报](./AI项目日报-2026-11-02.md)\n\n## 今日重点\n\n首次收录 Hallmark 和 ECC：分别关注网页设计质量与编程 Agent 的工程工作流。想尝试页面设计，可先用 Hallmark 审查单页；想组织规划、测试和审查，可从 ECC 的单一客户端、最小配置开始。本期依据官方当前资料调研，未安装、运行或实测；首次收录不等于刚发布，README 当前版本不作为今日发布证据。\n\n## 新增项目\n\n| 项目 | 已核实的用途 | 第三方近 7 日热度 | 体验入口与前提 | 建议先验证什么 |\n|---|---|---|---|---|\n| [Hallmark](https://github.com/Nutlope/hallmark) | 为编程助手提供页面主题、设计约束、重设计与审查流程，含静态及浏览器检查 | +9,718 Star | Node.js 18+、支持的编程助手；浏览器检查另需 puppeteer-core 与 Chrome | 先审查一张测试页面，再核对手机布局、对比度、链接和表单 |\n| [ECC](https://github.com/affaan-m/ECC) | 整合规划、测试、审查、记忆、Skill、规则与 hooks 的工程工具集 | +5,829 Star | 通用安装器需 Node.js 18+；客户端和可选功能有不同依赖，模型由原助手提供 | 先预览安装目标，在测试仓库完成小改动并对照测试和 diff |\n\n热度来自 [whatstrending.ai 仓库榜](https://whatstrending.ai/repos) 2026-11-03 快照，明确窗口为 2026-10-27—2026-11-03。这是第三方统计，未做 GitHub 官方审计，不表示项目质量、运行效果或安装量，不参与月报评分。不能与昨日滚动窗口相减推导单日增长。\n\n## 体验路径与限制\n\n### Hallmark：先审查，再决定是否重设计\n\n[官方安装说明](https://github.com/Nutlope/hallmark#install)给出 `npx skills add nutlope/hallmark -g`，其中省略 `-g` 可选择当前项目范围。完整浏览器检查还需 `puppeteer-core` 和 Chrome，缺少时只有静态检查。\n\n[官方重设计说明](https://github.com/Nutlope/hallmark#redesign)区分 audit 和 redesign：前者只报告，后者重做页面。Codex 调用前缀为 `$hallmark`。建议在测试副本先审查，再改一个页面，对照修改前后截图并实际点击链接、提交表单。作者的“保留内容与连接”是待验证承诺；检查通过不代表业务功能正确。素材需按各自许可处理。本期未验证浏览器检查覆盖率。\n\n### ECC：先选客户端与安装范围\n\n按[官方安装说明](https://github.com/affaan-m/ECC#install-ecc)选择一个入口：Claude Code 路径为 `npx ecc-universal@2.2.3 setup`；多客户端向导为 `npx ecc-universal@2.2.3 install --guided`。版本号来自本次 README，不表示今日发布。先查看目标与写入范围，再决定是否安装，本期未执行这些命令。\n\n[支持矩阵](https://github.com/affaan-m/ECC#platform-support)说明各客户端能力不等同，部分可选路径还需 Bash、Python 或其他工具。同一客户端不要叠加多套安装方式。建议只选需要的流程，在测试仓库完成一次小改动，核对计划、实际 diff、测试结果和 hooks；模型成本及额外上下文开销仍需自行测量。工具集提供流程与检查，不能保证产出正确。\n\n## 已有项目与月报\n\n- Impeccable、ThinkRail 已在昨日收录，本期不重复作为新增项目；热度变化本身不构成功能更新证据。\n- Hallmark 与 Impeccable 都关注设计质量，但安装、检查及工作方式不同；本次未做同任务对比，不能宣布谁更好。\n- 10 月正式月报已于 11 月 2 日补发，15 期日报、59 个去重项目；本次没有缺失的上月月报，不重写正式历史快照。\n- 今日两项已补充主用途分类，纳入 11 月候选池；下月评选仍需官方证据，Star 不计分。\n\n[阅读 10 月月报及双榜](https://luckye1120.github.io/ai-project-daily/#view=monthly&month=2026-10)\n",
+    "html": "<h2>AI 项目日报 · 2026-11-03</h2>\n<p>检索日期：2026 年 11 月 3 日（北京时间） 近一周观察窗口：10 月 27 日—11 月 3 日 对照文档：<a href=\"#date=2026-11-02\">11 月 2 日日报</a></p>\n<h3>今日重点</h3>\n<p>首次收录 Hallmark 和 ECC：分别关注网页设计质量与编程 Agent 的工程工作流。想尝试页面设计，可先用 Hallmark 审查单页；想组织规划、测试和审查，可从 ECC 的单一客户端、最小配置开始。本期依据官方当前资料调研，未安装、运行或实测；首次收录不等于刚发布，README 当前版本不作为今日发布证据。</p>\n<h3>新增项目</h3>\n<div class=\"table-scroll\" tabindex=\"0\" aria-label=\"可横向滚动的项目表格\"><table><thead><tr><th scope=\"col\">项目</th><th scope=\"col\">已核实的用途</th><th scope=\"col\">第三方近 7 日热度</th><th scope=\"col\">体验入口与前提</th><th scope=\"col\">建议先验证什么</th></tr></thead><tbody><tr><td><a href=\"https://github.com/Nutlope/hallmark\" target=\"_blank\" rel=\"noopener noreferrer\">Hallmark ↗</a></td><td>为编程助手提供页面主题、设计约束、重设计与审查流程，含静态及浏览器检查</td><td>+9,718 Star</td><td>Node.js 18+、支持的编程助手；浏览器检查另需 puppeteer-core 与 Chrome</td><td>先审查一张测试页面，再核对手机布局、对比度、链接和表单</td></tr><tr><td><a href=\"https://github.com/affaan-m/ECC\" target=\"_blank\" rel=\"noopener noreferrer\">ECC ↗</a></td><td>整合规划、测试、审查、记忆、Skill、规则与 hooks 的工程工具集</td><td>+5,829 Star</td><td>通用安装器需 Node.js 18+；客户端和可选功能有不同依赖，模型由原助手提供</td><td>先预览安装目标，在测试仓库完成小改动并对照测试和 diff</td></tr></tbody></table></div>\n<p>热度来自 <a href=\"https://whatstrending.ai/repos\" target=\"_blank\" rel=\"noopener noreferrer\">whatstrending.ai 仓库榜 ↗</a> 2026-11-03 快照，明确窗口为 2026-10-27—2026-11-03。这是第三方统计，未做 GitHub 官方审计，不表示项目质量、运行效果或安装量，不参与月报评分。不能与昨日滚动窗口相减推导单日增长。</p>\n<h3>体验路径与限制</h3>\n<h4>Hallmark：先审查，再决定是否重设计</h4>\n<p><a href=\"https://github.com/Nutlope/hallmark#install\" target=\"_blank\" rel=\"noopener noreferrer\">官方安装说明 ↗</a>给出 <code>npx skills add nutlope/hallmark -g</code>，其中省略 <code>-g</code> 可选择当前项目范围。完整浏览器检查还需 <code>puppeteer-core</code> 和 Chrome，缺少时只有静态检查。</p>\n<p><a href=\"https://github.com/Nutlope/hallmark#redesign\" target=\"_blank\" rel=\"noopener noreferrer\">官方重设计说明 ↗</a>区分 audit 和 redesign：前者只报告，后者重做页面。Codex 调用前缀为 <code>$hallmark</code>。建议在测试副本先审查，再改一个页面，对照修改前后截图并实际点击链接、提交表单。作者的“保留内容与连接”是待验证承诺；检查通过不代表业务功能正确。素材需按各自许可处理。本期未验证浏览器检查覆盖率。</p>\n<h4>ECC：先选客户端与安装范围</h4>\n<p>按<a href=\"https://github.com/affaan-m/ECC#install-ecc\" target=\"_blank\" rel=\"noopener noreferrer\">官方安装说明 ↗</a>选择一个入口：Claude Code 路径为 <code>npx ecc-universal@2.2.3 setup</code>；多客户端向导为 <code>npx ecc-universal@2.2.3 install --guided</code>。版本号来自本次 README，不表示今日发布。先查看目标与写入范围，再决定是否安装，本期未执行这些命令。</p>\n<p><a href=\"https://github.com/affaan-m/ECC#platform-support\" target=\"_blank\" rel=\"noopener noreferrer\">支持矩阵 ↗</a>说明各客户端能力不等同，部分可选路径还需 Bash、Python 或其他工具。同一客户端不要叠加多套安装方式。建议只选需要的流程，在测试仓库完成一次小改动，核对计划、实际 diff、测试结果和 hooks；模型成本及额外上下文开销仍需自行测量。工具集提供流程与检查，不能保证产出正确。</p>\n<h3>已有项目与月报</h3>\n<ul><li>Impeccable、ThinkRail 已在昨日收录，本期不重复作为新增项目；热度变化本身不构成功能更新证据。</li><li>Hallmark 与 Impeccable 都关注设计质量，但安装、检查及工作方式不同；本次未做同任务对比，不能宣布谁更好。</li><li>10 月正式月报已于 11 月 2 日补发，15 期日报、59 个去重项目；本次没有缺失的上月月报，不重写正式历史快照。</li><li>今日两项已补充主用途分类，纳入 11 月候选池；下月评选仍需官方证据，Star 不计分。</li></ul>\n<p><a href=\"https://luckye1120.github.io/ai-project-daily/#view=monthly&amp;month=2026-10\" target=\"_blank\" rel=\"noopener noreferrer\">阅读 10 月月报及双榜 ↗</a></p>",
+    "projects": [
+      {
+        "name": "Hallmark",
+        "url": "https://github.com/Nutlope/hallmark",
+        "description": "为编程助手提供页面主题、设计约束、重设计与审查流程，含静态及浏览器检查",
+        "signal": "+9,718 Star"
+      },
+      {
+        "name": "ECC",
+        "url": "https://github.com/affaan-m/ECC",
+        "description": "整合规划、测试、审查、记忆、Skill、规则与 hooks 的工程工具集",
+        "signal": "+5,829 Star"
+      }
+    ],
+    "observations": [
+      {
+        "name": "Hallmark",
+        "url": "https://github.com/Nutlope/hallmark",
+        "description": "为编程助手提供页面主题、设计约束、重设计与审查流程，含静态及浏览器检查",
+        "signal": "+9,718 Star"
+      },
+      {
+        "name": "ECC",
+        "url": "https://github.com/affaan-m/ECC",
+        "description": "整合规划、测试、审查、记忆、Skill、规则与 hooks 的工程工具集",
+        "signal": "+5,829 Star"
+      }
+    ]
+  },
+  {
     "date": "2026-11-02",
     "title": "AI 项目日报 · 2026-11-02",
     "filename": "AI项目日报-2026-11-02.md",
