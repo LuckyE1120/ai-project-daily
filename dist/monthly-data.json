@@ -3,17 +3,18 @@
     "month": "2026-11",
     "status": "preview",
     "title": "2026-11 · 月度采样预览",
-    "report_count": 2,
-    "project_count": 4,
+    "report_count": 3,
+    "project_count": 6,
     "calendar_days": 30,
-    "coverage": 6.7,
+    "coverage": 10.0,
     "start": "2026-11-02",
-    "end": "2026-11-03",
+    "end": "2026-11-04",
     "report_dates": [
       "2026-11-02",
-      "2026-11-03"
+      "2026-11-03",
+      "2026-11-04"
     ],
-    "source_fingerprint": "f56c306801f0af928c1bbee4453d88a01fe0ef34c37f1210cd754a44680afd17",
+    "source_fingerprint": "f27e8016d2822242521cb350cfb67b31ec935e5c3709e817b2eecb2b97e45899",
     "projects": [
       {
         "name": "ECC",
@@ -38,6 +39,17 @@
         ]
       },
       {
+        "name": "ffmpeg-skill",
+        "url": "https://github.com/kajisho5/ffmpeg-skill",
+        "description": "为编程 Agent 提供本地剪辑、字幕、画幅、响度及导出工具，支持 Skill 和 MCP",
+        "signal": "+1,136 Star",
+        "key": "kajisho5/ffmpeg-skill",
+        "category": "音视频创作",
+        "dates": [
+          "2026-11-04"
+        ]
+      },
+      {
         "name": "Hallmark",
         "url": "https://github.com/Nutlope/hallmark",
         "description": "为编程助手提供页面主题、设计约束、重设计与审查流程，含静态及浏览器检查",
@@ -46,6 +58,17 @@
         "category": "设计与可视化",
         "dates": [
           "2026-11-03"
+        ]
+      },
+      {
+        "name": "Auto Ontology",
+        "url": "https://github.com/NVIDIA/auto-ontology",
+        "description": "从元数据构建语义目录，为自然语言查库及 Agent 提供指标、实体和关系上下文，含 MCP/API 接口",
+        "signal": "+2,519 Star",
+        "key": "nvidia/auto-ontology",
+        "category": "Agent 基础能力",
+        "dates": [
+          "2026-11-04"
         ]
       },
       {
@@ -64,12 +87,22 @@
       {
         "name": "AI 编程与工程 Skill",
         "count": 2,
-        "percent": 50.0
+        "percent": 33.3
       },
       {
         "name": "设计与可视化",
         "count": 2,
-        "percent": 50.0
+        "percent": 33.3
+      },
+      {
+        "name": "Agent 基础能力",
+        "count": 1,
+        "percent": 16.7
+      },
+      {
+        "name": "音视频创作",
+        "count": 1,
+        "percent": 16.7
       }
     ],
     "idea_top": [],
