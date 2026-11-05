@@ -3,18 +3,19 @@
     "month": "2026-11",
     "status": "preview",
     "title": "2026-11 · 月度采样预览",
-    "report_count": 3,
-    "project_count": 6,
+    "report_count": 4,
+    "project_count": 8,
     "calendar_days": 30,
-    "coverage": 10.0,
+    "coverage": 13.3,
     "start": "2026-11-02",
-    "end": "2026-11-04",
+    "end": "2026-11-05",
     "report_dates": [
       "2026-11-02",
       "2026-11-03",
-      "2026-11-04"
+      "2026-11-04",
+      "2026-11-05"
     ],
-    "source_fingerprint": "f27e8016d2822242521cb350cfb67b31ec935e5c3709e817b2eecb2b97e45899",
+    "source_fingerprint": "a81d1e790a215031b1b454ed4cf6c78c57dba6a547d061463572a912caf80c59",
     "projects": [
       {
         "name": "ECC",
@@ -25,6 +26,28 @@
         "category": "AI 编程与工程 Skill",
         "dates": [
           "2026-11-03"
+        ]
+      },
+      {
+        "name": "Claude Code Game Studios",
+        "url": "https://github.com/Donchitos/Claude-Code-Game-Studios",
+        "description": "用游戏工作室角色、Skill、规则和 hooks 组织设计、开发、QA 与交付",
+        "signal": "+6,770 Star",
+        "key": "donchitos/claude-code-game-studios",
+        "category": "Agent 协作与编排",
+        "dates": [
+          "2026-11-05"
+        ]
+      },
+      {
+        "name": "Elephant Goldfish Model",
+        "url": "https://github.com/google/elephant-goldfish-model",
+        "description": "由掌握项目上下文的 Agent 起草方案，再以全新上下文的子 Agent 审查假设、需求与实现风险",
+        "signal": "+6,779 Star",
+        "key": "google/elephant-goldfish-model",
+        "category": "AI 编程与工程 Skill",
+        "dates": [
+          "2026-11-05"
         ]
       },
       {
@@ -86,23 +109,28 @@
     "categories": [
       {
         "name": "AI 编程与工程 Skill",
-        "count": 2,
-        "percent": 33.3
+        "count": 3,
+        "percent": 37.5
       },
       {
         "name": "设计与可视化",
         "count": 2,
-        "percent": 33.3
+        "percent": 25.0
+      },
+      {
+        "name": "Agent 协作与编排",
+        "count": 1,
+        "percent": 12.5
       },
       {
         "name": "Agent 基础能力",
         "count": 1,
-        "percent": 16.7
+        "percent": 12.5
       },
       {
         "name": "音视频创作",
         "count": 1,
-        "percent": 16.7
+        "percent": 12.5
       }
     ],
     "idea_top": [],
