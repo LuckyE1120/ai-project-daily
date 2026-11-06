@@ -3,19 +3,20 @@
     "month": "2026-11",
     "status": "preview",
     "title": "2026-11 · 月度采样预览",
-    "report_count": 4,
-    "project_count": 8,
+    "report_count": 5,
+    "project_count": 10,
     "calendar_days": 30,
-    "coverage": 13.3,
+    "coverage": 16.7,
     "start": "2026-11-02",
-    "end": "2026-11-05",
+    "end": "2026-11-06",
     "report_dates": [
       "2026-11-02",
       "2026-11-03",
       "2026-11-04",
-      "2026-11-05"
+      "2026-11-05",
+      "2026-11-06"
     ],
-    "source_fingerprint": "a81d1e790a215031b1b454ed4cf6c78c57dba6a547d061463572a912caf80c59",
+    "source_fingerprint": "be819198b1042544429a2f43b0f3e59aee7246d6ee3e161274397778d87393cf",
     "projects": [
       {
         "name": "ECC",
@@ -26,6 +27,17 @@
         "category": "AI 编程与工程 Skill",
         "dates": [
           "2026-11-03"
+        ]
+      },
+      {
+        "name": "Agent Cockpit",
+        "url": "https://github.com/chutingyean/Agent-Cockpit",
+        "description": "本地研究白板与 MCP 服务，将结论关联运行记录和依赖代码，标记过期证据并支持回放",
+        "signal": "+320 Star",
+        "key": "chutingyean/agent-cockpit",
+        "category": "科研与数据分析",
+        "dates": [
+          "2026-11-06"
         ]
       },
       {
@@ -104,33 +116,49 @@
         "dates": [
           "2026-11-02"
         ]
+      },
+      {
+        "name": "Mika",
+        "url": "https://github.com/wangzan101/Mika",
+        "description": "安卓 Agent，通过后台屏幕操作应用和网页，并提供电脑端 CLI/Skill/MCP 入口",
+        "signal": "+6,896 Star",
+        "key": "wangzan101/mika",
+        "category": "Agent 基础能力",
+        "dates": [
+          "2026-11-06"
+        ]
       }
     ],
     "categories": [
       {
         "name": "AI 编程与工程 Skill",
         "count": 3,
-        "percent": 37.5
+        "percent": 30.0
+      },
+      {
+        "name": "Agent 基础能力",
+        "count": 2,
+        "percent": 20.0
       },
       {
         "name": "设计与可视化",
         "count": 2,
-        "percent": 25.0
+        "percent": 20.0
       },
       {
         "name": "Agent 协作与编排",
         "count": 1,
-        "percent": 12.5
+        "percent": 10.0
       },
       {
-        "name": "Agent 基础能力",
+        "name": "科研与数据分析",
         "count": 1,
-        "percent": 12.5
+        "percent": 10.0
       },
       {
         "name": "音视频创作",
         "count": 1,
-        "percent": 12.5
+        "percent": 10.0
       }
     ],
     "idea_top": [],
