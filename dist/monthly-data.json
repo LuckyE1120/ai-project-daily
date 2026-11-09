@@ -3,20 +3,21 @@
     "month": "2026-11",
     "status": "preview",
     "title": "2026-11 · 月度采样预览",
-    "report_count": 5,
-    "project_count": 10,
+    "report_count": 6,
+    "project_count": 12,
     "calendar_days": 30,
-    "coverage": 16.7,
+    "coverage": 20.0,
     "start": "2026-11-02",
-    "end": "2026-11-06",
+    "end": "2026-11-09",
     "report_dates": [
       "2026-11-02",
       "2026-11-03",
       "2026-11-04",
       "2026-11-05",
-      "2026-11-06"
+      "2026-11-06",
+      "2026-11-09"
     ],
-    "source_fingerprint": "be819198b1042544429a2f43b0f3e59aee7246d6ee3e161274397778d87393cf",
+    "source_fingerprint": "27e2de8cfc8432c13b8f6268cfdeacd830b16e9f146680dd9452aa6bf8016804",
     "projects": [
       {
         "name": "ECC",
@@ -85,6 +86,17 @@
         ]
       },
       {
+        "name": "OpenMausBot",
+        "url": "https://github.com/milind-soni/OpenMausBot",
+        "description": "本地优先的聊天式多 Agent 桌面工作区；不同 Bot 可调用本机 Agent CLI、选择模型和独立工作空间，并通过权限卡确认 Shell、文件等操作",
+        "signal": "whatstrending.ai 快照：11 月 2 日—9 日约 +7,718 Star；第三方统计，不是 GitHub 官方趋势榜",
+        "key": "milind-soni/openmausbot",
+        "category": "待分类",
+        "dates": [
+          "2026-11-09"
+        ]
+      },
+      {
         "name": "Hallmark",
         "url": "https://github.com/Nutlope/hallmark",
         "description": "为编程助手提供页面主题、设计约束、重设计与审查流程，含静态及浏览器检查",
@@ -118,6 +130,17 @@
         ]
       },
       {
+        "name": "agent-desktop",
+        "url": "https://github.com/vercel-labs/agent-desktop",
+        "description": "通过 macOS AX、Windows UI Automation、Linux AT-SPI 无障碍树让 Agent 读取桌面界面、按元素引用执行操作；CLI、C 库及 MCP stdio 接口",
+        "signal": "第三方 Git of Anton 约 +12k Star/周；该站按自己的 GitHub Star 快照统计",
+        "key": "vercel-labs/agent-desktop",
+        "category": "待分类",
+        "dates": [
+          "2026-11-09"
+        ]
+      },
+      {
         "name": "Mika",
         "url": "https://github.com/wangzan101/Mika",
         "description": "安卓 Agent，通过后台屏幕操作应用和网页，并提供电脑端 CLI/Skill/MCP 入口",
@@ -133,32 +156,37 @@
       {
         "name": "AI 编程与工程 Skill",
         "count": 3,
-        "percent": 30.0
+        "percent": 25.0
       },
       {
         "name": "Agent 基础能力",
         "count": 2,
-        "percent": 20.0
+        "percent": 16.7
+      },
+      {
+        "name": "待分类",
+        "count": 2,
+        "percent": 16.7
       },
       {
         "name": "设计与可视化",
         "count": 2,
-        "percent": 20.0
+        "percent": 16.7
       },
       {
         "name": "Agent 协作与编排",
         "count": 1,
-        "percent": 10.0
+        "percent": 8.3
       },
       {
         "name": "科研与数据分析",
         "count": 1,
-        "percent": 10.0
+        "percent": 8.3
       },
       {
         "name": "音视频创作",
         "count": 1,
-        "percent": 10.0
+        "percent": 8.3
       }
     ],
     "idea_top": [],
