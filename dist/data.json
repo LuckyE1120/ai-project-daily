@@ -1,5 +1,40 @@
 [
   {
+    "date": "2026-11-11",
+    "title": "AI 项目日报 · 2026-11-11",
+    "filename": "AI项目日报-2026-11-11.md",
+    "text": "# AI 项目日报 · 2026-11-11\n\n检索日期：2026 年 11 月 11 日（北京时间）  \n近一周观察窗口：以可取得的第三方完整快照为准，分别标注窗口  \n对照文档：[11 月 10 日日报](./AI项目日报-2026-11-10.md)\n\n## 今日重点\n\n本期新增关注 DeepSeek 的 dsh-superagent 与 gputaskman。dsh-superagent 把 GitHub（可选飞书）请求变成隔离的编码任务，再把结果送回原对话；它的权限规则、独立工作目录和“先观察再执行”默认值值得研究，但官方明确称其为研究原型。gputaskman 则尝试把 GPU/显存占用细分到进程及本地 LLM 权重、KV cache 等，适合运行本地模型时排查显存去向。核对了官方仓库和第三方热度快照，未安装或实测。\n\n## 新增项目\n\n| 项目 | 已核实的用途 | 第三方近 7 日热度 | 体验入口与前提 | 建议先验证什么 |\n|---|---|---|---|---|\n| [dsh-superagent](https://github.com/deepseek-ai/dsh-superagent-prototype) | 面向单个 GitHub 仓库的主动式编码 Agent；监听 GitHub（可选飞书），为每项工作创建独立会话/目录，并在原对话交付结果或 PR | RepoAlerts 周榜（11 月 2—8 日）记录 +11,098 Star；第三方 GitHub 快照 | 需 Node.js 22.19+ 或 24+、pnpm、Git 2.32+、tmux、Python 3.8+、GitHub CLI 2.48+、DSH 与模型提供方；应先用测试仓库和专用 Agent 账号 | 先按官方 SETUP.md 完成受限配置，保持默认 observe 模式；确认仅允许列表中的账号能派单、每项任务独立 checkout，且未经人工批准不自动合并 |\n| [gputaskman](https://github.com/shanselman/gputaskman) | 终端 GPU 任务监视器，关联进程显存/引擎活动、运行时和本地 LLM 的模型文件与显存估算 | Upstar CLI 工具榜（11 月 4—10 日）约 +1,470 Star，榜单第 1；第三方按每日 Star 增量统计 | 官方说明需 Python 3.11+ 与受支持的 GPU/驱动；Windows、Linux/WSL 支持 NVIDIA，Windows 也支持 AMD；Apple Silicon Mac 亦列为支持平台。可用 `uv tool install gputaskman` 安装 | 运行本地模型与浏览器等工作负载时，对照系统监视器检查进程显存、模型识别及权重/KV cache 估算是否合理 |\n\n热度来自第三方统计，窗口、分类和计数方式不同：RepoAlerts 的 DeepSeek 数值是 11 月 2—8 日周榜；Upstar 数值是 11 月 4—10 日 CLI 分类榜。两者不能横向比较，也不代表实际使用量、质量或稳定性。\n\n## 体验路径与限制\n\n### dsh-superagent：先限制权限，再试一个低风险 Issue\n\n官方把项目定位为参考用研究原型，并特别说明它不是 DeepSeek 正式产品，也不保证达到设计文章所述的全部能力。安装配置按[官方 SETUP.md](https://github.com/deepseek-ai/dsh-superagent-prototype/blob/main/SETUP.md)进行：让编码 Agent 阅读 SETUP.md 并协助设置；只绑定一个测试仓库、设置专用 GitHub Agent 账号与短允许名单，保留默认 observe 模式。确认状态后，可由允许名单中的账号在测试 Issue 评论 `@<agent账号> <小任务>`，观察任务是否进入面板、是否使用独立工作目录，以及最终 PR/回复是否回到原讨论。\n\n它会接触仓库代码、GitHub 权限及可能的团队消息，配置不当会带来误操作或信息暴露。不要一开始接入生产仓库、扩大允许名单或启用自动合并；官方建议先读编号文档并由人负责最终交付。本期只核对文档，没有安装、授权账号或实际派单。\n\n### gputaskman：用已知负载验证监测结果\n\n官方[README](https://github.com/shanselman/gputaskman)给出的体验方式是通过 uv 或 pipx 安装，然后运行 `gputaskman`；Windows 无 Python 环境也有便携下载。先打开一个已知 GPU 应用或本地 LLM，再比对工具报告的进程显存、GPU 活动和模型细节。Apple Silicon Mac 可按官方支持说明试用；具体指标和功能随平台、驱动及硬件而异。\n\n项目仍属早期实验软件。官方说明进程计数是测量值，但模型分类及从 GGUF 推导的拆分是估算；发现 CUDA/PyTorch 库并不能证明正在运行某个模型。它关注本地 GPU 工作负载，不覆盖云端、纯 CPU 或纯 NPU 推理。本期未在机器上验证指标准确性。\n\n## 已有项目与月报\n\n- 11 月 9 日已收录 agent-desktop，本期不重复；它侧重 Agent 操作桌面 UI，dsh-superagent 则侧重 GitHub 任务分派与隔离执行。\n- gputaskman 是本地 AI 推理的资源可观测性工具，与已收录的 AI Agent/工作流项目用途不同。\n- 10 月正式月报已归档，今天不属于月初补报时点；11 月月报将在本月结束后按既定流程评审。\n\n## 来源\n\n- 热度快照：[RepoAlerts 2026-W45 周榜](https://repoalerts.com/weekly/2026-w45)、[Upstar CLI 工具周榜](https://upstar.dev/t/cli-tools?n=130)\n- 项目用途与限制：[DeepSeek dsh-superagent 官方仓库](https://github.com/deepseek-ai/dsh-superagent-prototype)、[官方 SETUP.md](https://github.com/deepseek-ai/dsh-superagent-prototype/blob/main/SETUP.md)\n- 项目用途、平台与安装：[gputaskman 官方仓库](https://github.com/shanselman/gputaskman)\n",
+    "html": "<h2>AI 项目日报 · 2026-11-11</h2>\n<p>检索日期：2026 年 11 月 11 日（北京时间） 近一周观察窗口：以可取得的第三方完整快照为准，分别标注窗口 对照文档：<a href=\"#date=2026-11-10\">11 月 10 日日报</a></p>\n<h3>今日重点</h3>\n<p>本期新增关注 DeepSeek 的 dsh-superagent 与 gputaskman。dsh-superagent 把 GitHub（可选飞书）请求变成隔离的编码任务，再把结果送回原对话；它的权限规则、独立工作目录和“先观察再执行”默认值值得研究，但官方明确称其为研究原型。gputaskman 则尝试把 GPU/显存占用细分到进程及本地 LLM 权重、KV cache 等，适合运行本地模型时排查显存去向。核对了官方仓库和第三方热度快照，未安装或实测。</p>\n<h3>新增项目</h3>\n<div class=\"table-scroll\" tabindex=\"0\" aria-label=\"可横向滚动的项目表格\"><table><thead><tr><th scope=\"col\">项目</th><th scope=\"col\">已核实的用途</th><th scope=\"col\">第三方近 7 日热度</th><th scope=\"col\">体验入口与前提</th><th scope=\"col\">建议先验证什么</th></tr></thead><tbody><tr><td><a href=\"https://github.com/deepseek-ai/dsh-superagent-prototype\" target=\"_blank\" rel=\"noopener noreferrer\">dsh-superagent ↗</a></td><td>面向单个 GitHub 仓库的主动式编码 Agent；监听 GitHub（可选飞书），为每项工作创建独立会话/目录，并在原对话交付结果或 PR</td><td>RepoAlerts 周榜（11 月 2—8 日）记录 +11,098 Star；第三方 GitHub 快照</td><td>需 Node.js 22.19+ 或 24+、pnpm、Git 2.32+、tmux、Python 3.8+、GitHub CLI 2.48+、DSH 与模型提供方；应先用测试仓库和专用 Agent 账号</td><td>先按官方 SETUP.md 完成受限配置，保持默认 observe 模式；确认仅允许列表中的账号能派单、每项任务独立 checkout，且未经人工批准不自动合并</td></tr><tr><td><a href=\"https://github.com/shanselman/gputaskman\" target=\"_blank\" rel=\"noopener noreferrer\">gputaskman ↗</a></td><td>终端 GPU 任务监视器，关联进程显存/引擎活动、运行时和本地 LLM 的模型文件与显存估算</td><td>Upstar CLI 工具榜（11 月 4—10 日）约 +1,470 Star，榜单第 1；第三方按每日 Star 增量统计</td><td>官方说明需 Python 3.11+ 与受支持的 GPU/驱动；Windows、Linux/WSL 支持 NVIDIA，Windows 也支持 AMD；Apple Silicon Mac 亦列为支持平台。可用 <code>uv tool install gputaskman</code> 安装</td><td>运行本地模型与浏览器等工作负载时，对照系统监视器检查进程显存、模型识别及权重/KV cache 估算是否合理</td></tr></tbody></table></div>\n<p>热度来自第三方统计，窗口、分类和计数方式不同：RepoAlerts 的 DeepSeek 数值是 11 月 2—8 日周榜；Upstar 数值是 11 月 4—10 日 CLI 分类榜。两者不能横向比较，也不代表实际使用量、质量或稳定性。</p>\n<h3>体验路径与限制</h3>\n<h4>dsh-superagent：先限制权限，再试一个低风险 Issue</h4>\n<p>官方把项目定位为参考用研究原型，并特别说明它不是 DeepSeek 正式产品，也不保证达到设计文章所述的全部能力。安装配置按<a href=\"https://github.com/deepseek-ai/dsh-superagent-prototype/blob/main/SETUP.md\" target=\"_blank\" rel=\"noopener noreferrer\">官方 SETUP.md ↗</a>进行：让编码 Agent 阅读 SETUP.md 并协助设置；只绑定一个测试仓库、设置专用 GitHub Agent 账号与短允许名单，保留默认 observe 模式。确认状态后，可由允许名单中的账号在测试 Issue 评论 <code>@&lt;agent账号&gt; &lt;小任务&gt;</code>，观察任务是否进入面板、是否使用独立工作目录，以及最终 PR/回复是否回到原讨论。</p>\n<p>它会接触仓库代码、GitHub 权限及可能的团队消息，配置不当会带来误操作或信息暴露。不要一开始接入生产仓库、扩大允许名单或启用自动合并；官方建议先读编号文档并由人负责最终交付。本期只核对文档，没有安装、授权账号或实际派单。</p>\n<h4>gputaskman：用已知负载验证监测结果</h4>\n<p>官方<a href=\"https://github.com/shanselman/gputaskman\" target=\"_blank\" rel=\"noopener noreferrer\">README ↗</a>给出的体验方式是通过 uv 或 pipx 安装，然后运行 <code>gputaskman</code>；Windows 无 Python 环境也有便携下载。先打开一个已知 GPU 应用或本地 LLM，再比对工具报告的进程显存、GPU 活动和模型细节。Apple Silicon Mac 可按官方支持说明试用；具体指标和功能随平台、驱动及硬件而异。</p>\n<p>项目仍属早期实验软件。官方说明进程计数是测量值，但模型分类及从 GGUF 推导的拆分是估算；发现 CUDA/PyTorch 库并不能证明正在运行某个模型。它关注本地 GPU 工作负载，不覆盖云端、纯 CPU 或纯 NPU 推理。本期未在机器上验证指标准确性。</p>\n<h3>已有项目与月报</h3>\n<ul><li>11 月 9 日已收录 agent-desktop，本期不重复；它侧重 Agent 操作桌面 UI，dsh-superagent 则侧重 GitHub 任务分派与隔离执行。</li><li>gputaskman 是本地 AI 推理的资源可观测性工具，与已收录的 AI Agent/工作流项目用途不同。</li><li>10 月正式月报已归档，今天不属于月初补报时点；11 月月报将在本月结束后按既定流程评审。</li></ul>\n<h3>来源</h3>\n<ul><li>热度快照：<a href=\"https://repoalerts.com/weekly/2026-w45\" target=\"_blank\" rel=\"noopener noreferrer\">RepoAlerts 2026-W45 周榜 ↗</a>、<a href=\"https://upstar.dev/t/cli-tools?n=130\" target=\"_blank\" rel=\"noopener noreferrer\">Upstar CLI 工具周榜 ↗</a></li><li>项目用途与限制：<a href=\"https://github.com/deepseek-ai/dsh-superagent-prototype\" target=\"_blank\" rel=\"noopener noreferrer\">DeepSeek dsh-superagent 官方仓库 ↗</a>、<a href=\"https://github.com/deepseek-ai/dsh-superagent-prototype/blob/main/SETUP.md\" target=\"_blank\" rel=\"noopener noreferrer\">官方 SETUP.md ↗</a></li><li>项目用途、平台与安装：<a href=\"https://github.com/shanselman/gputaskman\" target=\"_blank\" rel=\"noopener noreferrer\">gputaskman 官方仓库 ↗</a></li></ul>",
+    "projects": [
+      {
+        "name": "dsh-superagent",
+        "url": "https://github.com/deepseek-ai/dsh-superagent-prototype",
+        "description": "面向单个 GitHub 仓库的主动式编码 Agent；监听 GitHub（可选飞书），为每项工作创建独立会话/目录，并在原对话交付结果或 PR",
+        "signal": "RepoAlerts 周榜（11 月 2—8 日）记录 +11,098 Star；第三方 GitHub 快照"
+      },
+      {
+        "name": "gputaskman",
+        "url": "https://github.com/shanselman/gputaskman",
+        "description": "终端 GPU 任务监视器，关联进程显存/引擎活动、运行时和本地 LLM 的模型文件与显存估算",
+        "signal": "Upstar CLI 工具榜（11 月 4—10 日）约 +1,470 Star，榜单第 1；第三方按每日 Star 增量统计"
+      }
+    ],
+    "observations": [
+      {
+        "name": "dsh-superagent",
+        "url": "https://github.com/deepseek-ai/dsh-superagent-prototype",
+        "description": "面向单个 GitHub 仓库的主动式编码 Agent；监听 GitHub（可选飞书），为每项工作创建独立会话/目录，并在原对话交付结果或 PR",
+        "signal": "RepoAlerts 周榜（11 月 2—8 日）记录 +11,098 Star；第三方 GitHub 快照"
+      },
+      {
+        "name": "gputaskman",
+        "url": "https://github.com/shanselman/gputaskman",
+        "description": "终端 GPU 任务监视器，关联进程显存/引擎活动、运行时和本地 LLM 的模型文件与显存估算",
+        "signal": "Upstar CLI 工具榜（11 月 4—10 日）约 +1,470 Star，榜单第 1；第三方按每日 Star 增量统计"
+      }
+    ]
+  },
+  {
     "date": "2026-11-10",
     "title": "AI 项目日报 · 2026-11-10",
     "filename": "AI项目日报-2026-11-10.md",

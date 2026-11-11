@@ -3,12 +3,12 @@
     "month": "2026-11",
     "status": "preview",
     "title": "2026-11 · 月度采样预览",
-    "report_count": 7,
-    "project_count": 14,
+    "report_count": 8,
+    "project_count": 16,
     "calendar_days": 30,
-    "coverage": 23.3,
+    "coverage": 26.7,
     "start": "2026-11-02",
-    "end": "2026-11-10",
+    "end": "2026-11-11",
     "report_dates": [
       "2026-11-02",
       "2026-11-03",
@@ -16,9 +16,10 @@
       "2026-11-05",
       "2026-11-06",
       "2026-11-09",
-      "2026-11-10"
+      "2026-11-10",
+      "2026-11-11"
     ],
-    "source_fingerprint": "3c8d13cd4810ea8a8709ddc9e1e8c4cbfcfaf81683c9755a8c533106101f454d",
+    "source_fingerprint": "516e768bfdfaa9384abb8dabe1b9a5afbffb91ca90b63f096420d57a8fb15c54",
     "projects": [
       {
         "name": "ECC",
@@ -40,6 +41,17 @@
         "category": "科研与数据分析",
         "dates": [
           "2026-11-06"
+        ]
+      },
+      {
+        "name": "dsh-superagent",
+        "url": "https://github.com/deepseek-ai/dsh-superagent-prototype",
+        "description": "面向单个 GitHub 仓库的主动式编码 Agent；监听 GitHub（可选飞书），为每项工作创建独立会话/目录，并在原对话交付结果或 PR",
+        "signal": "RepoAlerts 周榜（11 月 2—8 日）记录 +11,098 Star；第三方 GitHub 快照",
+        "key": "deepseek-ai/dsh-superagent-prototype",
+        "category": "待分类",
+        "dates": [
+          "2026-11-11"
         ]
       },
       {
@@ -153,6 +165,17 @@
         ]
       },
       {
+        "name": "gputaskman",
+        "url": "https://github.com/shanselman/gputaskman",
+        "description": "终端 GPU 任务监视器，关联进程显存/引擎活动、运行时和本地 LLM 的模型文件与显存估算",
+        "signal": "Upstar CLI 工具榜（11 月 4—10 日）约 +1,470 Star，榜单第 1；第三方按每日 Star 增量统计",
+        "key": "shanselman/gputaskman",
+        "category": "待分类",
+        "dates": [
+          "2026-11-11"
+        ]
+      },
+      {
         "name": "agent-desktop",
         "url": "https://github.com/vercel-labs/agent-desktop",
         "description": "通过 macOS AX、Windows UI Automation、Linux AT-SPI 无障碍树让 Agent 读取桌面界面、按元素引用执行操作；CLI、C 库及 MCP stdio 接口",
@@ -178,38 +201,38 @@
     "categories": [
       {
         "name": "待分类",
-        "count": 4,
-        "percent": 28.6
+        "count": 6,
+        "percent": 37.5
       },
       {
         "name": "AI 编程与工程 Skill",
         "count": 3,
-        "percent": 21.4
+        "percent": 18.8
       },
       {
         "name": "Agent 基础能力",
         "count": 2,
-        "percent": 14.3
+        "percent": 12.5
       },
       {
         "name": "设计与可视化",
         "count": 2,
-        "percent": 14.3
+        "percent": 12.5
       },
       {
         "name": "Agent 协作与编排",
         "count": 1,
-        "percent": 7.1
+        "percent": 6.2
       },
       {
         "name": "科研与数据分析",
         "count": 1,
-        "percent": 7.1
+        "percent": 6.2
       },
       {
         "name": "音视频创作",
         "count": 1,
-        "percent": 7.1
+        "percent": 6.2
       }
     ],
     "idea_top": [],
