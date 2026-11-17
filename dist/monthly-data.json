@@ -3,12 +3,12 @@
     "month": "2026-11",
     "status": "preview",
     "title": "2026-11 · 月度采样预览",
-    "report_count": 8,
-    "project_count": 16,
+    "report_count": 9,
+    "project_count": 19,
     "calendar_days": 30,
-    "coverage": 26.7,
+    "coverage": 30.0,
     "start": "2026-11-02",
-    "end": "2026-11-11",
+    "end": "2026-11-17",
     "report_dates": [
       "2026-11-02",
       "2026-11-03",
@@ -17,9 +17,10 @@
       "2026-11-06",
       "2026-11-09",
       "2026-11-10",
-      "2026-11-11"
+      "2026-11-11",
+      "2026-11-17"
     ],
-    "source_fingerprint": "516e768bfdfaa9384abb8dabe1b9a5afbffb91ca90b63f096420d57a8fb15c54",
+    "source_fingerprint": "c355dd86641b150c182fa9f1261b4fd97f6bed9f59d55d3af10836b1b2ca67fc",
     "projects": [
       {
         "name": "ECC",
@@ -74,6 +75,28 @@
         "category": "AI 编程与工程 Skill",
         "dates": [
           "2026-11-05"
+        ]
+      },
+      {
+        "name": "HA-MCP",
+        "url": "https://github.com/homeassistant-ai/ha-mcp",
+        "description": "通过 MCP 查询和管理 Home Assistant，可控制设备、创建自动化/脚本/仪表盘、查看自动化运行记录；可用工具搜索减少大工具目录占用的上下文",
+        "signal": "appsgit（11 月 9—16 日快照）记录 +2,378 Star",
+        "key": "homeassistant-ai/ha-mcp",
+        "category": "待分类",
+        "dates": [
+          "2026-11-17"
+        ]
+      },
+      {
+        "name": "Jane Street Agent Skills",
+        "url": "https://github.com/janestreet/agent_skills",
+        "description": "目前仓库提供一个 Socratic Tutor Skill：先诊断知识水平，再分级、一次一问、间隔复习并做总结评估",
+        "signal": "GitTrend W46（11 月 9—15 日）记录 +8,685 Star",
+        "key": "janestreet/agent_skills",
+        "category": "待分类",
+        "dates": [
+          "2026-11-17"
         ]
       },
       {
@@ -176,6 +199,17 @@
         ]
       },
       {
+        "name": "Craft Anything",
+        "url": "https://github.com/storytold/craft-anything",
+        "description": "观察网站、桌面/手机应用、游戏或文件；可用编码 Agent 重建项目，再通过多视口或自测对照原目标并迭代；引擎工具也可走 CLI/MCP",
+        "signal": "GitTrend W46（11 月 9—15 日）记录 +11,053 Star",
+        "key": "storytold/craft-anything",
+        "category": "待分类",
+        "dates": [
+          "2026-11-17"
+        ]
+      },
+      {
         "name": "agent-desktop",
         "url": "https://github.com/vercel-labs/agent-desktop",
         "description": "通过 macOS AX、Windows UI Automation、Linux AT-SPI 无障碍树让 Agent 读取桌面界面、按元素引用执行操作；CLI、C 库及 MCP stdio 接口",
@@ -201,38 +235,38 @@
     "categories": [
       {
         "name": "待分类",
-        "count": 6,
-        "percent": 37.5
+        "count": 9,
+        "percent": 47.4
       },
       {
         "name": "AI 编程与工程 Skill",
         "count": 3,
-        "percent": 18.8
+        "percent": 15.8
       },
       {
         "name": "Agent 基础能力",
         "count": 2,
-        "percent": 12.5
+        "percent": 10.5
       },
       {
         "name": "设计与可视化",
         "count": 2,
-        "percent": 12.5
+        "percent": 10.5
       },
       {
         "name": "Agent 协作与编排",
         "count": 1,
-        "percent": 6.2
+        "percent": 5.3
       },
       {
         "name": "科研与数据分析",
         "count": 1,
-        "percent": 6.2
+        "percent": 5.3
       },
       {
         "name": "音视频创作",
         "count": 1,
-        "percent": 6.2
+        "percent": 5.3
       }
     ],
     "idea_top": [],

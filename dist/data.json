@@ -1,5 +1,52 @@
 [
   {
+    "date": "2026-11-17",
+    "title": "AI 项目日报 · 2026-11-17",
+    "filename": "AI项目日报-2026-11-17.md",
+    "text": "# AI 项目日报 · 2026-11-17\n\n检索日期：2026 年 11 月 17 日（北京时间）  \n近一周热度窗口：GitTrend 2026-W46（11 月 9—15 日）；appsgit 快照（11 月 9—16 日）  \n对照文档：[11 月 11 日日报](./AI项目日报-2026-11-11.md)\n\n## 今日重点\n\n这周 GitHub 热度主要落在 Agent 工作流和 Skills。本期新增关注 Craft Anything、Jane Street 的 Socratic Tutor Skill，以及 Home Assistant 的 ha-mcp。Craft Anything 把软件观察、编码 Agent 重建、结果对照放在一个工作流里，想法新但仍是 alpha，Codex 适配器尚未在真实安装上验证；Socratic Tutor 很容易装进 Codex 试用；ha-mcp 把 Home Assistant 的设备、自动化和仪表盘操作接入 MCP，落地价值高，但需谨慎配置权限。本期仅核对官方资料和第三方热度快照，没有安装或实测。\n\n## 新增项目\n\n| 项目 | 已核实的用途 | 第三方近 7 日热度 | 体验入口与前提 | 建议先验证什么 |\n|---|---|---|---|---|\n| [Craft Anything](https://github.com/storytold/craft-anything) | 观察网站、桌面/手机应用、游戏或文件；可用编码 Agent 重建项目，再通过多视口或自测对照原目标并迭代；引擎工具也可走 CLI/MCP | GitTrend W46（11 月 9—15 日）记录 +11,053 Star | macOS 可下载通用 DMG；重建需要一款本机已登录的编码 Agent。官方优先支持 Claude Code，Codex 适配器尚未在真实安装上核验 | 对自己拥有或获准检查的公开网站做 Clean-room 观察，重建一个简单页面，再检查三种屏宽的差异 |\n| [Jane Street Agent Skills](https://github.com/janestreet/agent_skills) | 目前仓库提供一个 Socratic Tutor Skill：先诊断知识水平，再分级、一次一问、间隔复习并做总结评估 | GitTrend W46（11 月 9—15 日）记录 +8,685 Star | 支持通用 `SKILL.md` 的 Coding Agent；可将 `socratic-tutor` 目录复制到 Codex 的 `~/.agents/skills/`，或当前项目的 `.agents/skills/` | 让它教一个熟悉主题，观察是否先问诊、单次只问一个问题，并按复习安排追问 |\n| [HA-MCP](https://github.com/homeassistant-ai/ha-mcp) | 通过 MCP 查询和管理 Home Assistant，可控制设备、创建自动化/脚本/仪表盘、查看自动化运行记录；可用工具搜索减少大工具目录占用的上下文 | appsgit（11 月 9—16 日快照）记录 +2,378 Star | 需要 Home Assistant（技术最低版本 2026.8；官方支持当前稳定版），以及兼容 MCP 的 AI 客户端。推荐经 HACS 安装；HA 2026.11+ 也可从 Marketplace 安装。连接时需配置 HA 管理员身份或令牌 | 先只读查询实体状态和现有自动化；确认 AI 客户端如何区分读、写、删除调用，再单独尝试创建一个不会触发真实设备的测试自动化 |\n\n热度来自第三方快照，不代表实际使用量或质量。GitTrend 对 W46 周榜按 11 月 9—15 日统计；appsgit 用 11 月 9—16 日的每日 Star 快照计算 7 日增量。窗口与采样规则不同，数字不要横向比较。\n\n## 体验路径与限制\n\n### Craft Anything：先在获准检查的目标上验证“观察—构建—对照”\n\n官方提供 Windows、macOS、Linux、FreeBSD 安装包；Mac 通用 DMG 已签名并公证。试做网站重建时，先在设置里选择编码 Agent，再对自己维护或获准检查的网站运行 `Study → Build → Check`，用三种视口的截图与页面检查记录核对结果。无需接触网站源代码的默认 Clean-room 模式适合作为起点；若打开 Deep 模式，工具可读取代码与文件。\n\n项目处于 early alpha。官方称 Claude Code 的构建路径已实际验证；Codex adapter 存在，但还没有在真实安装上验证。Clean-room 是产品层的访问规则，不是操作系统沙箱；编码 Agent 仍会以其自身权限读写/运行本机内容。只对有权检查的目标使用，不让构建任务访问真实密钥或生产数据。本期未下载或实测。\n\n### Jane Street Skill：低门槛试一个学习任务\n\n仓库中的 `socratic-tutor/SKILL.md` 是可复用的自然语言工作流说明，不是独立模型或课程内容。按[Codex 官方安装目录说明](https://developers.openai.com/api/reference/cli)，将 Skill 文件夹放到用户级 `~/.agents/skills/` 可供多个项目使用，或放进项目级 `.agents/skills/`；开始新的 Codex 会话后显式启用它，再要求“用苏格拉底式方法教我一个主题”。\n\n当前公开仓库实际只有一个 Skill。效果依赖模型遵循说明的程度，不能替代经过审核的教学材料或专业建议；星标增长也不代表教学质量经评估。本期未安装或试用。\n\n### HA-MCP：先以只读方式确认权限边界\n\n对已有 Home Assistant 的用户，官方推荐把 HA-MCP 集成为 HA 组件：HA 2026.8—2026.10 可从 HACS 安装；2026.11+ 可从 Marketplace 安装。重启 HA 后添加 HA-MCP Server 集成，选择客户端连接方式，再把连接 URL 配到 MCP 客户端。管理动作以 HA 管理员身份执行，令牌可跨设备使用，必须按密码保管；远程和局域网访问默认关闭。初次体验可先保持远程关闭，只连接可信客户端并测试查询状态，之后再考虑启用写操作。\n\n官方 README 列出约 86 项工具，并指出支持工具搜索模式；对工具目录一次性注入较多、上下文有限的模型尤其有用。改动自动化、仪表盘或设备会产生实际影响，删除和文件/YAML 工具更敏感；后者为显式启用的可选能力。stdio 传输存在已知连接问题，正式接入优先使用集成或 HTTP 模式。本期未配置 Home Assistant、令牌或 MCP 客户端。\n\n## 已有项目与月报\n\n- 对照 11 月 11 日归档，没有重复 dsh-superagent 与 gputaskman；Craft Anything 不是单纯编码 Agent 控制台，而是把软件观察与结果对照作为核心步骤。\n- 10 月正式月报已归档，最近结束月份并无缺报；11 月月报将在本月结束后依既定流程生成。\n\n## 来源\n\n- 第三方热度：[GitTrend 2026-W46 周榜](https://gittrend.io/weekly/2026-W46)、[appsgit 趋势与统计说明](https://appsgit.com/trending)\n- Craft Anything：[官方仓库与功能状态](https://github.com/storytold/craft-anything)、[下载与体验说明](https://github.com/storytold/craft-anything#downloads)\n- Jane Street：[官方 Skills 仓库](https://github.com/janestreet/agent_skills)、[Codex 官方 Skills 安装目录说明](https://developers.openai.com/api/reference/cli)\n- HA-MCP：[官方仓库与安装/权限说明](https://github.com/homeassistant-ai/ha-mcp)\n",
+    "html": "<h2>AI 项目日报 · 2026-11-17</h2>\n<p>检索日期：2026 年 11 月 17 日（北京时间） 近一周热度窗口：GitTrend 2026-W46（11 月 9—15 日）；appsgit 快照（11 月 9—16 日） 对照文档：<a href=\"#date=2026-11-11\">11 月 11 日日报</a></p>\n<h3>今日重点</h3>\n<p>这周 GitHub 热度主要落在 Agent 工作流和 Skills。本期新增关注 Craft Anything、Jane Street 的 Socratic Tutor Skill，以及 Home Assistant 的 ha-mcp。Craft Anything 把软件观察、编码 Agent 重建、结果对照放在一个工作流里，想法新但仍是 alpha，Codex 适配器尚未在真实安装上验证；Socratic Tutor 很容易装进 Codex 试用；ha-mcp 把 Home Assistant 的设备、自动化和仪表盘操作接入 MCP，落地价值高，但需谨慎配置权限。本期仅核对官方资料和第三方热度快照，没有安装或实测。</p>\n<h3>新增项目</h3>\n<div class=\"table-scroll\" tabindex=\"0\" aria-label=\"可横向滚动的项目表格\"><table><thead><tr><th scope=\"col\">项目</th><th scope=\"col\">已核实的用途</th><th scope=\"col\">第三方近 7 日热度</th><th scope=\"col\">体验入口与前提</th><th scope=\"col\">建议先验证什么</th></tr></thead><tbody><tr><td><a href=\"https://github.com/storytold/craft-anything\" target=\"_blank\" rel=\"noopener noreferrer\">Craft Anything ↗</a></td><td>观察网站、桌面/手机应用、游戏或文件；可用编码 Agent 重建项目，再通过多视口或自测对照原目标并迭代；引擎工具也可走 CLI/MCP</td><td>GitTrend W46（11 月 9—15 日）记录 +11,053 Star</td><td>macOS 可下载通用 DMG；重建需要一款本机已登录的编码 Agent。官方优先支持 Claude Code，Codex 适配器尚未在真实安装上核验</td><td>对自己拥有或获准检查的公开网站做 Clean-room 观察，重建一个简单页面，再检查三种屏宽的差异</td></tr><tr><td><a href=\"https://github.com/janestreet/agent_skills\" target=\"_blank\" rel=\"noopener noreferrer\">Jane Street Agent Skills ↗</a></td><td>目前仓库提供一个 Socratic Tutor Skill：先诊断知识水平，再分级、一次一问、间隔复习并做总结评估</td><td>GitTrend W46（11 月 9—15 日）记录 +8,685 Star</td><td>支持通用 <code>SKILL.md</code> 的 Coding Agent；可将 <code>socratic-tutor</code> 目录复制到 Codex 的 <code>~/.agents/skills/</code>，或当前项目的 <code>.agents/skills/</code></td><td>让它教一个熟悉主题，观察是否先问诊、单次只问一个问题，并按复习安排追问</td></tr><tr><td><a href=\"https://github.com/homeassistant-ai/ha-mcp\" target=\"_blank\" rel=\"noopener noreferrer\">HA-MCP ↗</a></td><td>通过 MCP 查询和管理 Home Assistant，可控制设备、创建自动化/脚本/仪表盘、查看自动化运行记录；可用工具搜索减少大工具目录占用的上下文</td><td>appsgit（11 月 9—16 日快照）记录 +2,378 Star</td><td>需要 Home Assistant（技术最低版本 2026.8；官方支持当前稳定版），以及兼容 MCP 的 AI 客户端。推荐经 HACS 安装；HA 2026.11+ 也可从 Marketplace 安装。连接时需配置 HA 管理员身份或令牌</td><td>先只读查询实体状态和现有自动化；确认 AI 客户端如何区分读、写、删除调用，再单独尝试创建一个不会触发真实设备的测试自动化</td></tr></tbody></table></div>\n<p>热度来自第三方快照，不代表实际使用量或质量。GitTrend 对 W46 周榜按 11 月 9—15 日统计；appsgit 用 11 月 9—16 日的每日 Star 快照计算 7 日增量。窗口与采样规则不同，数字不要横向比较。</p>\n<h3>体验路径与限制</h3>\n<h4>Craft Anything：先在获准检查的目标上验证“观察—构建—对照”</h4>\n<p>官方提供 Windows、macOS、Linux、FreeBSD 安装包；Mac 通用 DMG 已签名并公证。试做网站重建时，先在设置里选择编码 Agent，再对自己维护或获准检查的网站运行 <code>Study → Build → Check</code>，用三种视口的截图与页面检查记录核对结果。无需接触网站源代码的默认 Clean-room 模式适合作为起点；若打开 Deep 模式，工具可读取代码与文件。</p>\n<p>项目处于 early alpha。官方称 Claude Code 的构建路径已实际验证；Codex adapter 存在，但还没有在真实安装上验证。Clean-room 是产品层的访问规则，不是操作系统沙箱；编码 Agent 仍会以其自身权限读写/运行本机内容。只对有权检查的目标使用，不让构建任务访问真实密钥或生产数据。本期未下载或实测。</p>\n<h4>Jane Street Skill：低门槛试一个学习任务</h4>\n<p>仓库中的 <code>socratic-tutor/SKILL.md</code> 是可复用的自然语言工作流说明，不是独立模型或课程内容。按<a href=\"https://developers.openai.com/api/reference/cli\" target=\"_blank\" rel=\"noopener noreferrer\">Codex 官方安装目录说明 ↗</a>，将 Skill 文件夹放到用户级 <code>~/.agents/skills/</code> 可供多个项目使用，或放进项目级 <code>.agents/skills/</code>；开始新的 Codex 会话后显式启用它，再要求“用苏格拉底式方法教我一个主题”。</p>\n<p>当前公开仓库实际只有一个 Skill。效果依赖模型遵循说明的程度，不能替代经过审核的教学材料或专业建议；星标增长也不代表教学质量经评估。本期未安装或试用。</p>\n<h4>HA-MCP：先以只读方式确认权限边界</h4>\n<p>对已有 Home Assistant 的用户，官方推荐把 HA-MCP 集成为 HA 组件：HA 2026.8—2026.10 可从 HACS 安装；2026.11+ 可从 Marketplace 安装。重启 HA 后添加 HA-MCP Server 集成，选择客户端连接方式，再把连接 URL 配到 MCP 客户端。管理动作以 HA 管理员身份执行，令牌可跨设备使用，必须按密码保管；远程和局域网访问默认关闭。初次体验可先保持远程关闭，只连接可信客户端并测试查询状态，之后再考虑启用写操作。</p>\n<p>官方 README 列出约 86 项工具，并指出支持工具搜索模式；对工具目录一次性注入较多、上下文有限的模型尤其有用。改动自动化、仪表盘或设备会产生实际影响，删除和文件/YAML 工具更敏感；后者为显式启用的可选能力。stdio 传输存在已知连接问题，正式接入优先使用集成或 HTTP 模式。本期未配置 Home Assistant、令牌或 MCP 客户端。</p>\n<h3>已有项目与月报</h3>\n<ul><li>对照 11 月 11 日归档，没有重复 dsh-superagent 与 gputaskman；Craft Anything 不是单纯编码 Agent 控制台，而是把软件观察与结果对照作为核心步骤。</li><li>10 月正式月报已归档，最近结束月份并无缺报；11 月月报将在本月结束后依既定流程生成。</li></ul>\n<h3>来源</h3>\n<ul><li>第三方热度：<a href=\"https://gittrend.io/weekly/2026-W46\" target=\"_blank\" rel=\"noopener noreferrer\">GitTrend 2026-W46 周榜 ↗</a>、<a href=\"https://appsgit.com/trending\" target=\"_blank\" rel=\"noopener noreferrer\">appsgit 趋势与统计说明 ↗</a></li><li>Craft Anything：<a href=\"https://github.com/storytold/craft-anything\" target=\"_blank\" rel=\"noopener noreferrer\">官方仓库与功能状态 ↗</a>、<a href=\"https://github.com/storytold/craft-anything#downloads\" target=\"_blank\" rel=\"noopener noreferrer\">下载与体验说明 ↗</a></li><li>Jane Street：<a href=\"https://github.com/janestreet/agent_skills\" target=\"_blank\" rel=\"noopener noreferrer\">官方 Skills 仓库 ↗</a>、<a href=\"https://developers.openai.com/api/reference/cli\" target=\"_blank\" rel=\"noopener noreferrer\">Codex 官方 Skills 安装目录说明 ↗</a></li><li>HA-MCP：<a href=\"https://github.com/homeassistant-ai/ha-mcp\" target=\"_blank\" rel=\"noopener noreferrer\">官方仓库与安装/权限说明 ↗</a></li></ul>",
+    "projects": [
+      {
+        "name": "Craft Anything",
+        "url": "https://github.com/storytold/craft-anything",
+        "description": "观察网站、桌面/手机应用、游戏或文件；可用编码 Agent 重建项目，再通过多视口或自测对照原目标并迭代；引擎工具也可走 CLI/MCP",
+        "signal": "GitTrend W46（11 月 9—15 日）记录 +11,053 Star"
+      },
+      {
+        "name": "Jane Street Agent Skills",
+        "url": "https://github.com/janestreet/agent_skills",
+        "description": "目前仓库提供一个 Socratic Tutor Skill：先诊断知识水平，再分级、一次一问、间隔复习并做总结评估",
+        "signal": "GitTrend W46（11 月 9—15 日）记录 +8,685 Star"
+      },
+      {
+        "name": "HA-MCP",
+        "url": "https://github.com/homeassistant-ai/ha-mcp",
+        "description": "通过 MCP 查询和管理 Home Assistant，可控制设备、创建自动化/脚本/仪表盘、查看自动化运行记录；可用工具搜索减少大工具目录占用的上下文",
+        "signal": "appsgit（11 月 9—16 日快照）记录 +2,378 Star"
+      }
+    ],
+    "observations": [
+      {
+        "name": "Craft Anything",
+        "url": "https://github.com/storytold/craft-anything",
+        "description": "观察网站、桌面/手机应用、游戏或文件；可用编码 Agent 重建项目，再通过多视口或自测对照原目标并迭代；引擎工具也可走 CLI/MCP",
+        "signal": "GitTrend W46（11 月 9—15 日）记录 +11,053 Star"
+      },
+      {
+        "name": "Jane Street Agent Skills",
+        "url": "https://github.com/janestreet/agent_skills",
+        "description": "目前仓库提供一个 Socratic Tutor Skill：先诊断知识水平，再分级、一次一问、间隔复习并做总结评估",
+        "signal": "GitTrend W46（11 月 9—15 日）记录 +8,685 Star"
+      },
+      {
+        "name": "HA-MCP",
+        "url": "https://github.com/homeassistant-ai/ha-mcp",
+        "description": "通过 MCP 查询和管理 Home Assistant，可控制设备、创建自动化/脚本/仪表盘、查看自动化运行记录；可用工具搜索减少大工具目录占用的上下文",
+        "signal": "appsgit（11 月 9—16 日快照）记录 +2,378 Star"
+      }
+    ]
+  },
+  {
     "date": "2026-11-11",
     "title": "AI 项目日报 · 2026-11-11",
     "filename": "AI项目日报-2026-11-11.md",
